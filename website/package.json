@@ -1,0 +1,43 @@
+{
+  "name": "website",
+  "private": true,
+  "description": "Source for the designtokens.org website",
+  "version": "0.1.0",
+  "author": "Design Tokens W3C Community Group and Contributors",
+  "dependencies": {
+    "@dtcg/design-tokens": "^1.0.0",
+    "gatsby": "^2.19.25",
+    "gatsby-image": "^2.2.42",
+    "gatsby-plugin-react-helmet": "^3.1.22",
+    "gatsby-plugin-sass": "^2.1.29",
+    "gatsby-plugin-sharp": "^2.4.5",
+    "gatsby-source-filesystem": "^2.1.48",
+    "gatsby-transformer-sharp": "^2.3.16",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-helmet": "^5.2.1",
+    "resolve-url-loader": "^3.1.1"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "gatsby serve --host 0.0.0.0 --port ${PORT:=9000}",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/design-tokens/designtokens.org"
+  },
+  "bugs": {
+    "url": "https://github.com/design-tokens/designtokens.org/issues"
+  }
+}

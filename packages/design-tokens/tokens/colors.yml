@@ -1,0 +1,536 @@
+# Material Design Colors from https://material.io/guidelines/style/color.html#color-color-palette
+props:
+  - name: Red 50
+    value: '#FFEBEE'
+  - name: Red 100
+    value: '#FFCDD2'
+  - name: Red 200
+    value: '#EF9A9A'
+  - name: Red 300
+    value: '#E57373'
+  - name: Red 400
+    value: '#EF5350'
+  - name: Red 500
+    value: '#F44336'
+  - name: Red 600
+    value: '#E53935'
+  - name: Red 700
+    value: '#D32F2F'
+  - name: Red 800
+    value: '#C62828'
+  - name: Red 900
+    value: '#B71C1C'
+  - name: Red A100
+    value: '#FF8A80'
+  - name: Red A200
+    value: '#FF5252'
+  - name: Red A400
+    value: '#FF1744'
+  - name: Red A700
+    value: '#D50000'
+
+  - name: Pink 50
+    value: '#FCE4EC'
+  - name: Pink 100
+    value: '#F8BBD0'
+  - name: Pink 200
+    value: '#F48FB1'
+  - name: Pink 300
+    value: '#F06292'
+  - name: Pink 400
+    value: '#EC407A'
+  - name: Pink 500
+    value: '#E91E63'
+  - name: Pink 600
+    value: '#D81B60'
+  - name: Pink 700
+    value: '#C2185B'
+  - name: Pink 800
+    value: '#AD1457'
+  - name: Pink 900
+    value: '#880E4F'
+  - name: Pink A100
+    value: '#FF80AB'
+  - name: Pink A200
+    value: '#FF4081'
+  - name: Pink A400
+    value: '#F50057'
+  - name: Pink A700
+    value: '#C51162'
+
+  - name: Purple 50
+    value: '#F3E5F5'
+  - name: Purple 100
+    value: '#E1BEE7'
+  - name: Purple 200
+    value: '#CE93D8'
+  - name: Purple 300
+    value: '#BA68C8'
+  - name: Purple 400
+    value: '#AB47BC'
+  - name: Purple 500
+    value: '#9C27B0'
+  - name: Purple 600
+    value: '#8E24AA'
+  - name: Purple 700
+    value: '#7B1FA2'
+  - name: Purple 800
+    value: '#6A1B9A'
+  - name: Purple 900
+    value: '#4A148C'
+  - name: Purple A100
+    value: '#EA80FC'
+  - name: Purple A200
+    value: '#E040FB'
+  - name: Purple A400
+    value: '#D500F9'
+  - name: Purple A700
+    value: '#AA00FF'
+
+  - name: Deep purple 50
+    value: '#EDE7F6'
+  - name: Deep purple 100
+    value: '#D1C4E9'
+  - name: Deep purple 200
+    value: '#B39DDB'
+  - name: Deep purple 300
+    value: '#9575CD'
+  - name: Deep purple 400
+    value: '#7E57C2'
+  - name: Deep purple 500
+    value: '#673AB7'
+  - name: Deep purple 600
+    value: '#5E35B1'
+  - name: Deep purple 700
+    value: '#512DA8'
+  - name: Deep purple 800
+    value: '#4527A0'
+  - name: Deep purple 900
+    value: '#311B92'
+  - name: Deep purple A100
+    value: '#B388FF'
+  - name: Deep purple A200
+    value: '#7C4DFF'
+  - name: Deep purple A400
+    value: '#651FFF'
+  - name: Deep purple A700
+    value: '#6200EA'
+
+  - name: Indigo 50
+    value: '#E8EAF6'
+  - name: Indigo 100
+    value: '#C5CAE9'
+  - name: Indigo 200
+    value: '#9FA8DA'
+  - name: Indigo 300
+    value: '#7986CB'
+  - name: Indigo 400
+    value: '#5C6BC0'
+  - name: Indigo 500
+    value: '#3F51B5'
+  - name: Indigo 600
+    value: '#3949AB'
+  - name: Indigo 700
+    value: '#303F9F'
+  - name: Indigo 800
+    value: '#283593'
+  - name: Indigo 900
+    value: '#1A237E'
+  - name: Indigo A100
+    value: '#8C9EFF'
+  - name: Indigo A200
+    value: '#536DFE'
+  - name: Indigo A400
+    value: '#3D5AFE'
+  - name: Indigo A700
+    value: '#304FFE'
+
+  - name: Blue 50
+    value: '#E3F2FD'
+  - name: Blue 100
+    value: '#BBDEFB'
+  - name: Blue 200
+    value: '#90CAF9'
+  - name: Blue 300
+    value: '#64B5F6'
+  - name: Blue 400
+    value: '#42A5F5'
+  - name: Blue 500
+    value: '#2196F3'
+  - name: Blue 600
+    value: '#1E88E5'
+  - name: Blue 700
+    value: '#1976D2'
+  - name: Blue 800
+    value: '#1565C0'
+  - name: Blue 900
+    value: '#0D47A1'
+  - name: Blue A100
+    value: '#82B1FF'
+  - name: Blue A200
+    value: '#448AFF'
+  - name: Blue A400
+    value: '#2979FF'
+  - name: Blue A700
+    value: '#2962FF'
+
+  - name: Light blue 50
+    value: '#E1F5FE'
+  - name: Light blue 100
+    value: '#B3E5FC'
+  - name: Light blue 200
+    value: '#81D4FA'
+  - name: Light blue 300
+    value: '#4FC3F7'
+  - name: Light blue 400
+    value: '#29B6F6'
+  - name: Light blue 500
+    value: '#03A9F4'
+  - name: Light blue 600
+    value: '#039BE5'
+  - name: Light blue 700
+    value: '#0288D1'
+  - name: Light blue 800
+    value: '#0277BD'
+  - name: Light blue 900
+    value: '#01579B'
+  - name: Light blue A100
+    value: '#80D8FF'
+  - name: Light blue A200
+    value: '#40C4FF'
+  - name: Light blue A400
+    value: '#00B0FF'
+  - name: Light blue A700
+    value: '#0091EA'
+
+  - name: Cyan 50
+    value: '#E0F7FA'
+  - name: Cyan 100
+    value: '#B2EBF2'
+  - name: Cyan 200
+    value: '#80DEEA'
+  - name: Cyan 300
+    value: '#4DD0E1'
+  - name: Cyan 400
+    value: '#26C6DA'
+  - name: Cyan 500
+    value: '#00BCD4'
+  - name: Cyan 600
+    value: '#00ACC1'
+  - name: Cyan 700
+    value: '#0097A7'
+  - name: Cyan 800
+    value: '#00838F'
+  - name: Cyan 900
+    value: '#006064'
+  - name: Cyan A100
+    value: '#84FFFF'
+  - name: Cyan A200
+    value: '#18FFFF'
+  - name: Cyan A400
+    value: '#00E5FF'
+  - name: Cyan A700
+    value: '#00B8D4'
+
+  - name: Teal 50
+    value: '#E0F2F1'
+  - name: Teal 100
+    value: '#B2DFDB'
+  - name: Teal 200
+    value: '#80CBC4'
+  - name: Teal 300
+    value: '#4DB6AC'
+  - name: Teal 400
+    value: '#26A69A'
+  - name: Teal 500
+    value: '#009688'
+  - name: Teal 600
+    value: '#00897B'
+  - name: Teal 700
+    value: '#00796B'
+  - name: Teal 800
+    value: '#00695C'
+  - name: Teal 900
+    value: '#004D40'
+  - name: Teal A100
+    value: '#A7FFEB'
+  - name: Teal A200
+    value: '#64FFDA'
+  - name: Teal A400
+    value: '#1DE9B6'
+  - name: Teal A700
+    value: '#00BFA5'
+
+  - name: Green 50
+    value: '#E8F5E9'
+  - name: Green 100
+    value: '#C8E6C9'
+  - name: Green 200
+    value: '#A5D6A7'
+  - name: Green 300
+    value: '#81C784'
+  - name: Green 400
+    value: '#66BB6A'
+  - name: Green 500
+    value: '#4CAF50'
+  - name: Green 600
+    value: '#43A047'
+  - name: Green 700
+    value: '#388E3C'
+  - name: Green 800
+    value: '#2E7D32'
+  - name: Green 900
+    value: '#1B5E20'
+  - name: Green A100
+    value: '#B9F6CA'
+  - name: Green A200
+    value: '#69F0AE'
+  - name: Green A400
+    value: '#00E676'
+  - name: Green A700
+    value: '#00C853'
+
+  - name: Light green 50
+    value: '#F1F8E9'
+  - name: Light green 100
+    value: '#DCEDC8'
+  - name: Light green 200
+    value: '#C5E1A5'
+  - name: Light green 300
+    value: '#AED581'
+  - name: Light green 400
+    value: '#9CCC65'
+  - name: Light green 500
+    value: '#8BC34A'
+  - name: Light green 600
+    value: '#7CB342'
+  - name: Light green 700
+    value: '#689F38'
+  - name: Light green 800
+    value: '#558B2F'
+  - name: Light green 900
+    value: '#33691E'
+  - name: Light green A100
+    value: '#CCFF90'
+  - name: Light green A200
+    value: '#B2FF59'
+  - name: Light green A400
+    value: '#76FF03'
+  - name: Light green A700
+    value: '#64DD17'
+
+  - name: Lime 50
+    value: '#F9FBE7'
+  - name: Lime 100
+    value: '#F0F4C3'
+  - name: Lime 200
+    value: '#E6EE9C'
+  - name: Lime 300
+    value: '#DCE775'
+  - name: Lime 400
+    value: '#D4E157'
+  - name: Lime 500
+    value: '#CDDC39'
+  - name: Lime 600
+    value: '#C0CA33'
+  - name: Lime 700
+    value: '#AFB42B'
+  - name: Lime 800
+    value: '#9E9D24'
+  - name: Lime 900
+    value: '#827717'
+  - name: Lime A100
+    value: '#F4FF81'
+  - name: Lime A200
+    value: '#EEFF41'
+  - name: Lime A400
+    value: '#C6FF00'
+  - name: Lime A700
+    value: '#AEEA00'
+
+  - name: Yellow 50
+    value: '#FFFDE7'
+  - name: Yellow 100
+    value: '#FFF9C4'
+  - name: Yellow 200
+    value: '#FFF59D'
+  - name: Yellow 300
+    value: '#FFF176'
+  - name: Yellow 400
+    value: '#FFEE58'
+  - name: Yellow 500
+    value: '#FFEB3B'
+  - name: Yellow 600
+    value: '#FDD835'
+  - name: Yellow 700
+    value: '#FBC02D'
+  - name: Yellow 800
+    value: '#F9A825'
+  - name: Yellow 900
+    value: '#F57F17'
+  - name: Yellow A100
+    value: '#FFFF8D'
+  - name: Yellow A200
+    value: '#FFFF00'
+  - name: Yellow A400
+    value: '#FFEA00'
+  - name: Yellow A700
+    value: '#FFD600'
+
+  - name: Amber 50
+    value: '#FFF8E1'
+  - name: Amber 100
+    value: '#FFECB3'
+  - name: Amber 200
+    value: '#FFE082'
+  - name: Amber 300
+    value: '#FFD54F'
+  - name: Amber 400
+    value: '#FFCA28'
+  - name: Amber 500
+    value: '#FFC107'
+  - name: Amber 600
+    value: '#FFB300'
+  - name: Amber 700
+    value: '#FFA000'
+  - name: Amber 800
+    value: '#FF8F00'
+  - name: Amber 900
+    value: '#FF6F00'
+  - name: Amber A100
+    value: '#FFE57F'
+  - name: Amber A200
+    value: '#FFD740'
+  - name: Amber A400
+    value: '#FFC400'
+  - name: Amber A700
+    value: '#FFAB00'
+
+  - name: Orange 50
+    value: '#FFF3E0'
+  - name: Orange 100
+    value: '#FFE0B2'
+  - name: Orange 200
+    value: '#FFCC80'
+  - name: Orange 300
+    value: '#FFB74D'
+  - name: Orange 400
+    value: '#FFA726'
+  - name: Orange 500
+    value: '#FF9800'
+  - name: Orange 600
+    value: '#FB8C00'
+  - name: Orange 700
+    value: '#F57C00'
+  - name: Orange 800
+    value: '#EF6C00'
+  - name: Orange 900
+    value: '#E65100'
+  - name: Orange A100
+    value: '#FFD180'
+  - name: Orange A200
+    value: '#FFAB40'
+  - name: Orange A400
+    value: '#FF9100'
+  - name: Orange A700
+    value: '#FF6D00'
+
+  - name: Deep-orange 50
+    value: '#FBE9E7'
+  - name: Deep-orange 100
+    value: '#FFCCBC'
+  - name: Deep-orange 200
+    value: '#FFAB91'
+  - name: Deep-orange 300
+    value: '#FF8A65'
+  - name: Deep-orange 400
+    value: '#FF7043'
+  - name: Deep-orange 500
+    value: '#FF5722'
+  - name: Deep-orange 600
+    value: '#F4511E'
+  - name: Deep-orange 700
+    value: '#E64A19'
+  - name: Deep-orange 800
+    value: '#D84315'
+  - name: Deep-orange 900
+    value: '#BF360C'
+  - name: Deep-orange A100
+    value: '#FF9E80'
+  - name: Deep-orange A200
+    value: '#FF6E40'
+  - name: Deep-orange A400
+    value: '#FF3D00'
+  - name: Deep-orange A700
+    value: '#DD2C00'
+
+  - name: Brown 50
+    value: '#EFEBE9'
+  - name: Brown 100
+    value: '#D7CCC8'
+  - name: Brown 200
+    value: '#BCAAA4'
+  - name: Brown 300
+    value: '#A1887F'
+  - name: Brown 400
+    value: '#8D6E63'
+  - name: Brown 500
+    value: '#795548'
+  - name: Brown 600
+    value: '#6D4C41'
+  - name: Brown 700
+    value: '#5D4037'
+  - name: Brown 800
+    value: '#4E342E'
+  - name: Brown 900
+    value: '#3E2723'
+
+  - name: Grey 50
+    value: '#FAFAFA'
+  - name: Grey 100
+    value: '#F5F5F5'
+  - name: Grey 200
+    value: '#EEEEEE'
+  - name: Grey 300
+    value: '#E0E0E0'
+  - name: Grey 400
+    value: '#BDBDBD'
+  - name: Grey 500
+    value: '#9E9E9E'
+  - name: Grey 600
+    value: '#757575'
+  - name: Grey 700
+    value: '#616161'
+  - name: Grey 800
+    value: '#424242'
+  - name: Grey 900
+    value: '#212121'
+
+  - name: Blue grey 50
+    value: '#ECEFF1'
+  - name: Blue grey 100
+    value: '#CFD8DC'
+  - name: Blue grey 200
+    value: '#B0BEC5'
+  - name: Blue grey 300
+    value: '#90A4AE'
+  - name: Blue grey 400
+    value: '#78909C'
+  - name: Blue grey 500
+    value: '#607D8B'
+  - name: Blue grey 600
+    value: '#546E7A'
+  - name: Blue grey 700
+    value: '#455A64'
+  - name: Blue grey 800
+    value: '#37474F'
+  - name: Blue grey 900
+    value: '#263238'
+
+  - name: Black
+    value: '#000000'
+  - name: White
+    value: '#FFFFFF'
+global:
+  type: color
+  category: background-color

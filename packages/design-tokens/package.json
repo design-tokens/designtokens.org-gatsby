@@ -1,0 +1,18 @@
+{
+  "name": "@dtcg/design-tokens",
+  "version": "1.0.0",
+  "description": "Design tokens for the Design Tokens W3C Community Group",
+  "main": "index.js",
+  "repository": "https://github.com/design-tokens/designtokens.org",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "theo": "theo ./tokens/colors.yml --format json,scss --dest ./dist",
+    "lint:prettier": "prettier --config ../../.prettierrc --write ./dist/*.{json,scss}",
+    "lint:stylelint": "stylelint dist/*.scss --fix",
+    "build": "npm-run-all theo lint:*"
+  },
+  "devDependencies": {
+    "theo": "^8.1.5"
+  }
+}
