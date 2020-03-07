@@ -1,3 +1,4 @@
+// stylelint-disable no-duplicate-selectors
 @import '~@dtcg/design-tokens/dist/colors.scss';
 
 html {
@@ -455,20 +456,6 @@ figure {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-}
-
-pre {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: 1.45rem;
-  font-size: 0.85rem;
-  line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
-  overflow: auto;
-  word-wrap: normal;
-  padding: 1.45rem;
 }
 
 table {
