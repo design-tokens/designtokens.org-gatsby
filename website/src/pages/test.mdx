@@ -1,0 +1,44 @@
+---
+title: Test page
+path: /test
+date: 2020-03-05
+---
+
+import TestCustomComponent from '../components/TestCustomComponent.jsx';
+import Image from '../components/Image.jsx';
+
+<h1>{props.pageContext.frontmatter.title}</h1>
+<TestCustomComponent>I'm testing an MDX page.</TestCustomComponent>
+
+```jsx
+<SomeJSXCodeInACodeBlock />
+```
+
+```js render=true
+<div
+  style={{
+    backgroundColor: 'rebeccapurple',
+    padding: '20px',
+    marginTop: '20px',
+    color: 'white',
+  }}
+>
+  Some code that is being rendered (not sure why one would use that)
+</div>
+```
+
+```js live=true
+<div style={{ backgroundColor: 'tomato', padding: '20px' }} />
+```
+
+---
+
+## Images
+
+Image using Markdown:
+
+![Gatsby Logo](../images/gatsby-icon.png)
+
+Image using a React component:
+
+<Image src="../images/gatsby-icon.png" />

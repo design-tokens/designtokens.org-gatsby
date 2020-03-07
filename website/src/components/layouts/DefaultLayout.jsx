@@ -7,11 +7,19 @@
 
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { MDXProvider } from '@mdx-js/react';
 
-import Header from './header';
-import './layout.module.scss';
+import CodeBlock from '../CodeBlock';
+import Header from '../Header';
+import './DefaultLayout.module.scss';
 
-const Layout = ({ children }) => {
+const components = {
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  pre: ({ children }) => children,
+  code: CodeBlock,
+};
+
+const DefaultLayout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -32,7 +40,9 @@ const Layout = ({ children }) => {
           padding: '0 1.0875rem 1.45rem',
         }}
       >
-        <main>{children}</main>
+        <main>
+          <MDXProvider components={components}>{children}</MDXProvider>
+        </main>
         <footer>
           © {new Date().getFullYear()}, Built with{' '}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
@@ -42,4 +52,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+export default DefaultLayout;

@@ -19,7 +19,13 @@ Design tokens are located in the `packages/design-tokens` directory.
 
 ## Deploying the site
 
-Changes to `master` are automatically deployed to https://www.designtokens.org. 
+Changes to `master` are automatically deployed to https://www.designtokens.org.
+
+## Note on MDX
+
+Pages can be created and edited using JavaScript, JSX, and MDX.
+
+Configuration: https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/#configuration
 
 ## Editing the code
 
