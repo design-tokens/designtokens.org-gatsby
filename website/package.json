@@ -17,22 +17,37 @@
     "gatsby-remark-images": "^3.1.46",
     "gatsby-source-filesystem": "^2.1.50",
     "gatsby-transformer-sharp": "^2.3.17",
+    "imports-loader": "^0.8.0",
     "node-sass": "^4.13.1",
     "prism-react-renderer": "^1.0.2",
+    "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-helmet": "^5.2.1",
     "react-live": "^2.2.2",
     "resolve-url-loader": "^3.1.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-react-jsx": "^7.8.3",
+    "@storybook/addon-actions": "^5.3.14",
+    "@storybook/addon-docs": "^5.3.14",
+    "@storybook/react": "^5.3.14",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-remove-graphql-queries": "^2.7.24",
+    "cross-env": "^7.0.2",
+    "react-is": "^16.13.0",
+    "storybook-chromatic": "^3.5.2"
+  },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "build-storybook": "cross-env NODE_ENV=production build-storybook -c .storybook -o public/docs",
     "develop": "gatsby develop",
+    "storybook": "cross-env NODE_ENV=production start-storybook -p 9000 -c .storybook",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "gatsby serve --host 0.0.0.0 --port ${PORT:=9000}",
     "serve": "gatsby serve",

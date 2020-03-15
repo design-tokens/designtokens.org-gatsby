@@ -4,8 +4,8 @@ path: /test
 date: 2020-03-05
 ---
 
-import TestCustomComponent from '../components/TestCustomComponent.jsx';
-import Image from '../components/Image.jsx';
+import { TestCustomComponent } from '../components/TestCustomComponent';
+import { Image } from '../components/Image';
 
 <h1>{props.pageContext.frontmatter.title}</h1>
 <TestCustomComponent>I'm testing an MDX page.</TestCustomComponent>
@@ -41,4 +41,4 @@ Image using Markdown:
 
 Image using a React component:
 
-<Image src="../images/gatsby-icon.png" />
+<Image src="../images/gatsby-icon.png" alt="test" width="50%" />

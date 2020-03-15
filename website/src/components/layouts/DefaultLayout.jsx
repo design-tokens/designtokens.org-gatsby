@@ -8,13 +8,13 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
+import PropTypes from 'prop-types';
 
-import CodeBlock from '../CodeBlock';
-import Header from '../Header';
-import './DefaultLayout.module.scss';
+import { CodeBlock } from '../CodeBlock';
+import { Header } from '../Header';
+import * as styles from './DefaultLayout.module.scss';
 
 const components = {
-  // eslint-disable-next-line react/jsx-props-no-spreading
   pre: ({ children }) => children,
   code: CodeBlock,
 };
@@ -33,13 +33,7 @@ const DefaultLayout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: '0 auto',
-          maxWidth: 960,
-          padding: '0 1.0875rem 1.45rem',
-        }}
-      >
+      <div className={styles.container}>
         <main>
           <MDXProvider components={components}>{children}</MDXProvider>
         </main>
@@ -50,6 +44,10 @@ const DefaultLayout = ({ children }) => {
       </div>
     </>
   );
+};
+
+DefaultLayout.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default DefaultLayout;

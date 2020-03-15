@@ -1,0 +1,16 @@
+props:
+  # Font stacks
+  - name: font-stack-base
+    value: -apple-system, BlinkMacSystemFont, 'San Francisco', Roboto, 'Segoe UI', 'Helvetica Neue', sans-serif
+    type: font-family
+    category: font-family
+  - name: font-stack-monospace
+    value: Monaco, Consolas, 'Lucida Console', monospace
+    type: font-family
+    category: font-family
+
+  # Font sizes and line heights
+  # -
+global:
+  type: number
+  category: font-size

@@ -1,0 +1,17 @@
+@import '~@dtcg/design-tokens/dist';
+
+.wrapper {
+  background: $purple-600;
+  margin-bottom: 1.45rem;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.45rem 1.0875rem;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
