@@ -15,7 +15,9 @@
     "storybook": "yarn workspace website storybook",
     "start": "yarn workspace website run start",
     "build": "lerna run build",
-    "test": "lerna run test"
+    "build-storybook": "yarn workspace website run build-storybook",
+    "test": "lerna run test",
+    "chromatic": "CHROMATIC_APP_CODE=966rycwf5zf chromatic"
   },
   "devDependencies": {
     "eslint": "^6.8.0",

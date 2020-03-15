@@ -36,7 +36,8 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-remove-graphql-queries": "^2.7.24",
     "cross-env": "^7.0.2",
-    "react-is": "^16.13.0"
+    "react-is": "^16.13.0",
+    "storybook-chromatic": "^3.5.2"
   },
   "keywords": [
     "gatsby"
@@ -44,7 +45,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "build:storybook": "cross-env NODE_ENV=production build-storybook -c .storybook -o public/docs",
+    "build-storybook": "cross-env NODE_ENV=production build-storybook -c .storybook -o public/docs",
     "develop": "gatsby develop",
     "storybook": "cross-env NODE_ENV=production start-storybook -p 9000 -c .storybook",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
