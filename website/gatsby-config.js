@@ -44,6 +44,15 @@ module.exports = {
               maxWidth: 800,
             },
           },
+          // Valid remark-smartypants options may passed to the plugin.
+          // For more on valid options refer to the remark-smartypants API
+          // https://github.com/retextjs/retext-smartypants#api
+          {
+            resolve: 'gatsby-remark-smartypants',
+            options: {
+              // dashes: "oldschool",
+            },
+          },
         ],
       },
     },
