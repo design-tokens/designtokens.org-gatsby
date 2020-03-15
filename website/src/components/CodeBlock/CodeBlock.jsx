@@ -1,14 +1,15 @@
 /* eslint-disable react/no-array-index-key */
-/* eslint-disable react/jsx-props-no-spreading */
 // Code taken from:
 // https://github.com/mdx-js/mdx/tree/master/examples/syntax-highlighting
 
 import React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
+import PropTypes from 'prop-types';
+
 import { mdx } from '@mdx-js/react';
 
-export default ({ children, className, live, render }) => {
+const CodeBlock = ({ children, className, live, render }) => {
   const language = className.replace(/language-/, '');
 
   if (live) {
@@ -30,7 +31,7 @@ export default ({ children, className, live, render }) => {
   if (render) {
     return (
       <div style={{ marginTop: '40px' }}>
-        <LiveProvider code={children}>
+        <LiveProvider code={children.trim()}>
           <LivePreview />
         </LiveProvider>
       </div>
@@ -56,3 +57,18 @@ export default ({ children, className, live, render }) => {
     </Highlight>
   );
 };
+
+CodeBlock.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  live: PropTypes.bool,
+  render: PropTypes.bool,
+};
+
+CodeBlock.defaultProps = {
+  className: '',
+  live: false,
+  render: false,
+};
+
+export { CodeBlock };

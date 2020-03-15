@@ -10,6 +10,10 @@ To run the website locally:
 2. Run `yarn install`
 3. Run `yarn develop`
 
+## Storybook
+
+Run `yarn storybook` to preview stories in a browser.
+
 ## Building the tokens
 
 Design tokens are located in the `packages/design-tokens` directory.

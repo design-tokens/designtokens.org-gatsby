@@ -12,6 +12,7 @@
     "lint:js": "eslint website/ --ext .js,.jsx,.ts,.tsx --format codeframe",
     "lint:css": "stylelint **/*.scss",
     "develop": "yarn workspace website run develop",
+    "storybook": "yarn workspace website storybook",
     "start": "yarn workspace website run start",
     "build": "lerna run build",
     "test": "lerna run test"
