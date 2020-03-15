@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
@@ -26,10 +27,9 @@ const Image = (props) => {
     }
   `);
 
-  // eslint-disable-next-line react/jsx-props-no-spreading
   return <Img {...props} fluid={data.placeholderImage.childImageSharp.fluid} />;
 };
 
-Image.propTypes = { ...Img.propTypes };
+Image.propTypes = { ...Img.propTypes, alt: PropTypes.string.isRequired };
 
 export { Image };
