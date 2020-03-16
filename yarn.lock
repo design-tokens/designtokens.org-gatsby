@@ -9614,6 +9614,13 @@ gatsby-remark-smartypants@^2.1.22:
     retext-smartypants "^3.0.3"
     unist-util-visit "^1.4.1"
 
+gatsby-remark-widows@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-widows/-/gatsby-remark-widows-1.0.0.tgz#d80959914549979ad04a7950c47b9a58422967b8"
+  integrity sha512-F1GvxJayH4Nff4VWPzs5M3eK7b2Zb7I3zgSRS3GgA0nsqNxMssbq1dvt02JwlG9iPDvSTV3KrSgEL6OVSZWGcQ==
+  dependencies:
+    unist-util-visit "^1.1.1"
+
 gatsby-source-filesystem@^2.1.55:
   version "2.1.55"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.55.tgz#be30c28497bd92edc408bdba00288c13b8360cff"
@@ -20464,7 +20471,7 @@ unist-util-visit@2.0.2, unist-util-visit@^2.0.0:
     unist-util-is "^4.0.0"
     unist-util-visit-parents "^3.0.0"
 
-unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.4.0, unist-util-visit@^1.4.1:
+unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.1.1, unist-util-visit@^1.4.0, unist-util-visit@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.4.1.tgz#4724aaa8486e6ee6e26d7ff3c8685960d560b1e3"
   integrity sha512-AvGNk7Bb//EmJZyhtRUnNMEpId/AZ5Ph/KUpTI09WHQuDZHKovQ1oEv3mfmKpWKtoMzyMC4GLBm1Zy5k12fjIw==
