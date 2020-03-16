@@ -1,0 +1,15 @@
+module.exports = {
+  colorBlack: "#000000",
+  colorPrimary: "rebeccapurple",
+  spacingNone: 0,
+  spacingExtraTight: "4px",
+  spacingTight: "8px",
+  spacingBaseTight: "12px",
+  spacingBase: "16px",
+  spacingLoose: "20px",
+  spacingExtraLoose: "32px",
+  fontStackBase: "-apple-system, BlinkMacSystemFont, 'San Francisco', Roboto, 'Segoe UI', 'Helvetica Neue', sans-serif",
+  fontStackMonospace: "Monaco, Consolas, 'Lucida Console', monospace",
+  sizeSmall: "13px",
+  sizeDefault: "16px",
+};

@@ -8,6 +8,10 @@
     "@dtcg/design-tokens": "^1.0.0",
     "@mdx-js/mdx": "^1.5.7",
     "@mdx-js/react": "^1.5.7",
+    "@storybook/addon-a11y": "^5.3.17",
+    "@storybook/addon-essentials": "^5.3.17",
+    "@storybook/addon-storysource": "^5.3.17",
+    "babel-plugin-react-docgen": "^4.1.0",
     "gatsby": "^2.19.43",
     "gatsby-image": "^2.2.43",
     "gatsby-plugin-mdx": "^1.0.82",
@@ -26,7 +30,8 @@
     "react-dom": "^16.13.0",
     "react-helmet": "^5.2.1",
     "react-live": "^2.2.2",
-    "resolve-url-loader": "^3.1.1"
+    "resolve-url-loader": "^3.1.1",
+    "storybook-addon-deps": "^1.0.12"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.8.3",

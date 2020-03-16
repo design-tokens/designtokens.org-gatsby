@@ -10,7 +10,10 @@ props:
     category: font-family
 
   # Font sizes and line heights
-  # -
+  - name: size-small
+    value: 13px
+  - name: size-default
+    value: 16px
 global:
   type: number
   category: font-size
