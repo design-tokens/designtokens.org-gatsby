@@ -49,9 +49,15 @@ module.exports = {
           // https://github.com/retextjs/retext-smartypants#api
           {
             resolve: 'gatsby-remark-smartypants',
-            options: {
-              // dashes: "oldschool",
-            },
+          },
+          // Avoid widows in titles, paragraphs, etc.
+          {
+            resolve: 'gatsby-remark-widows',
+            // Default options:
+            // options: {
+            //   minLength: 4,
+            //   maxLength: null,
+            // },
           },
         ],
       },
