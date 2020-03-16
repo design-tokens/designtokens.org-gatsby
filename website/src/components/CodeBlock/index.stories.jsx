@@ -2,7 +2,7 @@ import React from 'react';
 import { CodeBlock } from '.';
 
 export default {
-  title: 'Components|CodeBlock',
+  title: 'Components/CodeBlock',
   component: CodeBlock,
 };
 

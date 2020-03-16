@@ -3,6 +3,9 @@ const path = require('path');
 const createCompiler = require('@storybook/addon-docs/mdx-compiler-plugin');
 
 module.exports = ({ config }) => {
+  // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
+  config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/];
+
   // Since we're using Yarn Workspaces and nesting the packages, we need to include the parent package
   config.module.rules[0].include = require('path').resolve('../..');
 
@@ -24,26 +27,16 @@ module.exports = ({ config }) => {
 
     // use babel-plugin-remove-graphql-queries to remove static queries from components when rendering in storybook
     require.resolve('babel-plugin-remove-graphql-queries'),
+
+    // Generate prop tables from prop types
+    require.resolve('babel-plugin-react-docgen'),
   ];
 
   // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
   config.resolve.mainFields = ['browser', 'module', 'main'];
 
-  config.module.rules.push({
-    test: /\.stories\.mdx$/,
-    use: [
-      {
-        loader: 'babel-loader',
-      },
-      {
-        loader: '@mdx-js/loader',
-        options: {
-          compilers: [createCompiler({})],
-        },
-      },
-    ],
-  });
-
+  // Run `source-loader` on story files to show their source code
+  // automatically in `DocsPage` or the `Source` doc block.
   config.module.rules.push({
     test: /\.stories\.jsx?$/,
     loader: require.resolve('@storybook/source-loader'),

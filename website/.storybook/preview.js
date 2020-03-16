@@ -1,15 +1,29 @@
-const { addParameters } = require('@storybook/react');
-const { DocsPage, DocsContainer } = require('@storybook/addon-docs/blocks');
-const { action } = require('@storybook/addon-actions');
+import { addDecorator, addParameters } from '@storybook/react';
+import { withA11y } from '@storybook/addon-a11y';
+import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 
-require('../src/global.scss');
+import '../src/global.scss';
 
 addParameters({
+  options: {
+    showRoots: true,
+  },
   docs: {
     container: DocsContainer,
     page: DocsPage,
   },
+  dependencies: {
+    //display only dependencies/dependents that have a story in storybook
+    //by default this is false
+    withStoriesOnly: true,
+
+    //completely hide a dependency/dependents block if it has no elements
+    //by default this is false
+    hideEmpty: true,
+  },
 });
+
+addDecorator(withA11y);
 
 // Gatsby's Link overrides:
 // Gatsby defines a global called ___loader to prevent its method calls from creating console errors you override it here
