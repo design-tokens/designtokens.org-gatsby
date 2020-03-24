@@ -43,7 +43,7 @@ const CodeBlock = ({ children, className, live, render }) => {
       {(highlight) => (
         <pre
           className={highlight.className}
-          style={{ ...highlight.style, padding: '20px' }}
+          style={{ ...highlight.style, padding: '5px' }}
         >
           {highlight.tokens.map((line, i) => (
             <div key={i} {...highlight.getLineProps({ line, key: i })}>
