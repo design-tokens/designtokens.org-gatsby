@@ -14,7 +14,7 @@ const CodeBlock = ({ children, className, live, render }) => {
 
   if (live) {
     return (
-      <div style={{ marginTop: '40px', backgroundColor: 'black' }}>
+      <div style={{ marginTop: '40px', backgroundColor: 'red' }}>
         <LiveProvider
           code={children.trim()}
           transformCode={(code) => `/** @jsx mdx */${code}`}
