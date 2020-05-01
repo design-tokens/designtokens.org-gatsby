@@ -43,7 +43,7 @@
     "babel-plugin-remove-graphql-queries": "^2.7.25",
     "cross-env": "^7.0.2",
     "react-is": "^16.13.0",
-    "storybook-chromatic": "^3.5.2"
+    "storybook-chromatic": "^4.0.2"
   },
   "keywords": [
     "gatsby"
