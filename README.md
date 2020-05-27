@@ -4,11 +4,18 @@ Work in progress - public contributions aren't accepted for the moment.
 
 ## Quick start
 
+1. Clone this repository
+1. In a terminal, `cd` into this directory
+1. [Install `nvm`](https://github.com/nvm-sh/nvm#install--update-script), and run this command to ensure your local environment is running the correct version of Node.js:
+
+   ```
+   nvm install
+   ```
+
 To run the website locally:
 
-1. Clone this repository
-2. Run `yarn install`
-3. Run `yarn develop`
+1. Run `yarn install` (if the install fails, run `rm -rf node_modules` and try again)
+1. Run `yarn develop`
 
 ## Storybook
 
