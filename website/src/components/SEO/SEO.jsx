@@ -68,7 +68,13 @@ const SEO = ({ title, description, lang, meta }) => {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link
+        rel='stylesheet'
+        type='text/css'
+        href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap'
+      />
+    </Helmet>
   );
 };
 SEO.propTypes = {

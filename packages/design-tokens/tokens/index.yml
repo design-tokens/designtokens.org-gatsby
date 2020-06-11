@@ -1,7 +1,7 @@
 imports:
-  - ./colors.yml
-  - ./spacing.yml
-  - ./typography.yml
+  - './global.yml'
+  - './components.yml'
+
 global:
   type: all
-  category: global
+  category: all

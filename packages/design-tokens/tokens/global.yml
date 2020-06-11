@@ -1,0 +1,12 @@
+imports:
+  - './global/spacing.yml'
+  - './global/font-size.yml'
+  - './global/font-family.yml'
+
+  - './global/accent-color.yml'
+  - './global/background-color.yml'
+  - './global/foreground-color.yml'
+
+global:
+  category: global
+  type: all

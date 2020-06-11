@@ -1,9 +1,0 @@
-# Material Design Colors from https://material.io/guidelines/style/color.html#color-color-palette
-props:
-  - name: color-black
-    value: '#000000'
-  - name: color-primary
-    value: 'rebeccapurple'
-global:
-  type: color
-  category: background-color

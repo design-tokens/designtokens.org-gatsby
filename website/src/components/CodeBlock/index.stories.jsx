@@ -16,8 +16,7 @@ export const render = () => (
 <div
 style={{
   backgroundColor: 'rebeccapurple',
-  padding: '20px',
-  marginTop: '20px',
+  padding: '.75rem 1rem',
   color: 'white',
 }}
 >
@@ -28,6 +27,6 @@ Some code that is being rendered (not sure why one would use that)
 );
 
 export const live = () => (
-  <CodeBlock render="true">{`<div style={{ backgroundColor: 'tomato', padding: '20px' }} />
+  <CodeBlock live="true">{`<div style={{ backgroundColor: 'gold', padding: '.75rem 1rem' }} />
 `}</CodeBlock>
 );

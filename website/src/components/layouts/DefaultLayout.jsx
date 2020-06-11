@@ -12,7 +12,6 @@ import PropTypes from 'prop-types';
 
 import { CodeBlock } from '../CodeBlock';
 import { Header } from '../Header';
-import * as styles from './DefaultLayout.module.scss';
 
 const components = {
   pre: ({ children }) => children,
@@ -33,15 +32,15 @@ const DefaultLayout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className={styles.container}>
-        <main>
-          <MDXProvider components={components}>{children}</MDXProvider>
-        </main>
-        <footer>
-          © {new Date().getFullYear()}, Built with{' '}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+
+      <main>
+        <MDXProvider components={components}>{children}</MDXProvider>
+      </main>
+
+      <footer>
+        © {new Date().getFullYear()}, Built with{' '}
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      </footer>
     </>
   );
 };

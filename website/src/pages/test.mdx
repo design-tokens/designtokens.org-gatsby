@@ -4,11 +4,11 @@ path: /test
 date: 2020-03-05
 ---
 
-import { TestCustomComponent } from '../components/TestCustomComponent';
+import { LinkButton } from '../components/LinkButton';
 import { Image } from '../components/Image';
 
 <h1>{props.pageContext.frontmatter.title}</h1>
-<TestCustomComponent>I'm testing an MDX page.</TestCustomComponent>
+<LinkButton to="/principles/">Principles</LinkButton>
 
 ```jsx
 <SomeJSXCodeInACodeBlock />

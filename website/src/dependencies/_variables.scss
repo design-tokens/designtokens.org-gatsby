@@ -1,0 +1,31 @@
+@import '~@dtcg/design-tokens/dist';
+
+$dark-mode: true !default;
+
+$rem-spacing-hairline: px-to-rem($spacing-hairline);
+$rem-spacing-thickline: px-to-rem($spacing-thickline);
+
+$rem-spacing-base: px-to-rem($spacing-base);
+
+$rem-spacing-vertical-small: px-to-rem($spacing-vertical-small);
+$rem-spacing-vertical-medium: px-to-rem($spacing-vertical-medium);
+$rem-spacing-vertical-large: px-to-rem($spacing-vertical-large);
+
+$rem-spacing-horizontal-small: px-to-rem($spacing-horizontal-small);
+$rem-spacing-horizontal-medium: px-to-rem($spacing-horizontal-medium);
+$rem-spacing-horizontal-large: px-to-rem($spacing-horizontal-large);
+
+$rem-font-size-x-small: px-to-rem($font-size-x-small);
+$rem-font-size-small: px-to-rem($font-size-small);
+$rem-font-size-medium: px-to-rem($font-size-medium);
+$rem-font-size-large: px-to-rem($font-size-large);
+$rem-font-size-x-large: px-to-rem($font-size-x-large);
+
+$unquote-font-family-body: unquote($font-family-body);
+$unquote-font-family-code: unquote($font-family-code);
+
+$breakpoint-x-small: px-to-em(480px);
+$breakpoint-small: px-to-em(640px);
+$breakpoint-medium: px-to-em(960px);
+$breakpoint-large: px-to-em(1280px);
+$breakpoint-x-large: px-to-em(1920px);

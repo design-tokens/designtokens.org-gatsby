@@ -1,0 +1,44 @@
+@mixin dark-mode {
+
+  @if $dark-mode==true {
+
+    @media (prefers-color-scheme: dark) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint($breakpoint, $max: false) {
+  $width-direction: if(($max !=true), 'min', 'max');
+
+  @media only screen and (#{$width-direction}-width: #{$breakpoint}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-small($max: false) {
+
+  @include breakpoint($breakpoint-small, $max) {
+    @content;
+  }
+}
+
+@mixin breakpoint-medium($max: false) {
+
+  @include breakpoint($breakpoint-medium, $max) {
+    @content;
+  }
+}
+
+@mixin breakpoint-large($max: false) {
+
+  @include breakpoint($breakpoint-large, $max) {
+    @content;
+  }
+}
+
+@mixin button {
+  display: inline-flex;
+  padding: $rem-spacing-vertical-small $rem-spacing-vertical-medium;
+  font-weight: bolder;
+}

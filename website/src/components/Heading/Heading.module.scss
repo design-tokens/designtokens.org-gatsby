@@ -1,0 +1,41 @@
+@import '../../dependencies';
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-top: $rem-spacing-vertical-medium;
+  margin-bottom: $rem-spacing-vertical-medium;
+}
+
+.h1,
+.h4,
+.h5 {
+  text-transform: uppercase;
+  letter-spacing: .0625em;
+}
+
+.h1 {
+  font-size: $rem-font-size-x-large;
+  line-height: 1;
+}
+
+.h2,
+.h4,
+.h6 {
+  font-weight: bolder;
+}
+
+.h2,
+.h3 {
+  font-size: $rem-font-size-large;
+  line-height: 1.125;
+}
+
+.h4,
+.h5,
+.h6 {
+  line-height: 1.25;
+}

@@ -1,0 +1,11 @@
+.sg-is {
+
+  // Interactive States
+  &-base,
+  &-hover,
+  &-focus,
+  &-active {
+    cursor: default;
+    pointer-events: none;
+  }
+}
