@@ -6,12 +6,18 @@
  */
 
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
 import PropTypes from 'prop-types';
 
 import { CodeBlock } from '../CodeBlock';
-import { Header } from '../Header';
+import { Heading } from '../Heading';
+import { Hero } from '../Hero';
+
+import { BreakoutContainer } from '../../layout/BreakoutContainer';
+import { Container } from '../../layout/Container';
+
+import * as styles from './DefaultLayout.module.scss';
 
 const components = {
   pre: ({ children }) => children,
@@ -30,8 +36,20 @@ const DefaultLayout = ({ children }) => {
   `);
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+    <Container>
+      <BreakoutContainer element="header" className={styles.header}>
+        <Container>
+          <Heading size={6} element="div" role="banner">
+            <Link to="/">{data.site.siteMetadata.title}</Link>
+          </Heading>
+        </Container>
+      </BreakoutContainer>
+
+      <Hero>
+        <Heading size={1}>Hero Heading</Heading>
+
+        <p>Hero Subtext</p>
+      </Hero>
 
       <main>
         <MDXProvider components={components}>{children}</MDXProvider>
@@ -41,7 +59,7 @@ const DefaultLayout = ({ children }) => {
         © {new Date().getFullYear()}, Built with{' '}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>
-    </>
+    </Container>
   );
 };
 

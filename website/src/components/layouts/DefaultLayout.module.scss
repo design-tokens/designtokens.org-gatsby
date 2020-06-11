@@ -1,0 +1,13 @@
+@import '../../dependencies';
+
+.header {
+  @include clearfix; // clear children’s margins
+
+  background: $color-background-strong;
+  color: $color-foreground-strong;
+
+  @include dark-mode {
+    background: $color-background-strong-inverse;
+    color: $color-foreground-strong-inverse;
+  }
+}
