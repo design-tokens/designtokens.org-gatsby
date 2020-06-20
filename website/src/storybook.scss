@@ -1,0 +1,18 @@
+.sbdocs.sbdocs-wrapper {
+  background: $color-background;
+
+  @include dark-mode {
+    background: $color-background-inverse;
+    color: $color-foreground-inverse;
+  }
+}
+
+.sbdocs.sbdocs-preview {
+  background: $color-background;
+  color: $color-foreground;
+
+  @include dark-mode {
+    background: $color-background-inverse;
+    color: $color-foreground-inverse;
+  }
+}

@@ -1,5 +1,3 @@
-@import '../../dependencies';
-
 .wrapper {
   @include button;
 
@@ -7,10 +5,10 @@
 
   &,
   &:global(.sg-is-base) {
-    background: rgba($color-background-strong, .25);
+    background: rgba($color-background-strong, 0.25);
 
     @include dark-mode {
-      background: rgba($color-background-strong-inverse, .25);
+      background: rgba($color-background-strong-inverse, 0.25);
     }
   }
 
@@ -18,10 +16,10 @@
   &:global(.sg-is-hover),
   &:focus,
   &:global(.sg-is-focus) {
-    background: rgba($color-background-strong, .5);
+    background: rgba($color-background-strong, 0.5);
 
     @include dark-mode {
-      background: rgba($color-background-strong-inverse, .5);
+      background: rgba($color-background-strong-inverse, 0.5);
     }
   }
 

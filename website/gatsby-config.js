@@ -16,6 +16,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-sass-resources-loader`,
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',

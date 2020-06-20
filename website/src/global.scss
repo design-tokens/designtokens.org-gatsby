@@ -1,5 +1,3 @@
-@import 'dependencies';
-
 *,
 *::before,
 *::after {
@@ -38,12 +36,20 @@ body {
 
 ::selection,
 .sg-is-selection {
-  background: rgba($color-background-strong-inverse, .99); // rgba hack avoids translucent selection bg
+  background: rgba(
+    $color-background-strong-inverse,
+    0.99
+  ); // rgba hack avoids translucent selection bg
+
   color: $color-foreground-strong-inverse;
   text-shadow: none;
 
   @include dark-mode {
-    background: rgba($color-background-strong, .99); // rgba hack avoids translucent selection bg
+    background: rgba(
+      $color-background-strong,
+      0.99
+    ); // rgba hack avoids translucent selection bg
+
     color: $color-foreground;
   }
 }
@@ -59,14 +65,14 @@ body {
   }
 }
 
-:focus:not(:focus-visible),
-.sg-is-focus:not(.sg-is-focus-visible) {
-  outline: 0;
-}
-
 :active,
 .sg-is-active {
   outline: 0 !important;
+}
+
+:focus:not(:focus-visible),
+.sg-is-focus:not(.sg-is-focus-visible) {
+  outline: 0;
 }
 
 a {
@@ -99,21 +105,21 @@ a {
   &.sg-is-hover {
     text-decoration: underline;
     text-decoration-thickness: $rem-spacing-hairline;
-    text-decoration-color: rgba($color-accent-primary, .5);
+    text-decoration-color: rgba($color-accent-primary, 0.5);
     text-decoration-skip-ink: auto;
 
     @include dark-mode {
-      text-decoration-color: rgba($color-accent-primary-inverse, .5);
+      text-decoration-color: rgba($color-accent-primary-inverse, 0.5);
     }
   }
 
   &:active,
   &.sg-is-active {
-    text-decoration-color: rgba($color-accent-primary-strong, .5);
+    text-decoration-color: rgba($color-accent-primary-strong, 0.5);
     color: $color-foreground-primary-strong;
 
     @include dark-mode {
-      text-decoration-color: rgba($color-accent-primary-strong-inverse, .5);
+      text-decoration-color: rgba($color-accent-primary-strong-inverse, 0.5);
       color: $color-foreground-primary-strong-inverse;
     }
   }
@@ -163,4 +169,4 @@ img {
   max-width: 100%;
 }
 
-@import 'styleguide';
+@import './styleguide';
