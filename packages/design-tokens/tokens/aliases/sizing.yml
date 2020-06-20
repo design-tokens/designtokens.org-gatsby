@@ -1,0 +1,21 @@
+aliases:
+  sizing_ui_icon:
+    value: 16px
+
+  sizing_container_xx_small:
+    value: 240px
+  sizing_container_x_small:
+    value: 320px
+  sizing_container_small:
+    value: 480px
+  sizing_container_medium:
+    value: 640px
+  sizing_container_large:
+    value: 960px
+  sizing_container_x_large:
+    value: 1280px
+  sizing_container_xx_large:
+    value: 1920px
+
+  sizing_none:
+    value: 0

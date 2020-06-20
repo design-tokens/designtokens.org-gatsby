@@ -6,8 +6,6 @@ global:
   type: size
 
 props:
-  font_size_x_small:
-    value: '{!font_size_x_small}'
   font_size_small:
     value: '{!font_size_small}'
   font_size_medium:
@@ -16,3 +14,9 @@ props:
     value: '{!font_size_large}'
   font_size_x_large:
     value: '{!font_size_x_large}'
+  font_size_xx_large:
+    value: '{!font_size_xx_large}'
+  font_size_xxx_large:
+    value: '{!font_size_xxx_large}'
+  font_size_xxxx_large:
+    value: '{!font_size_xxxx_large}'

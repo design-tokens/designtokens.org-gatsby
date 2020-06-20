@@ -1,5 +1,6 @@
 imports:
   - './global/spacing.yml'
+  - './global/sizing.yml'
   - './global/font-size.yml'
   - './global/font-family.yml'
 
