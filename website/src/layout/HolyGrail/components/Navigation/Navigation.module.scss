@@ -1,0 +1,7 @@
+.wrapper {
+  order: -1;
+
+  @include breakpoint-medium {
+    flex: 0 0 $sizing-container-xx-small;
+  }
+}

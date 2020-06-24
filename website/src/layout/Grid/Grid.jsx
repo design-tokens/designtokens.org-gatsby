@@ -9,6 +9,7 @@ const Grid = ({
   spacing,
   className,
   fit,
+  full,
   divideBy,
   children,
   ...rest
@@ -16,10 +17,11 @@ const Grid = ({
   const Element = element;
   const classes = classNames(
     styles.wrapper,
-    className,
     fit && styles.fit,
+    full && styles.full,
     divideBy && styles[`divide-by-${divideBy}`],
     spacing && styles[spacing],
+    className,
   );
 
   return (
@@ -33,7 +35,8 @@ Grid.propTypes = {
   element: PropTypes.string,
   className: PropTypes.string,
   fit: PropTypes.bool,
-  divideBy: PropTypes.oneOf([1, 2, 3, 4]),
+  full: PropTypes.bool,
+  divideBy: PropTypes.oneOf([2, 3, 4]),
   children: PropTypes.node.isRequired,
   spacing: PropTypes.oneOf(['base', 'small', 'medium', 'large']),
 };
@@ -42,6 +45,7 @@ Grid.defaultProps = {
   element: 'div',
   className: '',
   fit: false,
+  full: false,
   divideBy: '',
   spacing: '',
 };

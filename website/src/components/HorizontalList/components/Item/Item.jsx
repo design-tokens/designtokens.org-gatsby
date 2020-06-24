@@ -1,26 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-const HorizontalListItem = ({ element, className, children, ...rest }) => {
+const Item = ({ element, className, children, ...rest }) => {
   const Element = element !== '' ? element : 'li';
-  const ClassNames = className !== '' ? ` ${className}` : ``;
+  const classes = classNames(className);
 
   return (
-    <Element className={ClassNames} {...rest}>
+    <Element className={classes} {...rest}>
       {children}
     </Element>
   );
 };
 
-HorizontalListItem.propTypes = {
+Item.propTypes = {
   element: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
 
-HorizontalListItem.defaultProps = {
+Item.defaultProps = {
   element: 'li',
   className: '',
 };
 
-export { HorizontalListItem };
+export { Item };

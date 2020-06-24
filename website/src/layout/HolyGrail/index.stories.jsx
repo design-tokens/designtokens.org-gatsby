@@ -1,9 +1,5 @@
 import React from 'react';
 import { HolyGrail } from '.';
-import { HolyGrailBody } from './Body';
-import { HolyGrailContent } from './Content';
-import { HolyGrailNavigation } from './Navigation';
-import { HolyGrailAside } from './Aside';
 import { Example } from '../../example';
 
 export default {
@@ -13,98 +9,98 @@ export default {
 
 export const base = () => (
   <HolyGrail>
-    <header>
+    <HolyGrail.Header>
       <Example text="header" />
-    </header>
+    </HolyGrail.Header>
 
-    <HolyGrailBody>
-      <HolyGrailNavigation>
+    <HolyGrail.Body>
+      <HolyGrail.Navigation>
         <Example text="navigation" />
-      </HolyGrailNavigation>
+      </HolyGrail.Navigation>
 
-      <HolyGrailContent>
+      <HolyGrail.Content>
         <Example text="content" />
-      </HolyGrailContent>
+      </HolyGrail.Content>
 
-      <HolyGrailAside>
+      <HolyGrail.Aside>
         <Example text="aside" />
-      </HolyGrailAside>
-    </HolyGrailBody>
+      </HolyGrail.Aside>
+    </HolyGrail.Body>
 
-    <footer>
+    <HolyGrail.Footer>
       <Example text="footer" />
-    </footer>
+    </HolyGrail.Footer>
   </HolyGrail>
 );
 
 export const spacing = () => (
   <HolyGrail>
-    <header>
+    <HolyGrail.Header>
       <Example text="header" />
-    </header>
+    </HolyGrail.Header>
 
-    <HolyGrailBody spacing="large">
-      <HolyGrailNavigation>
+    <HolyGrail.Body spacing="large">
+      <HolyGrail.Navigation>
         <Example text="navigation" />
-      </HolyGrailNavigation>
+      </HolyGrail.Navigation>
 
-      <HolyGrailContent>
+      <HolyGrail.Content>
         <Example text="content" />
-      </HolyGrailContent>
+      </HolyGrail.Content>
 
-      <HolyGrailAside>
+      <HolyGrail.Aside>
         <Example text="aside" />
-      </HolyGrailAside>
-    </HolyGrailBody>
+      </HolyGrail.Aside>
+    </HolyGrail.Body>
 
-    <footer>
+    <HolyGrail.Footer>
       <Example text="footer" />
-    </footer>
+    </HolyGrail.Footer>
   </HolyGrail>
 );
 
 export const noHeaderOrFooter = () => (
   <HolyGrail>
-    <HolyGrailBody>
-      <HolyGrailNavigation>
+    <HolyGrail.Body>
+      <HolyGrail.Navigation>
         <Example text="navigation" />
-      </HolyGrailNavigation>
+      </HolyGrail.Navigation>
 
-      <HolyGrailContent>
+      <HolyGrail.Content>
         <Example text="content" />
-      </HolyGrailContent>
+      </HolyGrail.Content>
 
-      <HolyGrailAside>
+      <HolyGrail.Aside>
         <Example text="aside" />
-      </HolyGrailAside>
-    </HolyGrailBody>
+      </HolyGrail.Aside>
+    </HolyGrail.Body>
   </HolyGrail>
 );
 
 export const noNavigation = () => (
   <HolyGrail>
-    <HolyGrailBody>
-      <HolyGrailContent>
+    <HolyGrail.Body>
+      <HolyGrail.Content>
         <Example text="content" />
-      </HolyGrailContent>
+      </HolyGrail.Content>
 
-      <HolyGrailAside>
+      <HolyGrail.Aside>
         <Example text="aside" />
-      </HolyGrailAside>
-    </HolyGrailBody>
+      </HolyGrail.Aside>
+    </HolyGrail.Body>
   </HolyGrail>
 );
 
 export const noAside = () => (
   <HolyGrail>
-    <HolyGrailBody>
-      <HolyGrailNavigation>
+    <HolyGrail.Body>
+      <HolyGrail.Navigation>
         <Example text="navigation" />
-      </HolyGrailNavigation>
+      </HolyGrail.Navigation>
 
-      <HolyGrailContent>
+      <HolyGrail.Content>
         <Example text="content" />
-      </HolyGrailContent>
-    </HolyGrailBody>
+      </HolyGrail.Content>
+    </HolyGrail.Body>
   </HolyGrail>
 );

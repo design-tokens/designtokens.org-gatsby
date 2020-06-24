@@ -1,42 +1,9 @@
-html,
-body,
-.wrapper,
-:global(#root) {
-  height: 100%;
-}
-
-.wrapper,
-.body {
+.wrapper {
   display: flex;
   flex-direction: column;
-}
+  height: 100%;
 
-.wrapper>* {
-  flex: none;
-}
-
-.body {
-  flex: 1 0 auto;
-}
-
-.navigation {
-  order: -1;
-}
-
-@include breakpoint-medium {
-
-  .body {
-    flex-direction: row;
-
-    >* {
-      flex: 1;
-    }
+  >* {
+    flex: none;
   }
-
-  .navigation,
-  .aside {
-    flex: 0 0 $sizing-container-xx-small;
-  }
-
-  @include spacing;
 }

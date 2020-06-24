@@ -9,6 +9,11 @@
   vertical-align: inherit;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 html {
   font-size: 100%;
   line-height: 1.5;
@@ -28,7 +33,6 @@ html {
 }
 
 body {
-  min-height: 100vh;
   font-size: $font-size-medium;
   text-rendering: optimizeLegibility;
   background: transparent;

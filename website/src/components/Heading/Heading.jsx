@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import * as styles from './Heading.module.scss';
 
 const Heading = ({ level, element, className, children, ...rest }) => {
   const Element = element === '' ? `h${level}` : element;
+  const classes = classNames(styles[`h${level}`], className);
 
   return (
-    <Element className={`${styles[`h${level}`]} ${className}`} {...rest}>
+    <Element className={classes} {...rest}>
       {children}
     </Element>
   );

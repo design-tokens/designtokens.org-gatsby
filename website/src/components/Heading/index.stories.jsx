@@ -6,7 +6,7 @@ export default {
   component: Heading,
 };
 
-export const base = () => <Heading>Heading</Heading>;
+export const base = () => <Heading>Heading defaults to level 2</Heading>;
 
 export const heading1 = () => <Heading level={1}>Heading 1</Heading>;
 

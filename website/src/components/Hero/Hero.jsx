@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { Heading } from '../Heading';
 import * as styles from './Hero.module.scss';
 
 const Hero = ({ className, children, heading, description, ...rest }) => {
+  const classes = classNames(styles.wrapper, className);
+
   return (
-    <section className={`${styles.wrapper} ${className}`} {...rest}>
+    <section className={classes} {...rest}>
       {heading !== '' ? <Heading level={1}>{heading}</Heading> : ''}
 
       {description !== '' ? <Heading level={2}>{description}</Heading> : ''}

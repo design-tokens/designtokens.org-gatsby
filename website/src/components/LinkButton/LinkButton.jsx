@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { Link } from 'gatsby';
 import * as styles from './LinkButton.module.scss';
 
 const LinkButton = ({ element, className, children, href, to, ...rest }) => {
   const Element = element;
-  const ClassNames = `${styles.wrapper} ${className}`;
+  const classes = classNames(styles.wrapper, className);
 
   if (to !== '') {
     return (
-      <Link className={ClassNames} to={to} {...rest}>
+      <Link className={classes} to={to} {...rest}>
         {children}
       </Link>
     );
@@ -17,14 +18,14 @@ const LinkButton = ({ element, className, children, href, to, ...rest }) => {
 
   if (href !== '') {
     return (
-      <a className={ClassNames} href={href} {...rest}>
+      <a className={classes} href={href} {...rest}>
         {children}
       </a>
     );
   }
 
   return (
-    <Element className={ClassNames} {...rest}>
+    <Element className={classes} {...rest}>
       {children}
     </Element>
   );

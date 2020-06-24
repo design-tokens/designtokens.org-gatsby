@@ -3,14 +3,15 @@
 // https://github.com/mdx-js/mdx/tree/master/examples/syntax-highlighting
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-import PropTypes from 'prop-types';
 import { mdx } from '@mdx-js/react';
 import * as styles from './CodeBlock.module.scss';
 
 const CodeBlock = ({ children, className, live, render }) => {
-  const ClassNames = `${styles.wrapper} ${className}`;
+  const classes = classNames(styles.wrapper, className);
   const language = className.replace(/language-/, '');
 
   if (live) {
@@ -22,7 +23,7 @@ const CodeBlock = ({ children, className, live, render }) => {
       >
         <LivePreview />
 
-        <div className={ClassNames}>
+        <div className={classes}>
           <LiveEditor />
         </div>
 
@@ -40,7 +41,7 @@ const CodeBlock = ({ children, className, live, render }) => {
   }
 
   return (
-    <div className={ClassNames}>
+    <div className={classes}>
       <Highlight {...defaultProps} code={children.trim()} language={language}>
         {(highlight) => (
           <pre className={highlight.className} style={{ ...highlight.style }}>

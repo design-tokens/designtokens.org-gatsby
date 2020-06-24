@@ -1,33 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as styles from './HolyGrail.module.scss';
+import classNames from 'classnames';
+import * as styles from './Body.module.scss';
 
-const HolyGrailBody = ({ element, spacing, className, children, ...rest }) => {
+const Body = ({ element, spacing, className, children, ...rest }) => {
   const Element = element;
+  const classes = classNames(
+    styles.wrapper,
+    spacing && styles[spacing],
+    className,
+  );
 
   return (
-    <Element
-      className={`${styles.body} ${
-        spacing === '' ? '' : styles[spacing]
-      } ${className}`}
-      {...rest}
-    >
+    <Element className={classes} {...rest}>
       {children}
     </Element>
   );
 };
 
-HolyGrailBody.propTypes = {
+Body.propTypes = {
   element: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   spacing: PropTypes.oneOf(['base', 'small', 'medium', 'large']),
 };
 
-HolyGrailBody.defaultProps = {
+Body.defaultProps = {
   element: 'div',
   className: '',
   spacing: '',
 };
 
-export { HolyGrailBody };
+export { Body };

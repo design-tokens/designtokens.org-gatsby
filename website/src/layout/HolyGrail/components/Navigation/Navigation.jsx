@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import styles from './Column.module.scss';
+import * as styles from './Navigation.module.scss';
 
-const Column = ({ element, className, children, autoSize, ...rest }) => {
+const Navigation = ({ element, className, children, ...rest }) => {
   const Element = element;
-  const classes = classNames(autoSize && styles['auto-size'], className);
+  const classes = classNames(styles.wrapper, className);
 
   return (
     <Element className={classes} {...rest}>
@@ -14,17 +14,15 @@ const Column = ({ element, className, children, autoSize, ...rest }) => {
   );
 };
 
-Column.propTypes = {
+Navigation.propTypes = {
   element: PropTypes.string,
-  autoSize: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
 
-Column.defaultProps = {
+Navigation.defaultProps = {
   element: 'div',
-  autoSize: false,
   className: '',
 };
 
-export { Column };
+export { Navigation };

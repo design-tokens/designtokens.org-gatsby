@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import * as styles from './AssistiveText.module.scss';
 
 const AssistiveText = ({

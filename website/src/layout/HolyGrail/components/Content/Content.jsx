@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import styles from './Column.module.scss';
 
-const Column = ({ element, className, children, autoSize, ...rest }) => {
+const Content = ({ element, className, children, ...rest }) => {
   const Element = element;
-  const classes = classNames(autoSize && styles['auto-size'], className);
+  const classes = classNames(className);
 
   return (
     <Element className={classes} {...rest}>
@@ -14,17 +13,15 @@ const Column = ({ element, className, children, autoSize, ...rest }) => {
   );
 };
 
-Column.propTypes = {
+Content.propTypes = {
   element: PropTypes.string,
-  autoSize: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
 
-Column.defaultProps = {
-  element: 'div',
-  autoSize: false,
+Content.defaultProps = {
+  element: 'section',
   className: '',
 };
 
-export { Column };
+export { Content };

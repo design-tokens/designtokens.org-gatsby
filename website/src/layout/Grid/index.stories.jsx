@@ -19,8 +19,8 @@ export const fit = () => (
   </Grid>
 );
 
-export const divideBy1 = () => (
-  <Grid divideBy={1}>
+export const full = () => (
+  <Grid full>
     <GridExample />
   </Grid>
 );
