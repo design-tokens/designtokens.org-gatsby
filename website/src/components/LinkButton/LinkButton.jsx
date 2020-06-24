@@ -4,12 +4,12 @@ import { Link } from 'gatsby';
 import * as styles from './LinkButton.module.scss';
 
 const LinkButton = ({ element, className, children, href, to, ...rest }) => {
-  const Element = element !== '' ? element : 'section';
-  const ClassNames = className !== '' ? ` ${className}` : '';
+  const Element = element;
+  const ClassNames = `${styles.wrapper} ${className}`;
 
   if (to !== '') {
     return (
-      <Link className={`${styles.wrapper}${ClassNames}`} to={to} {...rest}>
+      <Link className={ClassNames} to={to} {...rest}>
         {children}
       </Link>
     );
@@ -17,14 +17,14 @@ const LinkButton = ({ element, className, children, href, to, ...rest }) => {
 
   if (href !== '') {
     return (
-      <a className={`${styles.wrapper}${ClassNames}`} href={href} {...rest}>
+      <a className={ClassNames} href={href} {...rest}>
         {children}
       </a>
     );
   }
 
   return (
-    <Element className={`${styles.wrapper}${ClassNames}`} {...rest}>
+    <Element className={ClassNames} {...rest}>
       {children}
     </Element>
   );

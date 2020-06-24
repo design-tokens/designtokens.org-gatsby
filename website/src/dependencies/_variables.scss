@@ -1,30 +1,201 @@
 @import '~@dtcg/design-tokens/dist';
 
-$dark-mode: true !default;
+// TODO: Refactor to use Design Tokens Sass Maps instead
 
-$rem-spacing-hairline: px-to-rem($spacing-hairline);
-$rem-spacing-thickline: px-to-rem($spacing-thickline);
+$flex-alignments: flex-start,
+center,
+flex-end,
+baseline,
+stretch;
 
-$rem-spacing-base: px-to-rem($spacing-base);
+$sides: top,
+right,
+bottom,
+left;
 
-$rem-spacing-vertical-small: px-to-rem($spacing-vertical-small);
-$rem-spacing-vertical-medium: px-to-rem($spacing-vertical-medium);
-$rem-spacing-vertical-large: px-to-rem($spacing-vertical-large);
+$vertical-sides: top,
+bottom;
 
-$rem-spacing-horizontal-small: px-to-rem($spacing-horizontal-small);
-$rem-spacing-horizontal-medium: px-to-rem($spacing-horizontal-medium);
-$rem-spacing-horizontal-large: px-to-rem($spacing-horizontal-large);
+$horizontal-sides: right,
+left;
 
-$rem-font-size-small: px-to-rem($font-size-small);
-$rem-font-size-medium: px-to-rem($font-size-medium);
-$rem-font-size-large: px-to-rem($font-size-large);
-$rem-font-size-x-large: px-to-rem($font-size-x-large);
+$spacings: ( // map
+  base: $spacing-base,
+  vertical-small: $spacing-vertical-small,
+  vertical-medium: $spacing-vertical-medium,
+  vertical-large: $spacing-vertical-large,
+  horizontal-small: $spacing-horizontal-small,
+  horizontal-medium: $spacing-horizontal-medium,
+  horizontal-large: $spacing-horizontal-large,
+);
+
+$spacing-horizontals: ( // map
+  base: $spacing-base,
+  small: $spacing-horizontal-small,
+  medium: $spacing-horizontal-medium,
+  large: $spacing-horizontal-large,
+);
+
+$spacing-verticals: ( // map
+  base: $spacing-base,
+  small: $spacing-vertical-small,
+  medium: $spacing-vertical-medium,
+  large: $spacing-vertical-large,
+);
+
+$border-widths: ( // map
+  hairline: $border-width-hairline,
+  thickline: $border-width-thickline,
+);
+
+$sizings-ui: ( // map
+  icon: $sizing-ui-icon,
+);
+
+$sizings-containers: ( // map
+  xx-small: $sizing-container-xx-small,
+  x-small: $sizing-container-x-small,
+  small: $sizing-container-small,
+  medium: $sizing-container-medium,
+  large: $sizing-container-large,
+  x-large: $sizing-container-x-large,
+  xx-large: $sizing-container-xx-large,
+);
+
+$breakpoint-small: px-to-em($sizing-container-small);
+$breakpoint-medium: px-to-em($sizing-container-medium);
+$breakpoint-large: px-to-em($sizing-container-large);
+$breakpoint-x-large: px-to-em($sizing-container-x-large);
+$breakpoint-xx-large: px-to-em($sizing-container-xx-large);
+
+$breakpoints: ( // map
+  small: $breakpoint-small,
+  medium: $breakpoint-medium,
+  large: $breakpoint-large,
+  x-large: $breakpoint-x-large,
+  xx-large: $breakpoint-xx-large,
+);
+
+$font-sizes: ( // map
+  small: $font-size-small,
+  medium: $font-size-medium,
+  large: $font-size-large,
+  x-large: $font-size-x-large,
+  xx-large: $font-size-xx-large,
+  xxx-large: $font-size-xxx-large,
+  xxxx-large: $font-size-xxxx-large,
+);
 
 $unquote-font-family-body: unquote($font-family-body);
 $unquote-font-family-code: unquote($font-family-code);
 
-$breakpoint-x-small: px-to-em(480px);
-$breakpoint-small: px-to-em(640px);
-$breakpoint-medium: px-to-em(960px);
-$breakpoint-large: px-to-em(1280px);
-$breakpoint-x-large: px-to-em(1920px);
+$font-families: ( // map
+  body: $unquote-font-family-body,
+  code: $unquote-font-family-code,
+);
+
+$colors: ( // map
+  accent-weak: $color-accent-weak,
+  accent: $color-accent,
+  accent-strong: $color-accent-strong,
+
+  accent-primary-weak: $color-accent-primary-weak,
+  accent-primary: $color-accent-primary,
+  accent-primary-strong: $color-accent-primary-strong,
+
+  accent-weak-inverse: $color-accent-weak-inverse,
+  accent-inverse: $color-accent-inverse,
+  accent-strong-inverse: $color-accent-strong-inverse,
+
+  accent-primary-weak-inverse: $color-accent-primary-weak-inverse,
+  accent-primary-inverse: $color-accent-primary-inverse,
+  accent-primary-strong-inverse: $color-accent-primary-strong-inverse,
+
+  background-weak: $color-background-weak,
+  background: $color-background,
+  background-strong: $color-background-strong,
+
+  background-primary-weak: $color-background-primary-weak,
+  background-primary: $color-background-primary,
+  background-primary-strong: $color-background-primary-strong,
+
+  background-weak-inverse: $color-background-weak-inverse,
+  background-inverse: $color-background-inverse,
+  background-strong-inverse: $color-background-strong-inverse,
+
+  background-primary-weak-inverse: $color-background-primary-weak-inverse,
+  background-primary-strong-inverse: $color-background-primary-strong-inverse,
+  background-primary-inverse: $color-background-primary-inverse,
+
+  foreground-weak: $color-foreground-weak,
+  foreground: $color-foreground,
+  foreground-strong: $color-foreground-strong,
+
+  foreground-primary-weak-inverse: $color-foreground-primary-weak-inverse,
+  foreground-primary: $color-foreground-primary,
+  foreground-primary-strong-inverse: $color-foreground-primary-strong-inverse,
+
+  foreground-weak-inverse: $color-foreground-weak-inverse,
+  foreground-inverse: $color-foreground-inverse,
+  foreground-strong-inverse: $color-foreground-strong-inverse,
+
+  foreground-primary-weak: $color-foreground-primary-weak,
+  foreground-primary-inverse: $color-foreground-primary-inverse,
+  foreground-primary-strong: $color-foreground-primary-strong,
+);
+
+$color-accents: ( // map
+  weak: $color-accent-weak,
+  base: $color-accent,
+  strong: $color-accent-strong,
+
+  primary-weak: $color-accent-primary-weak,
+  primary: $color-accent-primary,
+  primary-strong: $color-accent-primary-strong,
+
+  weak-inverse: $color-accent-weak-inverse,
+  inverse: $color-accent-inverse,
+  strong-inverse: $color-accent-strong-inverse,
+
+  primary-weak-inverse: $color-accent-primary-weak-inverse,
+  primary-inverse: $color-accent-primary-inverse,
+  primary-strong-inverse: $color-accent-primary-strong-inverse,
+);
+
+$color-backgrounds: ( // map
+  weak: $color-background-weak,
+  base: $color-background,
+  strong: $color-background-strong,
+
+  primary-weak: $color-background-primary-weak,
+  primary: $color-background-primary,
+  primary-strong: $color-background-primary-strong,
+
+  weak-inverse: $color-background-weak-inverse,
+  inverse: $color-background-inverse,
+  strong-inverse: $color-background-strong-inverse,
+
+  primary-weak-inverse: $color-background-primary-weak-inverse,
+  primary-strong-inverse: $color-background-primary-strong-inverse,
+  primary-inverse: $color-background-primary-inverse,
+);
+
+$color-foregrounds: ( // map
+  weak: $color-foreground-weak,
+  base: $color-foreground,
+  strong: $color-foreground-strong,
+
+  primary-weak-inverse: $color-foreground-primary-weak-inverse,
+  primary: $color-foreground-primary,
+  primary-strong-inverse: $color-foreground-primary-strong-inverse,
+
+  weak-inverse: $color-foreground-weak-inverse,
+  inverse: $color-foreground-inverse,
+  strong-inverse: $color-foreground-strong-inverse,
+
+  primary-weak: $color-foreground-primary-weak,
+  primary-inverse: $color-foreground-primary-inverse,
+  primary-strong: $color-foreground-primary-strong,
+);
+
+$dark-mode: true !default;

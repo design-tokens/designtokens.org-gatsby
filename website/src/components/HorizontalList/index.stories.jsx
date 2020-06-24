@@ -3,7 +3,7 @@ import { HorizontalList } from '.';
 import { HorizontalListItem } from './Item';
 
 export default {
-  title: 'Layout/HorizontalList',
+  title: 'Components/HorizontalList',
   component: HorizontalList,
 };
 
@@ -17,7 +17,17 @@ export const noSpacing = () => (
   </HorizontalList>
 );
 
-export const smallSpacing = () => (
+export const base = () => (
+  <HorizontalList spacing="base">
+    <HorizontalListItem>List Item</HorizontalListItem>
+
+    <HorizontalListItem>List Item</HorizontalListItem>
+
+    <HorizontalListItem>List Item</HorizontalListItem>
+  </HorizontalList>
+);
+
+export const small = () => (
   <HorizontalList spacing="small">
     <HorizontalListItem>List Item</HorizontalListItem>
 
@@ -27,7 +37,7 @@ export const smallSpacing = () => (
   </HorizontalList>
 );
 
-export const mediumSpacing = () => (
+export const medium = () => (
   <HorizontalList spacing="medium">
     <HorizontalListItem>List Item</HorizontalListItem>
 
@@ -37,7 +47,7 @@ export const mediumSpacing = () => (
   </HorizontalList>
 );
 
-export const largeSpacing = () => (
+export const large = () => (
   <HorizontalList spacing="large">
     <HorizontalListItem>List Item</HorizontalListItem>
 

@@ -6,4 +6,8 @@ export default {
   component: Hero,
 };
 
-export const simple = () => <Hero>Hero</Hero>;
+export const base = () => (
+  <Hero heading="Heading" description="Description">
+    <p>Children content</p>
+  </Hero>
+);

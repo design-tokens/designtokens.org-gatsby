@@ -6,6 +6,17 @@ export default {
   component: AssistiveText,
 };
 
-export const assistiveText = () => (
-  <AssistiveText>Assistive Text</AssistiveText>
+export const base = () => (
+  <>
+    Assistive text: <AssistiveText>Assistive Text</AssistiveText>
+  </>
+);
+
+export const focusable = () => (
+  <>
+    Focusable assistive text:{' '}
+    <AssistiveText element="a" href="#" focusable>
+      Focusable Assistive Text
+    </AssistiveText>
+  </>
 );

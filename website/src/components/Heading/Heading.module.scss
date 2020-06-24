@@ -1,39 +1,86 @@
+h1,
 .h1,
+h2,
 .h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  margin-top: $rem-spacing-vertical-medium;
-  margin-bottom: $rem-spacing-vertical-medium;
+h3,
+.h3 {
+  margin-top: $spacing-vertical-large;
 }
 
-.h1,
-.h4,
-.h5 {
-  text-transform: uppercase;
-  letter-spacing: 0.0625em;
-}
-
+h1,
 .h1 {
-  font-size: $rem-font-size-x-large;
+  margin-bottom: $spacing-vertical-large;
+  font-weight: normal;
+  font-size: $font-size-x-large;
   line-height: 1;
+
+  @include breakpoint-large {
+    font-size: $font-size-xx-large;
+  }
+
+  @include breakpoint-x-large {
+    font-size: $font-size-xxx-large;
+  }
+
+  @include breakpoint-xx-large {
+    font-size: $font-size-xxxx-large;
+  }
 }
 
+h2,
 .h2,
+h3,
+.h3,
+h4,
 .h4,
+h5,
+.h5,
+h6,
 .h6 {
+  margin-bottom: $spacing-vertical-medium;
   font-weight: bolder;
 }
 
+h2,
 .h2,
+h4,
+.h4,
+h6,
+.h6 {
+  text-transform: uppercase;
+  letter-spacing: .0625em;
+}
+
+h1,
+.h1,
+h3,
+.h3,
+h5,
+.h5 {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+h2,
+.h2,
+h3,
 .h3 {
-  font-size: $rem-font-size-large;
+  font-size: $font-size-large;
   line-height: 1.125;
 }
 
+h4,
 .h4,
+h5,
 .h5,
+h6,
 .h6 {
+  font-size: $font-size-medium;
+  margin-top: $spacing-vertical-medium;
   line-height: 1.25;
+}
+
+.h6,
+h6 {
+  font-size: $font-size-small;
 }

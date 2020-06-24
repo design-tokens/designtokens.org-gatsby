@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import * as styles from './Container.module.scss';
 
 const Container = ({ element, className, children, ...rest }) => {
-  const Element = element !== '' ? element : 'section';
+  const Element = element;
   const ClassNames = className !== '' ? ` ${className}` : '';
 
   return (

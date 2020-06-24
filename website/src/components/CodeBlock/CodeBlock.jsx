@@ -10,6 +10,7 @@ import { mdx } from '@mdx-js/react';
 import * as styles from './CodeBlock.module.scss';
 
 const CodeBlock = ({ children, className, live, render }) => {
+  const ClassNames = `${styles.wrapper} ${className}`;
   const language = className.replace(/language-/, '');
 
   if (live) {
@@ -21,7 +22,7 @@ const CodeBlock = ({ children, className, live, render }) => {
       >
         <LivePreview />
 
-        <div className={styles.code}>
+        <div className={ClassNames}>
           <LiveEditor />
         </div>
 
@@ -39,13 +40,10 @@ const CodeBlock = ({ children, className, live, render }) => {
   }
 
   return (
-    <div className={styles.code}>
+    <div className={ClassNames}>
       <Highlight {...defaultProps} code={children.trim()} language={language}>
         {(highlight) => (
-          <pre
-            className={highlight.className}
-            style={{ ...highlight.style }}
-          >
+          <pre className={highlight.className} style={{ ...highlight.style }}>
             {highlight.tokens.map((line, i) => (
               <div key={i} {...highlight.getLineProps({ line, key: i })}>
                 {line.map((token, key) => (

@@ -2,14 +2,6 @@
   @return ($pixels / 16px * 1em);
 }
 
-@function px-to-rem($pixels) {
-  @return ($pixels / 16px * 1rem);
-}
-
-@function px-to-unitlesss($pixels) {
-  @return ($pixels / 16px);
-}
-
 // https://gist.github.com/certainlyakey/e9c0d8f5c87ff47e3d5b
 //does not work with colors containing alpha
 @function encodecolor($string) {

@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 import * as styles from './Button.module.scss';
 
 const Button = ({ className, children, type, ...rest }) => {
-  const ClassNames = className !== '' ? ` ${className}` : '';
-
   return (
-    <button type={type} className={`${styles.wrapper}${ClassNames}`} {...rest}>
+    <button type={type} className={`${styles.wrapper} ${className}`} {...rest}>
       {children}
     </button>
   );

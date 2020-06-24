@@ -9,12 +9,15 @@ const AssistiveText = ({
   focusable,
   ...rest
 }) => {
-  const Element = element !== '' ? element : 'span';
-  const ClassNames = className !== '' ? ` ${className}` : '';
-  const Focusable = focusable === true ? ` ${styles.focusable}` : '';
+  const Element = element;
 
   return (
-    <Element className={`${styles.wrapper}${Focusable}${ClassNames}`} {...rest}>
+    <Element
+      className={`${styles.wrapper} ${
+        focusable === true ? styles.focusable : ''
+      } ${className}`}
+      {...rest}
+    >
       {children}
     </Element>
   );

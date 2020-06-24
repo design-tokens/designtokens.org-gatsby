@@ -8,6 +8,8 @@ imports:
   - './global/background-color.yml'
   - './global/foreground-color.yml'
 
+  - './global/borders.yml'
+
 global:
   category: global
   type: all

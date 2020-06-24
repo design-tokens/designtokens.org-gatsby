@@ -1,0 +1,192 @@
+$index-map: (
+  'spacing-base': (
+    4px,
+  ),
+  'spacing-vertical-small': (
+    12px,
+  ),
+  'spacing-vertical-medium': (
+    24px,
+  ),
+  'spacing-vertical-large': (
+    48px,
+  ),
+  'spacing-horizontal-small': (
+    8px,
+  ),
+  'spacing-horizontal-medium': (
+    16px,
+  ),
+  'spacing-horizontal-large': (
+    32px,
+  ),
+  'sizing-ui-icon': (
+    16px,
+  ),
+  'sizing-container-xx-small': (
+    240px,
+  ),
+  'sizing-container-x-small': (
+    320px,
+  ),
+  'sizing-container-small': (
+    480px,
+  ),
+  'sizing-container-medium': (
+    640px,
+  ),
+  'sizing-container-large': (
+    960px,
+  ),
+  'sizing-container-x-large': (
+    1280px,
+  ),
+  'sizing-container-xx-large': (
+    1920px,
+  ),
+  'font-size-small': (
+    12px,
+  ),
+  'font-size-medium': (
+    16px,
+  ),
+  'font-size-large': (
+    24px,
+  ),
+  'font-size-x-large': (
+    32px,
+  ),
+  'font-size-xx-large': (
+    48px,
+  ),
+  'font-size-xxx-large': (
+    64px,
+  ),
+  'font-size-xxxx-large': (
+    96px,
+  ),
+  'font-family-body': (
+    "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'San Francisco', 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+  ),
+  'font-family-code': (
+    "Menlo, Monaco, Consolas, 'Roboto Mono', 'Ubuntu Monospace', 'Noto Mono', 'Oxygen Mono', 'Liberation Mono', 'Lucida Console', 'Courier New', Courier, monospace, monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+  ),
+  'color-accent-strong-inverse': (
+    #adb5bd,
+  ),
+  'color-accent-weak-inverse': (
+    #495057,
+  ),
+  'color-accent': (
+    #adb5bd,
+  ),
+  'color-accent-primary': (
+    #6f4800,
+  ),
+  'color-accent-primary-strong': (
+    #593a00,
+  ),
+  'color-accent-primary-weak': (
+    #865700,
+  ),
+  'color-accent-strong': (
+    #596067,
+  ),
+  'color-accent-weak': (
+    #ced4da,
+  ),
+  'color-accent-inverse': (
+    #596067,
+  ),
+  'color-accent-primary-inverse': (
+    #fcc419,
+  ),
+  'color-accent-primary-strong-inverse': (
+    #ffd43b,
+  ),
+  'color-accent-primary-weak-inverse': (
+    #fab005,
+  ),
+  'color-background-primary-strong': (
+    #593a00,
+  ),
+  'color-background-primary-weak': (
+    #865700,
+  ),
+  'color-background': (
+    #e9ecef,
+  ),
+  'color-background-strong': (
+    #fff,
+  ),
+  'color-background-primary': (
+    #6f4800,
+  ),
+  'color-background-weak': (
+    #dee2e6,
+  ),
+  'color-background-primary-strong-inverse': (
+    #ffd43b,
+  ),
+  'color-background-primary-weak-inverse': (
+    #fab005,
+  ),
+  'color-background-inverse': (
+    #212529,
+  ),
+  'color-background-strong-inverse': (
+    #000,
+  ),
+  'color-background-primary-inverse': (
+    #fcc419,
+  ),
+  'color-background-weak-inverse': (
+    #343a40,
+  ),
+  'color-foreground-primary': (
+    #6f4800,
+  ),
+  'color-foreground-primary-strong-inverse': (
+    #ffd43b,
+  ),
+  'color-foreground-primary-weak-inverse': (
+    #fab005,
+  ),
+  'color-foreground-strong-inverse': (
+    #e9ecef,
+  ),
+  'color-foreground-weak-inverse': (
+    #ced4da,
+  ),
+  'color-foreground-inverse': (
+    #dee2e6,
+  ),
+  'color-foreground-primary-inverse': (
+    #fcc419,
+  ),
+  'color-foreground-primary-strong': (
+    #593a00,
+  ),
+  'color-foreground-primary-weak': (
+    #865700,
+  ),
+  'color-foreground-strong': (
+    #212529,
+  ),
+  'color-foreground-weak': (
+    #495057,
+  ),
+  'color-foreground': (
+    #343a40,
+  ),
+  'border-width-hairline': (
+    1px,
+  ),
+  'border-width-thickline': (
+    2px,
+  ),
+  /* Example — not actually using */ 'button-color-background':
+    (
+      #6f4800,
+    ),
+);

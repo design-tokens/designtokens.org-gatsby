@@ -2,22 +2,16 @@
   @include button;
 
   cursor: pointer;
+  background: $color-background-primary-weak;
+  color: $color-foreground-strong-inverse;
 
-  &,
-  &:global(.sg-is-base) {
-    background: $color-background-primary-weak;
-    color: $color-foreground-strong-inverse;
-
-    @include dark-mode {
-      background: $color-background-primary-weak-inverse;
-      color: $color-foreground-strong;
-    }
+  @include dark-mode {
+    background: $color-background-primary-weak-inverse;
+    color: $color-foreground-strong;
   }
 
   &:hover,
-  &:global(.sg-is-hover),
-  &:focus,
-  &:global(.sg-is-focus) {
+  &:focus {
     background: $color-background-primary;
 
     @include dark-mode {
@@ -25,8 +19,7 @@
     }
   }
 
-  &:active,
-  &:global(.sg-is-active) {
+  &:active {
     background: $color-background-primary-strong;
 
     @include dark-mode {

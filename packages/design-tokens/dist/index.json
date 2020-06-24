@@ -1,12 +1,10 @@
 {
-  "spacing_vertical_medium": "24px",
-  "spacing_horizontal_small": "8px",
   "spacing_base": "4px",
-  "spacing_vertical_large": "48px",
-  "spacing_hairline": "1px",
-  "spacing_horizontal_medium": "16px",
-  "spacing_thickline": "2px",
   "spacing_vertical_small": "12px",
+  "spacing_vertical_medium": "24px",
+  "spacing_vertical_large": "48px",
+  "spacing_horizontal_small": "8px",
+  "spacing_horizontal_medium": "16px",
   "spacing_horizontal_large": "32px",
   "sizing_ui_icon": "16px",
   "sizing_container_xx_small": "240px",
@@ -61,5 +59,7 @@
   "color_foreground_strong": "#212529",
   "color_foreground_weak": "#495057",
   "color_foreground": "#343a40",
+  "border_width_hairline": "1px",
+  "border_width_thickline": "2px",
   "button_color_background": "#6F4800"
 }

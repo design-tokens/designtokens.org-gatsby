@@ -29,35 +29,29 @@ html {
 
 body {
   min-height: 100vh;
-  font-size: $rem-font-size-medium;
+  font-size: $font-size-medium;
   text-rendering: optimizeLegibility;
   background: transparent;
 }
 
-::selection,
-.sg-is-selection {
-  background: rgba(
-    $color-background-strong-inverse,
-    0.99
-  ); // rgba hack avoids translucent selection bg
+::selection {
+  background: rgba($color-background-strong-inverse,
+      0.99); // rgba hack avoids translucent selection bg
 
   color: $color-foreground-strong-inverse;
   text-shadow: none;
 
   @include dark-mode {
-    background: rgba(
-      $color-background-strong,
-      0.99
-    ); // rgba hack avoids translucent selection bg
+    background: rgba($color-background-strong,
+        0.99); // rgba hack avoids translucent selection bg
 
     color: $color-foreground;
   }
 }
 
-:focus,
-.sg-is-focus {
+:focus {
   position: relative; // pop focused elements forward in z-index stacking
-  outline: $rem-spacing-base solid $color-background-strong-inverse;
+  outline: $spacing-base solid $color-background-strong-inverse;
   z-index: 9999;
 
   @include dark-mode {
@@ -65,14 +59,17 @@ body {
   }
 }
 
-:active,
-.sg-is-active {
+:active {
   outline: 0 !important;
 }
 
-:focus:not(:focus-visible),
-.sg-is-focus:not(.sg-is-focus-visible) {
+:focus:not(:focus-visible) {
   outline: 0;
+}
+
+a,
+button {
+  transition: all 0.25s;
 }
 
 a {
@@ -80,20 +77,14 @@ a {
   text-decoration: none;
   background: transparent;
   cursor: pointer;
+  color: $color-foreground-primary-weak;
 
-  &,
-  &.sg-is-base {
-    color: $color-foreground-primary-weak;
-
-    @include dark-mode {
-      color: $color-foreground-primary-weak-inverse;
-    }
+  @include dark-mode {
+    color: $color-foreground-primary-weak-inverse;
   }
 
   &:hover,
-  &.sg-is-hover,
-  &:focus,
-  &.sg-is-focus {
+  &:focus {
     color: $color-foreground-primary;
 
     @include dark-mode {
@@ -101,10 +92,9 @@ a {
     }
   }
 
-  &:hover,
-  &.sg-is-hover {
+  &:hover {
     text-decoration: underline;
-    text-decoration-thickness: $rem-spacing-hairline;
+    text-decoration-thickness: $border-width-hairline;
     text-decoration-color: rgba($color-accent-primary, 0.5);
     text-decoration-skip-ink: auto;
 
@@ -113,9 +103,8 @@ a {
     }
   }
 
-  &:active,
-  &.sg-is-active {
-    text-decoration-color: rgba($color-accent-primary-strong, 0.5);
+  &:active {
+    text-decoration-color: rgba($color-accent-primary-strong, .5);
     color: $color-foreground-primary-strong;
 
     @include dark-mode {
@@ -137,13 +126,13 @@ dl,
 blockquote,
 figure,
 hr {
-  margin-top: $rem-spacing-vertical-medium;
-  margin-bottom: $rem-spacing-vertical-medium;
+  margin-top: $spacing-vertical-medium;
+  margin-bottom: $spacing-vertical-medium;
 }
 
 ul,
 ol {
-  padding-left: $rem-spacing-horizontal-large;
+  padding-left: $spacing-horizontal-large;
 }
 
 nav ul,
@@ -155,7 +144,7 @@ form ol {
 }
 
 dd {
-  margin-left: $rem-spacing-horizontal-large;
+  margin-left: $spacing-horizontal-large;
 }
 
 p,
@@ -168,5 +157,3 @@ img {
   display: block;
   max-width: 100%;
 }
-
-@import './styleguide';

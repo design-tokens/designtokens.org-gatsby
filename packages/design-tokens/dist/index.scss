@@ -1,11 +1,9 @@
-$spacing-vertical-medium: 24px;
-$spacing-horizontal-small: 8px;
 $spacing-base: 4px;
-$spacing-vertical-large: 48px;
-$spacing-hairline: 1px;
-$spacing-horizontal-medium: 16px;
-$spacing-thickline: 2px;
 $spacing-vertical-small: 12px;
+$spacing-vertical-medium: 24px;
+$spacing-vertical-large: 48px;
+$spacing-horizontal-small: 8px;
+$spacing-horizontal-medium: 16px;
 $spacing-horizontal-large: 32px;
 $sizing-ui-icon: 16px;
 $sizing-container-xx-small: 240px;
@@ -60,6 +58,8 @@ $color-foreground-primary-weak: #865700;
 $color-foreground-strong: #212529;
 $color-foreground-weak: #495057;
 $color-foreground: #343a40;
+$border-width-hairline: 1px;
+$border-width-thickline: 2px;
 
 /* Example — not actually using */
 $button-color-background: #6f4800;

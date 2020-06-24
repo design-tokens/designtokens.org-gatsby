@@ -6,7 +6,7 @@ export default {
   component: CodeBlock,
 };
 
-export const simple = () => (
+export const base = () => (
   <CodeBlock className="scss">{'.Test { color: blue; }'}</CodeBlock>
 );
 
@@ -20,7 +20,7 @@ style={{
   color: 'white',
 }}
 >
-Some code that is being rendered (not sure why one would use that)
+Some code that is being rendered.
 </div>
 `}
   </CodeBlock>

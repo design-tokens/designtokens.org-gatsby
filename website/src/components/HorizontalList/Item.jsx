@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const HorizontalListItem = ({ element, className, children, ...rest }) => {
   const Element = element !== '' ? element : 'li';
-  const ClassNames = className !== '' ? ` ${className}` : '';
+  const ClassNames = className !== '' ? ` ${className}` : ``;
 
   return (
     <Element className={ClassNames} {...rest}>

@@ -1,9 +1,4 @@
 aliases:
-  spacing_hairline:
-    value: 1px
-  spacing_thickline:
-    value: 2px
-
   spacing_base:
     value: 4px
 

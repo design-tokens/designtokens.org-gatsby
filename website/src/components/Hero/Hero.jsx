@@ -1,32 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BreakoutContainer } from '../../layout/BreakoutContainer';
-import { Container } from '../../layout/Container';
+import { Heading } from '../Heading';
 import * as styles from './Hero.module.scss';
 
-const Hero = ({ element, className, children, ...rest }) => {
-  const ClassNames = className !== '' ? ` ${className}` : '';
-
+const Hero = ({ className, children, heading, description, ...rest }) => {
   return (
-    <BreakoutContainer
-      element={element}
-      className={`${styles.wrapper}${ClassNames}`}
-      {...rest}
-    >
-      <Container>{children}</Container>
-    </BreakoutContainer>
+    <section className={`${styles.wrapper} ${className}`} {...rest}>
+      {heading !== '' ? <Heading level={1}>{heading}</Heading> : ''}
+
+      {description !== '' ? <Heading level={2}>{description}</Heading> : ''}
+
+      {children}
+    </section>
   );
 };
 
 Hero.propTypes = {
-  element: PropTypes.string,
   className: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
+  heading: PropTypes.string,
+  description: PropTypes.string,
 };
 
 Hero.defaultProps = {
-  element: 'section',
   className: '',
+  heading: '',
+  description: '',
 };
 
 export { Hero };

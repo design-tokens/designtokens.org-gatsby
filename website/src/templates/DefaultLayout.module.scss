@@ -1,0 +1,64 @@
+:global(#___gatsby),
+:global(#gatsby-focus-wrapper) {
+  height: 100%;
+}
+
+.Header,
+.Footer,
+.Footer p {
+  padding-right: $spacing-horizontal-medium;
+  padding-left: $spacing-horizontal-medium;
+}
+
+.Aside,
+.Navigation {
+  padding-right: $spacing-horizontal-large;
+  padding-left: $spacing-horizontal-large;
+}
+
+.Header,
+.Footer {
+  background: $color-background-strong;
+  color: $color-foreground-strong;
+
+  @include breakpoint-large($max: true) {
+    padding-top: $spacing-vertical-small;
+    padding-bottom: $spacing-vertical-small;
+
+    * {
+      display: block !important;
+    }
+  }
+
+  @include dark-mode {
+    background: $color-background-strong-inverse;
+    color: $color-foreground-strong-inverse;
+  }
+
+  p,
+  ul {
+    margin: 0;
+  }
+
+  ul {
+    justify-content: flex-end;
+  }
+
+  p {
+    padding-top: $spacing-vertical-small;
+    padding-bottom: $spacing-vertical-small;
+  }
+}
+
+.Body {
+  padding-top: $spacing-vertical-large;
+  padding-bottom: $spacing-vertical-large;
+}
+
+.Aside {
+  background: $color-background-weak;
+
+  @include dark-mode {
+    background: $color-background-weak-inverse;
+  }
+}

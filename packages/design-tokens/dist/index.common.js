@@ -1,12 +1,10 @@
 module.exports = {
-  spacingVerticalMedium: "24px",
-  spacingHorizontalSmall: "8px",
   spacingBase: "4px",
-  spacingVerticalLarge: "48px",
-  spacingHairline: "1px",
-  spacingHorizontalMedium: "16px",
-  spacingThickline: "2px",
   spacingVerticalSmall: "12px",
+  spacingVerticalMedium: "24px",
+  spacingVerticalLarge: "48px",
+  spacingHorizontalSmall: "8px",
+  spacingHorizontalMedium: "16px",
   spacingHorizontalLarge: "32px",
   sizingUiIcon: "16px",
   sizingContainerXxSmall: "240px",
@@ -61,6 +59,8 @@ module.exports = {
   colorForegroundStrong: "#212529",
   colorForegroundWeak: "#495057",
   colorForeground: "#343a40",
+  borderWidthHairline: "1px",
+  borderWidthThickline: "2px",
   /* Example — not actually using */
   buttonColorBackground: "#6F4800",
 };

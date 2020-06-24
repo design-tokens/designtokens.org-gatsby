@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "theo": "theo ./tokens/index.yml --format json,scss,common.js --dest ./dist",
+    "theo": "theo ./tokens/index.yml --format json,scss,map.scss,common.js,html --dest ./dist",
     "lint:prettier": "prettier --config ../../.prettierrc --write ./dist/*.{json,scss}",
     "lint:stylelint": "stylelint dist/*.scss --fix",
     "build": "npm-run-all theo lint:*"

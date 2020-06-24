@@ -1,0 +1,29 @@
+// Grid
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  >* {
+    flex: 1;
+  }
+}
+
+@include breakpoints('fit', '>*') {
+  flex: 1;
+}
+
+@for $i from 1 through 4 {
+
+  @include breakpoints('divide-by-#{$i}', '>*') {
+    flex: 0 0 100% / $i;
+  }
+}
+
+.auto-size {
+  flex: none;
+}
+
+@include spacing;

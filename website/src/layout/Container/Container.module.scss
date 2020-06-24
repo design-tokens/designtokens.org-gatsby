@@ -1,10 +1,10 @@
 .wrapper {
   margin: 0 auto;
-  padding: 0 $rem-spacing-horizontal-medium;
-  max-width: 80rem;
+  padding: 0 $spacing-horizontal-medium;
+  max-width: $sizing-container-xx-large;
 
   @include breakpoint-large {
-    padding-right: $rem-spacing-horizontal-large;
-    padding-left: $rem-spacing-horizontal-large;
+    padding-right: $spacing-horizontal-large;
+    padding-left: $spacing-horizontal-large;
   }
 }

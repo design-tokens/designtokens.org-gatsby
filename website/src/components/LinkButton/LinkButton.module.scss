@@ -1,30 +1,27 @@
 .wrapper {
   @include button;
+}
 
+a.wrapper {
+  // ignore span for active placement
   cursor: pointer;
 
-  &,
-  &:global(.sg-is-base) {
-    background: rgba($color-background-strong, 0.25);
+  background: rgba($color-background-strong, 0.25);
 
-    @include dark-mode {
-      background: rgba($color-background-strong-inverse, 0.25);
-    }
+  @include dark-mode {
+    background: rgba($color-background-strong-inverse, 0.25);
   }
 
   &:hover,
-  &:global(.sg-is-hover),
-  &:focus,
-  &:global(.sg-is-focus) {
+  &:focus {
     background: rgba($color-background-strong, 0.5);
 
     @include dark-mode {
-      background: rgba($color-background-strong-inverse, 0.5);
+      background: rgba($color-background-strong-inverse, .25);
     }
   }
 
-  &:active,
-  &:global(.sg-is-active) {
+  &:active {
     background: $color-background-strong;
 
     @include dark-mode {

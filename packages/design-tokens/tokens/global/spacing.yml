@@ -6,11 +6,6 @@ global:
   type: size
 
 props:
-  spacing_hairline:
-    value: '{!spacing_hairline}'
-  spacing_thickline:
-    value: '{!spacing_thickline}'
-
   spacing_base:
     value: '{!spacing_base}'
 
