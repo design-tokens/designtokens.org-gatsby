@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import styles from './Column.module.scss';
+import styles from '../../Grid.module.scss';
 
 const Column = ({ element, className, children, autoSize, ...rest }) => {
   const Element = element;
-  const classes = classNames(autoSize && styles['auto-size'], className);
+  const classes = classNames(
+    styles.column,
+    autoSize && styles['auto-size'],
+    className,
+  );
 
   return (
     <Element className={classes} {...rest}>

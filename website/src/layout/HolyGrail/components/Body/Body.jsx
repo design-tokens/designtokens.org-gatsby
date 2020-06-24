@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import * as styles from './Body.module.scss';
+import * as styles from '../../HolyGrail.module.scss';
 
 const Body = ({ element, spacing, className, children, ...rest }) => {
   const Element = element;
   const classes = classNames(
-    styles.wrapper,
+    styles.body,
     spacing && styles[spacing],
     className,
   );

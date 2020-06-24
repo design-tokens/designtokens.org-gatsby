@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import * as styles from './Navigation.module.scss';
+import * as styles from '../../HolyGrail.module.scss';
 
 const Navigation = ({ element, className, children, ...rest }) => {
   const Element = element;
-  const classes = classNames(styles.wrapper, className);
+  const classes = classNames(styles.navigation, className);
 
   return (
     <Element className={classes} {...rest}>

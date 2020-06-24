@@ -113,7 +113,7 @@
   }
 }
 
-@mixin spacing {
+@mixin spacing($child-selector: '>*') {
 
   @each $spacing-name,
   $spacing-value in $spacing-horizontals {
@@ -122,7 +122,7 @@
       margin-right: -$spacing-value / 2 !important;
       margin-left: -$spacing-value / 2 !important;
 
-      >* {
+      >#{$child-selector} {
         padding-right: $spacing-value / 2 !important;
         padding-left: $spacing-value / 2 !important;
       }

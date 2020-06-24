@@ -13,16 +13,11 @@ import PropTypes from 'prop-types';
 import { CodeBlock } from '../components/CodeBlock';
 import { Hero } from '../components/Hero';
 import { HorizontalList } from '../components/HorizontalList';
-import { HorizontalListItem } from '../components/HorizontalList/Item';
 import { LinkButton } from '../components/LinkButton';
 
 import { Container } from '../layout/Container';
 import { Grid } from '../layout/Grid';
 import { HolyGrail } from '../layout/HolyGrail';
-import { HolyGrailBody } from '../layout/HolyGrail/Body';
-import { HolyGrailNavigation } from '../layout/HolyGrail/Navigation';
-import { HolyGrailContent } from '../layout/HolyGrail/Content';
-import { HolyGrailAside } from '../layout/HolyGrail/Aside';
 
 import * as styles from './DefaultLayout.module.scss';
 
@@ -52,29 +47,29 @@ const DefaultLayout = ({ navigation, aside, children }) => {
 
           <Grid.Column element="nav" role="navigation">
             <HorizontalList spacing="small">
-              <HorizontalListItem>
+              <HorizontalList.Item>
                 <LinkButton to="/principles/">Principles</LinkButton>
-              </HorizontalListItem>
+              </HorizontalList.Item>
             </HorizontalList>
           </Grid.Column>
         </Grid>
       </header>
 
-      <HolyGrailBody>
-        <HolyGrailContent>
+      <HolyGrail.Body>
+        <HolyGrail.Content>
           <HolyGrail>
             <Hero heading="Lorem Ipsum" />
 
-            <HolyGrailBody>
+            <HolyGrail.Body>
               {navigation !== '' ? (
-                <HolyGrailNavigation className={styles.Navigation}>
+                <HolyGrail.Navigation className={styles.Navigation}>
                   {navigation}
-                </HolyGrailNavigation>
+                </HolyGrail.Navigation>
               ) : (
                 ''
               )}
 
-              <HolyGrailContent>
+              <HolyGrail.Content>
                 <Container>
                   <div className={styles.Body}>
                     <MDXProvider components={components}>
@@ -82,17 +77,17 @@ const DefaultLayout = ({ navigation, aside, children }) => {
                     </MDXProvider>
                   </div>
                 </Container>
-              </HolyGrailContent>
-            </HolyGrailBody>
+              </HolyGrail.Content>
+            </HolyGrail.Body>
           </HolyGrail>
-        </HolyGrailContent>
+        </HolyGrail.Content>
 
         {aside !== '' ? (
-          <HolyGrailAside className={styles.Aside}>{aside}</HolyGrailAside>
+          <HolyGrail.Aside className={styles.Aside}>{aside}</HolyGrail.Aside>
         ) : (
           ''
         )}
-      </HolyGrailBody>
+      </HolyGrail.Body>
 
       <footer className={styles.Footer}>
         <Grid spacing="medium">
@@ -104,23 +99,23 @@ const DefaultLayout = ({ navigation, aside, children }) => {
 
           <Grid.Column>
             <HorizontalList spacing="small">
-              <HorizontalListItem>
+              <HorizontalList.Item>
                 <LinkButton href="https://www.w3.org/community/design-tokens/">
                   W3C Group
                 </LinkButton>
-              </HorizontalListItem>
+              </HorizontalList.Item>
 
-              <HorizontalListItem>
+              <HorizontalList.Item>
                 <LinkButton href="https://github.com/design-tokens/">
                   GitHub
                 </LinkButton>
-              </HorizontalListItem>
+              </HorizontalList.Item>
 
-              <HorizontalListItem>
+              <HorizontalList.Item>
                 <LinkButton href="https://twitter.com/DesignTokens">
                   Twitter
                 </LinkButton>
-              </HorizontalListItem>
+              </HorizontalList.Item>
             </HorizontalList>
           </Grid.Column>
         </Grid>
