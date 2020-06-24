@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { Heading } from './components/Heading';
 
 const Example = ({
@@ -12,12 +13,15 @@ const Example = ({
   stretch,
 }) => {
   const Element = element;
+  const classes = classNames(
+    className,
+    box && 'example-box',
+    square && 'example-box--square',
+    stretch && 'example-box--stretch',
+  );
+
   return (
-    <Element
-      className={`${box === true ? 'example-box' : ''} ${
-        square === true ? 'example-box--square' : ''
-      } ${stretch === true ? 'example-box--stretch' : ''} ${className}`}
-    >
+    <Element className={classes}>
       {heading !== '' ? <Heading level={4}>{heading}</Heading> : ''}
 
       {text}
@@ -28,7 +32,6 @@ const Example = ({
 Example.propTypes = {
   element: PropTypes.string,
   className: PropTypes.string,
-  children: PropTypes.node.isRequired,
   text: PropTypes.string,
   heading: PropTypes.string,
   box: PropTypes.bool,
