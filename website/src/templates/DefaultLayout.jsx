@@ -18,7 +18,6 @@ import { LinkButton } from '../components/LinkButton';
 
 import { Container } from '../layout/Container';
 import { Grid } from '../layout/Grid';
-import { GridColumn } from '../layout/Grid/Column';
 import { HolyGrail } from '../layout/HolyGrail';
 import { HolyGrailBody } from '../layout/HolyGrail/Body';
 import { HolyGrailNavigation } from '../layout/HolyGrail/Navigation';
@@ -47,17 +46,17 @@ const DefaultLayout = ({ navigation, aside, children }) => {
     <HolyGrail>
       <header className={styles.Header}>
         <Grid spacing="medium">
-          <GridColumn role="banner">
+          <Grid.Column role="banner">
             <LinkButton to="/">{data.site.siteMetadata.title}</LinkButton>
-          </GridColumn>
+          </Grid.Column>
 
-          <GridColumn element="nav" role="navigation">
+          <Grid.Column element="nav" role="navigation">
             <HorizontalList spacing="small">
               <HorizontalListItem>
                 <LinkButton to="/principles/">Principles</LinkButton>
               </HorizontalListItem>
             </HorizontalList>
-          </GridColumn>
+          </Grid.Column>
         </Grid>
       </header>
 
@@ -97,13 +96,13 @@ const DefaultLayout = ({ navigation, aside, children }) => {
 
       <footer className={styles.Footer}>
         <Grid spacing="medium">
-          <GridColumn role="contentinfo">
+          <Grid.Column role="contentinfo">
             <p>
               &copy; {new Date().getFullYear()} {data.site.siteMetadata.title}
             </p>
-          </GridColumn>
+          </Grid.Column>
 
-          <GridColumn>
+          <Grid.Column>
             <HorizontalList spacing="small">
               <HorizontalListItem>
                 <LinkButton href="https://www.w3.org/community/design-tokens/">
@@ -123,7 +122,7 @@ const DefaultLayout = ({ navigation, aside, children }) => {
                 </LinkButton>
               </HorizontalListItem>
             </HorizontalList>
-          </GridColumn>
+          </Grid.Column>
         </Grid>
       </footer>
     </HolyGrail>

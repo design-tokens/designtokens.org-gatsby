@@ -1,38 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GridColumn } from './Column';
+import { Grid } from '.';
 import { Example } from '../../example';
 
 const GridExample = ({ autoSize, stretch }) => {
   return (
     <>
-      <GridColumn autoSize={autoSize}>
+      <Grid.Column autoSize={autoSize}>
         <Example
           stretch={stretch}
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         />
-      </GridColumn>
+      </Grid.Column>
 
-      <GridColumn>
+      <Grid.Column>
         <Example
           stretch={stretch}
           text="Sed eleifend, velit vitae pellentesque venenatis, urna mauris pellentesque neque, a venenatis purus sapien sed mauris."
         />
-      </GridColumn>
+      </Grid.Column>
 
-      <GridColumn>
+      <Grid.Column>
         <Example
           stretch={stretch}
           text="Phasellus eleifend, tortor et ornare lobortis, mi magna interdum ligula, in imperdiet libero tellus eu libero."
         />
-      </GridColumn>
+      </Grid.Column>
 
-      <GridColumn>
+      <Grid.Column>
         <Example
           stretch={stretch}
           text="Maecenas leo mauris, pellentesque ut pellentesque vitae, molestie non nisl."
         />
-      </GridColumn>
+      </Grid.Column>
     </>
   );
 };

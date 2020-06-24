@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { Column } from './components';
 import * as styles from './Grid.module.scss';
 
 const Grid = ({
@@ -12,14 +14,16 @@ const Grid = ({
   ...rest
 }) => {
   const Element = element;
+  const classes = classNames(
+    styles.wrapper,
+    className,
+    fit && styles.fit,
+    divideBy && styles[`divide-by-${divideBy}`],
+    spacing && styles[spacing],
+  );
 
   return (
-    <Element
-      className={`${styles.wrapper} ${fit === true ? styles.fit : ''} ${
-        divideBy === '' ? '' : styles[`divide-by-${divideBy}`]
-      } ${spacing === '' ? '' : styles[spacing]} ${className}`}
-      {...rest}
-    >
+    <Element className={classes} {...rest}>
       {children}
     </Element>
   );
@@ -41,5 +45,7 @@ Grid.defaultProps = {
   divideBy: '',
   spacing: '',
 };
+
+Grid.Column = Column;
 
 export { Grid };
