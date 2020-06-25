@@ -1,0 +1,20 @@
+aliases:
+  spacing_base:
+    value: 4px
+
+  spacing_horizontal_small:
+    value: 8px
+  spacing_horizontal_medium:
+    value: 16px
+  spacing_horizontal_large:
+    value: 32px
+
+  spacing_vertical_small:
+    value: 12px
+  spacing_vertical_medium:
+    value: 24px
+  spacing_vertical_large:
+    value: 48px
+
+  spacing_none:
+    value: 0

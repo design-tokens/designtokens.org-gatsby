@@ -1,0 +1,24 @@
+imports:
+  - '../aliases/spacing.yml'
+
+global:
+  category: spacing
+  type: size
+
+props:
+  spacing_base:
+    value: '{!spacing_base}'
+
+  spacing_vertical_small:
+    value: '{!spacing_vertical_small}'
+  spacing_vertical_medium:
+    value: '{!spacing_vertical_medium}'
+  spacing_vertical_large:
+    value: '{!spacing_vertical_large}'
+
+  spacing_horizontal_small:
+    value: '{!spacing_horizontal_small}'
+  spacing_horizontal_medium:
+    value: '{!spacing_horizontal_medium}'
+  spacing_horizontal_large:
+    value: '{!spacing_horizontal_large}'

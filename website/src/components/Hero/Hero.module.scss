@@ -1,0 +1,44 @@
+.wrapper {
+  position: relative;
+  padding: $spacing-vertical-medium $spacing-horizontal-large;
+  background: rgba(black, .0625);
+  color: $color-foreground-strong;
+  z-index: 1;
+
+  * {
+    margin: 0;
+
+    +* {
+      margin-top: $spacing-vertical-small;
+    }
+  }
+
+  @include dark-mode {
+    background: rgba(white, 0.03125);
+    color: $color-foreground-strong-inverse;
+  }
+
+  @include breakpoint-medium {
+    padding-top: $spacing-vertical-large;
+    padding-bottom: $spacing-vertical-large;
+  }
+
+  &::before {
+    @include flower-of-life(white);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .5;
+    content: ' ';
+    z-index: -1;
+
+    @include dark-mode {
+      @include flower-of-life(black);
+
+      opacity: 0.25;
+    }
+  }
+}

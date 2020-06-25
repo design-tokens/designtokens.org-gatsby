@@ -1,0 +1,12 @@
+imports:
+  - '../aliases/borders.yml'
+
+global:
+  category: borders
+  type: size
+
+props:
+  border_width_hairline:
+    value: '{!border_width_hairline}'
+  border_width_thickline:
+    value: '{!border_width_thickline}'

@@ -1,0 +1,12 @@
+imports:
+  - '../aliases/typography.yml'
+
+global:
+  category: font-family
+  type: string
+
+props:
+  font_family_body:
+    value: '{!font_family_body}'
+  font_family_code:
+    value: '{!font_family_code}'

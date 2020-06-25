@@ -1,0 +1,29 @@
+.wrapper {
+  @include button;
+
+  cursor: pointer;
+  background: $color-background-primary-weak;
+  color: $color-foreground-strong-inverse;
+
+  @include dark-mode {
+    background: $color-background-primary-weak-inverse;
+    color: $color-foreground-strong;
+  }
+
+  &:hover,
+  &:focus {
+    background: $color-background-primary;
+
+    @include dark-mode {
+      background: $color-background-primary-inverse;
+    }
+  }
+
+  &:active {
+    background: $color-background-primary-strong;
+
+    @include dark-mode {
+      background: $color-background-primary-strong-inverse;
+    }
+  }
+}

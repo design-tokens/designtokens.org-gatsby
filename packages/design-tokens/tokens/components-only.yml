@@ -1,0 +1,6 @@
+imports:
+  - './components/buttons.yml'
+
+global:
+  category: components
+  type: all

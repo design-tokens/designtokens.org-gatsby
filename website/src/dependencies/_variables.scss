@@ -1,0 +1,35 @@
+@import '~@dtcg/design-tokens/dist';
+
+$dark-mode: true !default;
+
+$flex-alignments: flex-start, center, flex-end, baseline, stretch;
+
+$sides: top, right, bottom, left;
+
+$vertical-sides: top, bottom;
+
+$horizontal-sides: right, left;
+
+$spacing-horizontals: (
+  base: $spacing-base,
+  small: $spacing-horizontal-small,
+  medium: $spacing-horizontal-medium,
+  large: $spacing-horizontal-large,
+);
+
+$breakpoint-small: px-to-em($sizing-container-small);
+$breakpoint-medium: px-to-em($sizing-container-medium);
+$breakpoint-large: px-to-em($sizing-container-large);
+$breakpoint-x-large: px-to-em($sizing-container-x-large);
+$breakpoint-xx-large: px-to-em($sizing-container-xx-large);
+
+$breakpoints: (
+  small: $breakpoint-small,
+  medium: $breakpoint-medium,
+  large: $breakpoint-large,
+  x-large: $breakpoint-x-large,
+  xx-large: $breakpoint-xx-large,
+);
+
+$unquote-font-family-body: unquote($font-family-body);
+$unquote-font-family-code: unquote($font-family-code);

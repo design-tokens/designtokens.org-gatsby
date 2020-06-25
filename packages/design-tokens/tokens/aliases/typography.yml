@@ -1,0 +1,20 @@
+aliases:
+  font_size_small:
+    value: 12px
+  font_size_medium:
+    value: 16px
+  font_size_large:
+    value: 24px
+  font_size_x_large:
+    value: 32px
+  font_size_xx_large:
+    value: 48px
+  font_size_xxx_large:
+    value: 64px
+  font_size_xxxx_large:
+    value: 96px
+
+  font_family_body:
+    value: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'San Francisco', 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
+  font_family_code:
+    value: Menlo, Monaco, Consolas, 'Roboto Mono', 'Ubuntu Monospace', 'Noto Mono', 'Oxygen Mono', 'Liberation Mono', 'Lucida Console', 'Courier New', Courier, monospace, monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'

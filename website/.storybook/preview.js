@@ -3,6 +3,7 @@ import { withA11y } from '@storybook/addon-a11y';
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 
 import '../src/global.scss';
+import '../src/storybook.scss';
 
 addParameters({
   options: {

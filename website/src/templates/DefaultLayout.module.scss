@@ -1,0 +1,84 @@
+:global(#___gatsby),
+:global(#gatsby-focus-wrapper) {
+  height: 100%;
+}
+
+.Header,
+.Footer,
+.Footer p {
+  padding-right: $spacing-horizontal-medium;
+  padding-left: $spacing-horizontal-medium;
+}
+
+.Aside,
+.Navigation {
+  padding-right: $spacing-horizontal-large;
+  padding-left: $spacing-horizontal-large;
+}
+
+.Header,
+.Footer {
+
+  p,
+  ul {
+    margin: 0;
+  }
+
+  @include breakpoint-large {
+
+    ul {
+      justify-content: flex-end;
+    }
+  }
+
+  p {
+    padding-top: $spacing-vertical-small;
+    padding-bottom: $spacing-vertical-small;
+  }
+}
+
+.Header {
+  background: $color-background-strong;
+  color: $color-foreground-strong;
+
+  @include dark-mode {
+    background: $color-background-strong-inverse;
+    color: $color-foreground-strong-inverse;
+  }
+}
+
+.Content,
+.Navigation,
+.Aside {
+  padding-top: $spacing-vertical-small;
+  padding-bottom: $spacing-vertical-small;
+
+  @include breakpoint-medium {
+    padding-top: $spacing-vertical-medium;
+    padding-bottom: $spacing-vertical-medium;
+  }
+}
+
+.Navigation a {
+  display: block;
+  margin-right: -$spacing-horizontal-medium;
+  margin-left: -$spacing-horizontal-medium;
+}
+
+.Aside {
+  background: $color-background-weak;
+
+  @include dark-mode {
+    background: $color-background-weak-inverse;
+  }
+}
+
+.Footer {
+  background: $color-background-weak;
+  color: $color-foreground-weak;
+
+  @include dark-mode {
+    background: $color-background-weak-inverse;
+    color: $color-foreground-weak-inverse;
+  }
+}

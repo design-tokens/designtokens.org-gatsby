@@ -1,0 +1,21 @@
+.wrapper {
+  background: $color-background-strong-inverse;
+  color: $color-foreground-strong-inverse;
+
+  &,
+  pre,
+  textarea {
+    font-family: $unquote-font-family-code !important;
+  }
+
+  pre,
+  textarea {
+    padding: $spacing-vertical-small $spacing-horizontal-medium !important;
+    background: transparent !important;
+  }
+
+  textarea:focus {
+    outline-color: $color-accent-primary-strong-inverse;
+    outline-offset: -$border-width-thickline;
+  }
+}

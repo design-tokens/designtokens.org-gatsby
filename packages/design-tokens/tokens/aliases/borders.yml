@@ -1,0 +1,5 @@
+aliases:
+  border_width_hairline:
+    value: 1px
+  border_width_thickline:
+    value: 2px

@@ -1,0 +1,38 @@
+.wrapper,
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  height: 100%;
+}
+
+.header,
+.footer {
+  flex: none;
+}
+
+.body {
+  flex: 1 0 auto;
+
+  @include breakpoint-medium {
+    flex-direction: row;
+
+    .content {
+      flex: 1;
+    }
+  }
+}
+
+.navigation,
+.aside {
+
+  @include breakpoint-medium {
+    flex: 0 0 $sizing-container-xx-small;
+  }
+}
+
+.navigation {
+  order: -1;
+}

@@ -1,0 +1,79 @@
+imports:
+  - ./color-palette.yml
+
+aliases:
+  # Default theme
+  color_accent_weak:
+    value: '{!color_ghost}'
+  color_accent:
+    value: '{!color_hit_grey}'
+  color_accent_strong:
+    value: '{!color_shuttle_grey}'
+  color_accent_primary_weak:
+    value: '{!color_brown}'
+  color_accent_primary:
+    value: '{!color_cinnamon}'
+  color_accent_primary_strong:
+    value: '{!color_saddle_brown}'
+  color_background_weak:
+    value: '{!color_geyser}'
+  color_background:
+    value: '{!color_athens_grey}'
+  color_background_strong:
+    value: '{!color_white}'
+  color_background_primary_weak:
+    value: '{!color_brown}'
+  color_background_primary:
+    value: '{!color_cinnamon}'
+  color_background_primary_strong:
+    value: '{!color_saddle_brown}'
+  color_foreground_weak:
+    value: '{!color_trout}'
+  color_foreground:
+    value: '{!color_outer_space}'
+  color_foreground_strong:
+    value: '{!color_shark}'
+  color_foreground_primary_weak:
+    value: '{!color_brown}'
+  color_foreground_primary:
+    value: '{!color_cinnamon}'
+  color_foreground_primary_strong:
+    value: '{!color_saddle_brown}'
+
+  # Inverse theme
+  color_accent_weak_inverse:
+    value: '{!color_trout}'
+  color_accent_inverse:
+    value: '{!color_shuttle_grey}'
+  color_accent_strong_inverse:
+    value: '{!color_hit_grey}'
+  color_accent_primary_weak_inverse:
+    value: '{!color_yellow_sea}'
+  color_accent_primary_inverse:
+    value: '{!color_lightning_yellow}'
+  color_accent_primary_strong_inverse:
+    value: '{!color_bright_sun}'
+  color_background_weak_inverse:
+    value: '{!color_outer_space}'
+  color_background_inverse:
+    value: '{!color_shark}'
+  color_background_strong_inverse:
+    value: '{!color_black}'
+  color_background_primary_weak_inverse:
+    value: '{!color_yellow_sea}'
+  color_background_primary_inverse:
+    value: '{!color_lightning_yellow}'
+  color_background_primary_strong_inverse:
+    value: '{!color_bright_sun}'
+  color_foreground_weak_inverse:
+    value: '{!color_ghost}'
+  color_foreground_inverse:
+    value: '{!color_geyser}'
+  color_foreground_strong_inverse:
+    value: '{!color_athens_grey}'
+  color_foreground_primary_weak_inverse:
+    value: '{!color_yellow_sea}'
+  color_foreground_primary_inverse:
+    value: '{!color_lightning_yellow}'
+  color_foreground_primary_strong_inverse:
+    value: '{!color_bright_sun}'

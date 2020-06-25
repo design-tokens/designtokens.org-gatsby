@@ -1,6 +1,8 @@
 require('imports-loader');
 const path = require('path');
 const createCompiler = require('@storybook/addon-docs/mdx-compiler-plugin');
+const sassResourcesLoaderRule = require('../plugins/gatsby-sass-resources-loader/gatsby-node')
+  .rule;
 
 module.exports = ({ config }) => {
   // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
@@ -48,7 +50,7 @@ module.exports = ({ config }) => {
   config.module.rules.push({
     test: /\.module\.scss$/,
     use: [
-      { loader: 'style-loader' },
+      { loader: 'style-loader', options: { sourceMap: true } },
       {
         loader: 'css-loader',
         options: {
@@ -56,16 +58,28 @@ module.exports = ({ config }) => {
           modules: {
             localIdentName: '[path]-[local]-[hash:base64:5]',
           },
+          sourceMap: true,
         },
       },
-      { loader: 'sass-loader' },
+      {
+        loader: 'sass-loader',
+        options: {
+          sourceMap: true,
+        },
+      },
+      sassResourcesLoaderRule,
     ],
     include: path.resolve(__dirname, '../src'),
   });
 
   config.module.rules.push({
     test: /\.scss$/,
-    loaders: ['style-loader', 'css-loader', 'sass-loader'],
+    loaders: [
+      { loader: 'style-loader', options: { sourceMap: true } },
+      { loader: 'css-loader', options: { sourceMap: true } },
+      { loader: 'sass-loader', options: { sourceMap: true } },
+      sassResourcesLoaderRule,
+    ],
     exclude: /\.module\.scss$/,
     include: path.resolve(__dirname, '../src'),
   });

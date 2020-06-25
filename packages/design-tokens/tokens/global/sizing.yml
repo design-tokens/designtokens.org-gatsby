@@ -1,0 +1,25 @@
+imports:
+  - '../aliases/sizing.yml'
+
+global:
+  category: sizing
+  type: size
+
+props:
+  sizing_ui_icon:
+    value: '{!sizing_ui_icon}'
+
+  sizing_container_xx_small:
+    value: '{!sizing_container_xx_small}'
+  sizing_container_x_small:
+    value: '{!sizing_container_x_small}'
+  sizing_container_small:
+    value: '{!sizing_container_small}'
+  sizing_container_medium:
+    value: '{!sizing_container_medium}'
+  sizing_container_large:
+    value: '{!sizing_container_large}'
+  sizing_container_x_large:
+    value: '{!sizing_container_x_large}'
+  sizing_container_xx_large:
+    value: '{!sizing_container_xx_large}'

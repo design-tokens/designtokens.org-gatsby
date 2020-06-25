@@ -6,7 +6,7 @@ export default {
   component: CodeBlock,
 };
 
-export const simple = () => (
+export const base = () => (
   <CodeBlock className="scss">{'.Test { color: blue; }'}</CodeBlock>
 );
 
@@ -16,18 +16,17 @@ export const render = () => (
 <div
 style={{
   backgroundColor: 'rebeccapurple',
-  padding: '20px',
-  marginTop: '20px',
+  padding: '1em',
   color: 'white',
 }}
 >
-Some code that is being rendered (not sure why one would use that)
+Some code that is being rendered.
 </div>
 `}
   </CodeBlock>
 );
 
 export const live = () => (
-  <CodeBlock render="true">{`<div style={{ backgroundColor: 'tomato', padding: '20px' }} />
+  <CodeBlock live="true">{`<div style={{ backgroundColor: 'gold', padding: '1em' }} />
 `}</CodeBlock>
 );
