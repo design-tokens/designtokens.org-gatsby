@@ -8,18 +8,18 @@
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
+}
 
-  &.focusable {
+.focusable {
 
-    &:focus,
-    &:active {
-      position: static;
-      margin: 0;
-      width: auto;
-      height: auto;
-      overflow: visible;
-      clip: auto;
-      white-space: inherit;
-    }
+  &:focus,
+  &:active {
+    position: static;
+    margin: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: inherit;
   }
 }

@@ -51,33 +51,6 @@
   }
 }
 
-@mixin breakpoints($selector, $child: '', $max: false) {
-  $append: if(($child !=''), ' #{$child}', '');
-
-  .#{$selector}#{$append} {
-    @content;
-  }
-
-  @each $breakpoint,
-  $value in $breakpoints {
-
-    @include breakpoint($value, $max) {
-      .#{$selector}\@#{$breakpoint}#{$append} {
-        @content;
-      }
-    }
-  }
-}
-
-@mixin hi-res {
-
-  @media (-webkit-min-device-pixel-ratio: 1.5),
-  (min-resolution: 144dpi),
-  (min-resolution: 1.5dppx) {
-    @content;
-  }
-}
-
 @mixin button {
   display: inline-flex;
   padding: $spacing-vertical-small $spacing-horizontal-medium;
@@ -113,18 +86,37 @@
   }
 }
 
-@mixin spacing($child-selector: '>*') {
+@mixin spacing($child-selector: '>*', $use-breakpoint: '') {
 
   @each $spacing-name,
   $spacing-value in $spacing-horizontals {
 
-    @include breakpoints($spacing-name) {
-      margin-right: -$spacing-value / 2 !important;
-      margin-left: -$spacing-value / 2 !important;
+    @if $use-breakpoint !='' {
 
-      >#{$child-selector} {
-        padding-right: $spacing-value / 2 !important;
-        padding-left: $spacing-value / 2 !important;
+      @include breakpoint($use-breakpoint) {
+
+        .#{$spacing-name}\@#{$use-breakpoint} {
+          margin-right: -$spacing-value / 2 !important;
+          margin-left: -$spacing-value / 2 !important;
+
+          #{$child-selector} {
+            padding-right: $spacing-value / 2 !important;
+            padding-left: $spacing-value / 2 !important;
+          }
+        }
+      }
+    }
+
+    @else {
+
+      .#{$spacing-name} {
+        margin-right: -$spacing-value / 2 !important;
+        margin-left: -$spacing-value / 2 !important;
+
+        #{$child-selector} {
+          padding-right: $spacing-value / 2 !important;
+          padding-left: $spacing-value / 2 !important;
+        }
       }
     }
   }

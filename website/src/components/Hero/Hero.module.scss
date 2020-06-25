@@ -1,10 +1,17 @@
 .wrapper {
   position: relative;
-  padding: $spacing-vertical-small $spacing-horizontal-large;
-  font-size: $font-size-large;
+  padding: $spacing-vertical-medium $spacing-horizontal-large;
   background: rgba(black, .0625);
   color: $color-foreground-strong;
   z-index: 1;
+
+  * {
+    margin: 0;
+
+    +* {
+      margin-top: $spacing-vertical-small;
+    }
+  }
 
   @include dark-mode {
     background: rgba(white, 0.03125);
@@ -12,11 +19,6 @@
   }
 
   @include breakpoint-medium {
-    padding-top: $spacing-vertical-medium;
-    padding-bottom: $spacing-vertical-medium;
-  }
-
-  @include breakpoint-large {
     padding-top: $spacing-vertical-large;
     padding-bottom: $spacing-vertical-large;
   }

@@ -11,14 +11,14 @@ const AssistiveText = ({
   ...rest
 }) => {
   const Element = element;
+  const classes = classNames(
+    styles.wrapper,
+    focusable && styles.focusable,
+    className,
+  );
 
   return (
-    <Element
-      className={`${styles.wrapper} ${
-        focusable === true ? styles.focusable : ''
-      } ${className}`}
-      {...rest}
-    >
+    <Element className={classes} {...rest}>
       {children}
     </Element>
   );

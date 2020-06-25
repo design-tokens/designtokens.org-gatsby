@@ -9,6 +9,6 @@ export default {
 
 export const base = () => (
   <Container>
-    <Example />
+    <Example text="container" />
   </Container>
 );

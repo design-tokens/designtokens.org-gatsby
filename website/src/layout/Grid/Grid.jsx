@@ -6,19 +6,27 @@ import * as styles from './Grid.module.scss';
 
 const Grid = ({
   element,
-  spacing,
-  className,
-  fit,
   full,
+  smallFit,
+  mediumFit,
+  largeFit,
+  xLargeFit,
+  xXLargeFit,
   divideBy,
+  spacing,
   children,
+  className,
   ...rest
 }) => {
   const Element = element;
   const classes = classNames(
     styles.wrapper,
-    fit && styles.fit,
     full && styles.full,
+    smallFit && styles.smallFit,
+    mediumFit && styles.mediumFit,
+    largeFit && styles.largeFit,
+    xLargeFit && styles.xLargeFit,
+    xXLargeFit && styles.xxLargeFit,
     divideBy && styles[`divide-by-${divideBy}`],
     spacing && styles[spacing],
     className,
@@ -33,21 +41,29 @@ const Grid = ({
 
 Grid.propTypes = {
   element: PropTypes.string,
-  className: PropTypes.string,
-  fit: PropTypes.bool,
   full: PropTypes.bool,
+  smallFit: PropTypes.bool,
+  mediumFit: PropTypes.bool,
+  largeFit: PropTypes.bool,
+  xLargeFit: PropTypes.bool,
+  xXLargeFit: PropTypes.bool,
   divideBy: PropTypes.oneOf([2, 3, 4]),
-  children: PropTypes.node.isRequired,
   spacing: PropTypes.oneOf(['base', 'small', 'medium', 'large']),
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 };
 
 Grid.defaultProps = {
   element: 'div',
-  className: '',
-  fit: false,
   full: false,
+  smallFit: false,
+  mediumFit: false,
+  largeFit: false,
+  xLargeFit: false,
+  xXLargeFit: false,
   divideBy: '',
   spacing: '',
+  className: '',
 };
 
 Grid.Column = Column;

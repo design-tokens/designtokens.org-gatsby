@@ -19,22 +19,16 @@
 .Header,
 .Footer {
 
-  @include breakpoint-large($max: true) {
-    padding-top: $spacing-vertical-small;
-    padding-bottom: $spacing-vertical-small;
-
-    * {
-      display: block !important;
-    }
-  }
-
   p,
   ul {
     margin: 0;
   }
 
-  ul {
-    justify-content: flex-end;
+  @include breakpoint-large {
+
+    ul {
+      justify-content: flex-end;
+    }
   }
 
   p {
@@ -53,11 +47,16 @@
   }
 }
 
-.Body,
+.Content,
 .Navigation,
 .Aside {
-  padding-top: $spacing-vertical-large;
-  padding-bottom: $spacing-vertical-large;
+  padding-top: $spacing-vertical-small;
+  padding-bottom: $spacing-vertical-small;
+
+  @include breakpoint-medium {
+    padding-top: $spacing-vertical-medium;
+    padding-bottom: $spacing-vertical-medium;
+  }
 }
 
 .Navigation a {

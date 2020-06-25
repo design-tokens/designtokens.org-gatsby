@@ -45,9 +45,9 @@ const DefaultLayout = ({
 
   return (
     <HolyGrail>
-      <header className={styles.Header}>
-        <Grid spacing="medium">
-          <Grid.Column role="banner">
+      <HolyGrail.Header className={styles.Header}>
+        <Grid full largeFit spacing="medium">
+          <Grid.Column role="banner" smallAutoSize={true}>
             <LinkButton to="/">
               <abbr title={data.site.siteMetadata.title}>DTCG</abbr>
             </LinkButton>
@@ -61,20 +61,22 @@ const DefaultLayout = ({
             </HorizontalList>
           </Grid.Column>
         </Grid>
-      </header>
+      </HolyGrail.Header>
 
       <HolyGrail.Body>
         <HolyGrail.Content>
           <HolyGrail>
-            <Hero
-              heading={
-                pageContext !== ''
-                  ? pageContext.frontmatter.title
-                  : pageTitle !== ''
-                  ? pageTitle
-                  : data.site.siteMetadata.title
-              }
-            />
+            <HolyGrail.Header>
+              <Hero
+                heading={
+                  pageContext !== ''
+                    ? pageContext.frontmatter.title
+                    : pageTitle !== ''
+                    ? pageTitle
+                    : data.site.siteMetadata.title
+                }
+              />
+            </HolyGrail.Header>
 
             <HolyGrail.Body>
               {navigation !== '' ? (
@@ -85,13 +87,13 @@ const DefaultLayout = ({
                 ''
               )}
 
-              <HolyGrail.Content>
+              <HolyGrail.Content className={styles.Content}>
                 <Container>
-                  <div className={styles.Body}>
+                  <main>
                     <MDXProvider components={components}>
                       {children}
                     </MDXProvider>
-                  </div>
+                  </main>
                 </Container>
               </HolyGrail.Content>
             </HolyGrail.Body>
@@ -105,8 +107,8 @@ const DefaultLayout = ({
         )}
       </HolyGrail.Body>
 
-      <footer className={styles.Footer}>
-        <Grid spacing="medium">
+      <HolyGrail.Footer className={styles.Footer}>
+        <Grid full largeFit spacing="medium">
           <Grid.Column role="contentinfo">
             <p>
               &copy; {new Date().getFullYear()} {data.site.siteMetadata.title}
@@ -135,7 +137,7 @@ const DefaultLayout = ({
             </HorizontalList>
           </Grid.Column>
         </Grid>
-      </footer>
+      </HolyGrail.Footer>
     </HolyGrail>
   );
 };
