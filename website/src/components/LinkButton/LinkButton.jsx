@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'gatsby';
-import * as styles from './LinkButton.module.scss';
+import styles from './LinkButton.module.scss';
 
 const LinkButton = ({
   element,

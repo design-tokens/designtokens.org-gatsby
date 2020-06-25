@@ -26,7 +26,6 @@
     "gatsby-source-filesystem": "^2.3.14",
     "gatsby-transformer-sharp": "^2.5.7",
     "imports-loader": "^1.1.0",
-    "node-sass": "^4.14.1",
     "postcss-em-media-query": "^2.0.0",
     "postcss-preset-env": "^6.7.0",
     "postcss-pxtorem": "^5.1.1",

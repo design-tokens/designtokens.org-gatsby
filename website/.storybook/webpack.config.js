@@ -1,7 +1,7 @@
 require('imports-loader');
 const path = require('path');
 const createCompiler = require('@storybook/addon-docs/mdx-compiler-plugin');
-const sassResourcesLoaderRule = require('../plugins/gatsby-sass-resources-loader/gatsby-node')
+const sassResourcesLoaderRule = require('../plugins/gatsby-sass-resources-loader/rule')
   .rule;
 
 module.exports = ({ config }) => {
@@ -62,6 +62,10 @@ module.exports = ({ config }) => {
         },
       },
       {
+        loader: 'postcss-loader',
+        options: { sourceMap: true },
+      },
+      {
         loader: 'sass-loader',
         options: {
           sourceMap: true,
@@ -77,6 +81,10 @@ module.exports = ({ config }) => {
     loaders: [
       { loader: 'style-loader', options: { sourceMap: true } },
       { loader: 'css-loader', options: { sourceMap: true } },
+      {
+        loader: 'postcss-loader',
+        options: { sourceMap: true },
+      },
       { loader: 'sass-loader', options: { sourceMap: true } },
       sassResourcesLoaderRule,
     ],

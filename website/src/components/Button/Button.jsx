@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import * as styles from './Button.module.scss';
+import styles from './Button.module.scss';
 
 const Button = ({ className, children, type, ...rest }) => {
   const classes = classNames(styles.wrapper, className);

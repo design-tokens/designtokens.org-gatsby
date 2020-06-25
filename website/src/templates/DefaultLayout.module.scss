@@ -18,14 +18,12 @@
 
 .Header,
 .Footer {
-
   p,
   ul {
     margin: 0;
   }
 
   @include breakpoint-large {
-
     ul {
       justify-content: flex-end;
     }

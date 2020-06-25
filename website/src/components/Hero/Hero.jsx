@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Heading } from '../Heading';
-import * as styles from './Hero.module.scss';
+import styles from './Hero.module.scss';
 
 const Hero = ({ className, children, heading, description, ...rest }) => {
   const classes = classNames(styles.wrapper, className);

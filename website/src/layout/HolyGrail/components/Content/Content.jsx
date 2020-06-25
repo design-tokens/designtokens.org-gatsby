@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import * as styles from '../../HolyGrail.module.scss';
+import styles from '../../HolyGrail.module.scss';
 
 const Content = ({ element, className, children, ...rest }) => {
   const Element = element;

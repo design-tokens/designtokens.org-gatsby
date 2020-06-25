@@ -39,15 +39,19 @@ body {
 }
 
 ::selection {
-  background: rgba($color-background-strong-inverse,
-      0.99); // rgba hack avoids translucent selection bg
+  background: rgba(
+    $color-background-strong-inverse,
+    0.99
+  ); // rgba hack avoids translucent selection bg
 
   color: $color-foreground-strong-inverse;
   text-shadow: none;
 
   @include dark-mode {
-    background: rgba($color-background-strong,
-        0.99); // rgba hack avoids translucent selection bg
+    background: rgba(
+      $color-background-strong,
+      0.99
+    ); // rgba hack avoids translucent selection bg
 
     color: $color-foreground;
   }
@@ -113,7 +117,7 @@ a {
   }
 
   &:active {
-    text-decoration-color: rgba($color-accent-primary-strong, .5);
+    text-decoration-color: rgba($color-accent-primary-strong, 0.5);
     color: $color-foreground-primary-strong;
 
     @include dark-mode {

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import * as styles from './Heading.module.scss';
+import styles from './Heading.module.scss';
 
 const Heading = ({ level, element, className, children, ...rest }) => {
   const Element = element === '' ? `h${level}` : element;

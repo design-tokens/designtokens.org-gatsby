@@ -17,11 +17,11 @@ $spacing-horizontals: (
   large: $spacing-horizontal-large,
 );
 
-$breakpoint-small: px-to-em($sizing-container-small);
-$breakpoint-medium: px-to-em($sizing-container-medium);
-$breakpoint-large: px-to-em($sizing-container-large);
-$breakpoint-x-large: px-to-em($sizing-container-x-large);
-$breakpoint-xx-large: px-to-em($sizing-container-xx-large);
+$breakpoint-small: $sizing-container-small;
+$breakpoint-medium: $sizing-container-medium;
+$breakpoint-large: $sizing-container-large;
+$breakpoint-x-large: $sizing-container-x-large;
+$breakpoint-xx-large: $sizing-container-xx-large;
 
 $breakpoints: (
   small: $breakpoint-small,

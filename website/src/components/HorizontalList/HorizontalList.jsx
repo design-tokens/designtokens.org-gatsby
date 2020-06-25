@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Item } from './components';
-import * as styles from './HorizontalList.module.scss';
+import styles from './HorizontalList.module.scss';
 
 const HorizontalList = ({ element, className, children, spacing, ...rest }) => {
   const Element = element;
