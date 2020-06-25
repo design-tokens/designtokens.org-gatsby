@@ -6,10 +6,12 @@ a.wrapper {
   // ignore span for active placement
   cursor: pointer;
 
-  background: rgba($color-background-strong, 0.25);
+  &.primary {
+    background: rgba($color-background-strong, 0.25);
 
-  @include dark-mode {
-    background: rgba($color-background-strong-inverse, 0.25);
+    @include dark-mode {
+      background: rgba($color-background-strong-inverse, 0.25);
+    }
   }
 
   &:hover,

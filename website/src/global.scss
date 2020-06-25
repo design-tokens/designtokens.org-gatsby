@@ -76,6 +76,11 @@ button {
   transition: all 0.25s;
 }
 
+abbr {
+  border: 0;
+  text-decoration: none;
+}
+
 a {
   box-decoration-break: clone;
   text-decoration: none;
@@ -132,6 +137,12 @@ figure,
 hr {
   margin-top: $spacing-vertical-medium;
   margin-bottom: $spacing-vertical-medium;
+}
+
+p,
+li,
+dd {
+  max-width: 50em; // measure for readability
 }
 
 ul,

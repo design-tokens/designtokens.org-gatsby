@@ -1,30 +1,45 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Heading } from '../components/Heading';
+import { LinkButton } from '../components/LinkButton';
 
 import DefaultLayout from '../templates/DefaultLayout';
 import { SEO } from '../components/SEO';
 
 const IndexPage = () => (
   <DefaultLayout
-    navigation={
-      <>
-        <p>
-          <Link to="/page-2/">Go to page 2</Link>
-        </p>
-        <p>
-          <Link to="/principles/">Go to the principles page (in MDX)</Link>
-        </p>
-        <p>
-          <Link to="/test/">Load an MDX test page</Link>
-        </p>
-      </>
-    }
-    aside={<p>This is an aside.</p>}
+    navigation={<LinkButton to="/test/">MDX test page</LinkButton>}
   >
     <SEO title="Home" />
-    <p>Welcome to your new Gatsby site.</p>
 
-    <p>Now go build something great.</p>
+    <Heading>Principles</Heading>
+
+    <Heading level={3}>1. Inclusive</Heading>
+
+    <p>
+      Allow anyone to become familiar with design tokens. Empower people, no
+      matter what their skills and tool choices are, as they develop new mental
+      models, acquire skills, and implement tools to scale design in their
+      projects. Everyone is welcome to join the conversation and share use-cases
+      with the community.
+    </p>
+
+    <Heading level={3}>2. Focused, yet extensible</Heading>
+
+    <p>
+      Stay focused on the smallest surface area necessary to cover the most
+      commonly referenced use-cases. Be a platform that opens the door to a wide
+      range of possibilities. This small footprint helps maintain simplicity
+      with zero dependencies. Extensibility allows the community to incubate new
+      ideas that will define the future of design tokens.
+    </p>
+
+    <Heading level={3}>3. Stable</Heading>
+
+    <p>
+      Provide a stable foundation that users and tool makers can put in place
+      and depend on in the long term. For example, by using existing and trusted
+      standards (unless conflicting with the two first principles).
+    </p>
   </DefaultLayout>
 );
 

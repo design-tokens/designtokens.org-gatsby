@@ -18,8 +18,6 @@
 
 .Header,
 .Footer {
-  background: $color-background-strong;
-  color: $color-foreground-strong;
 
   @include breakpoint-large($max: true) {
     padding-top: $spacing-vertical-small;
@@ -28,11 +26,6 @@
     * {
       display: block !important;
     }
-  }
-
-  @include dark-mode {
-    background: $color-background-strong-inverse;
-    color: $color-foreground-strong-inverse;
   }
 
   p,
@@ -50,9 +43,27 @@
   }
 }
 
-.Body {
+.Header {
+  background: $color-background-strong;
+  color: $color-foreground-strong;
+
+  @include dark-mode {
+    background: $color-background-strong-inverse;
+    color: $color-foreground-strong-inverse;
+  }
+}
+
+.Body,
+.Navigation,
+.Aside {
   padding-top: $spacing-vertical-large;
   padding-bottom: $spacing-vertical-large;
+}
+
+.Navigation a {
+  display: block;
+  margin-right: -$spacing-horizontal-medium;
+  margin-left: -$spacing-horizontal-medium;
 }
 
 .Aside {
@@ -60,5 +71,15 @@
 
   @include dark-mode {
     background: $color-background-weak-inverse;
+  }
+}
+
+.Footer {
+  background: $color-background-weak;
+  color: $color-foreground-weak;
+
+  @include dark-mode {
+    background: $color-background-weak-inverse;
+    color: $color-foreground-weak-inverse;
   }
 }

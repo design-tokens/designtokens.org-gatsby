@@ -4,9 +4,21 @@ import classNames from 'classnames';
 import { Link } from 'gatsby';
 import * as styles from './LinkButton.module.scss';
 
-const LinkButton = ({ element, className, children, href, to, ...rest }) => {
+const LinkButton = ({
+  element,
+  className,
+  children,
+  primary,
+  href,
+  to,
+  ...rest
+}) => {
   const Element = element;
-  const classes = classNames(styles.wrapper, className);
+  const classes = classNames(
+    styles.wrapper,
+    primary && styles.primary,
+    className,
+  );
 
   if (to !== '') {
     return (
@@ -37,6 +49,7 @@ LinkButton.propTypes = {
   children: PropTypes.node.isRequired,
   to: PropTypes.string,
   href: PropTypes.string,
+  primary: PropTypes.bool,
 };
 
 LinkButton.defaultProps = {
@@ -44,6 +57,7 @@ LinkButton.defaultProps = {
   className: '',
   to: '',
   href: '',
+  primary: false,
 };
 
 export { LinkButton };

@@ -26,7 +26,13 @@ const components = {
   code: CodeBlock,
 };
 
-const DefaultLayout = ({ navigation, aside, children }) => {
+const DefaultLayout = ({
+  pageTitle,
+  navigation,
+  aside,
+  children,
+  pageContext,
+}) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -42,7 +48,9 @@ const DefaultLayout = ({ navigation, aside, children }) => {
       <header className={styles.Header}>
         <Grid spacing="medium">
           <Grid.Column role="banner">
-            <LinkButton to="/">{data.site.siteMetadata.title}</LinkButton>
+            <LinkButton to="/">
+              <abbr title={data.site.siteMetadata.title}>DTCG</abbr>
+            </LinkButton>
           </Grid.Column>
 
           <Grid.Column element="nav" role="navigation">
@@ -58,7 +66,15 @@ const DefaultLayout = ({ navigation, aside, children }) => {
       <HolyGrail.Body>
         <HolyGrail.Content>
           <HolyGrail>
-            <Hero heading="Lorem Ipsum" />
+            <Hero
+              heading={
+                pageContext !== ''
+                  ? pageContext.frontmatter.title
+                  : pageTitle !== ''
+                  ? pageTitle
+                  : data.site.siteMetadata.title
+              }
+            />
 
             <HolyGrail.Body>
               {navigation !== '' ? (
@@ -125,14 +141,20 @@ const DefaultLayout = ({ navigation, aside, children }) => {
 };
 
 DefaultLayout.propTypes = {
+  pageTitle: PropTypes.string,
+  pageContext: PropTypes.node,
+  mdxTitle: PropTypes.string,
   children: PropTypes.node.isRequired,
   navigation: PropTypes.node,
   aside: PropTypes.node,
 };
 
 DefaultLayout.defaultProps = {
+  pageTitle: '',
+  mdxTitle: '',
   navigation: '',
   aside: '',
+  pageContext: '',
 };
 
 export default DefaultLayout;

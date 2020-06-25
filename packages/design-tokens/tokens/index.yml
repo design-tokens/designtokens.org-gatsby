@@ -1,6 +1,6 @@
 imports:
-  - './global.yml'
-  - './components.yml'
+  - './global-only.yml'
+  - './components-only.yml'
 
 global:
   type: all
