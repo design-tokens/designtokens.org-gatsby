@@ -1,14 +1,11 @@
 import React from 'react';
 import { Heading } from '../components/Heading';
-import { LinkButton } from '../components/LinkButton';
 
 import DefaultLayout from '../templates/DefaultLayout';
 import { SEO } from '../components/SEO';
 
 const IndexPage = () => (
-  <DefaultLayout
-    navigation={<LinkButton to="/test/">MDX test page</LinkButton>}
-  >
+  <DefaultLayout>
     <SEO title="Home" />
 
     <Heading>Principles</Heading>

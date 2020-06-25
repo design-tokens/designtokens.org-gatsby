@@ -56,7 +56,7 @@ const DefaultLayout = ({
           <Grid.Column element="nav" role="navigation">
             <HorizontalList spacing="small">
               <HorizontalList.Item>
-                <LinkButton to="/principles/">Principles</LinkButton>
+                <LinkButton to="/test/">Test Page</LinkButton>
               </HorizontalList.Item>
             </HorizontalList>
           </Grid.Column>
