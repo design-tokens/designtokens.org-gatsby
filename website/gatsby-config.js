@@ -1,17 +1,23 @@
+/* eslint-disable global-require */
+
 module.exports = {
   siteMetadata: {
     title: 'Design Tokens W3C Community Group',
-    description: 'The DTCG’s goal is to provide standards upon which products and design tools can rely for sharing stylistic pieces of a design system at scale.',
+    description:
+      'The DTCG’s goal is to provide standards upon which products and design tools can rely for sharing stylistic pieces of a design system at scale.',
     author: '@designtokens',
   },
-  plugins: [ {
+  plugins: [
+    {
       resolve: 'gatsby-plugin-sass',
       options: {
+        implementation: require('sass'),
         useResolveUrlLoader: {
           options: {
             sourceMap: true,
           },
         },
+        postCssPlugins: require('./postcss.config').plugins,
       },
     },
     `gatsby-sass-resources-loader`,
@@ -29,14 +35,13 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
-          default: require.resolve(
-            './src/templates/DefaultLayout.jsx',
-          ),
+          default: require.resolve('./src/templates/DefaultLayout.jsx'),
         },
         // a workaround to solve mdx-remark plugin compat issue
         // https://github.com/gatsbyjs/gatsby/issues/15486
-        plugins: [ 'gatsby-remark-images' ],
-        gatsbyRemarkPlugins: [ {
+        plugins: ['gatsby-remark-images'],
+        gatsbyRemarkPlugins: [
+          {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 800,

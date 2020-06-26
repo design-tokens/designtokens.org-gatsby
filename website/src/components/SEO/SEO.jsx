@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -70,9 +70,8 @@ const SEO = ({ title, description, lang, meta }) => {
       ].concat(meta)}
     >
       <link
-        rel='stylesheet'
-        type='text/css'
-        href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap'
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       />
     </Helmet>
   );

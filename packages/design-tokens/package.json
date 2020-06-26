@@ -13,6 +13,7 @@
     "build": "npm-run-all theo lint:*"
   },
   "devDependencies": {
+    "optimist": "^0.6.1",
     "theo": "^8.1.5"
   }
 }

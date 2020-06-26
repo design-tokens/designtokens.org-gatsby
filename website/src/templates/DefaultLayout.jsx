@@ -19,7 +19,7 @@ import { Container } from '../layout/Container';
 import { Grid } from '../layout/Grid';
 import { HolyGrail } from '../layout/HolyGrail';
 
-import * as styles from './DefaultLayout.module.scss';
+import styles from './DefaultLayout.module.scss';
 
 const components = {
   pre: ({ children }) => children,
@@ -47,7 +47,7 @@ const DefaultLayout = ({
     <HolyGrail>
       <HolyGrail.Header className={styles.Header}>
         <Grid full largeFit spacing="medium">
-          <Grid.Column role="banner" smallAutoSize={true}>
+          <Grid.Column role="banner" smallAutoSize>
             <LinkButton to="/">
               <abbr title={data.site.siteMetadata.title}>DTCG</abbr>
             </LinkButton>

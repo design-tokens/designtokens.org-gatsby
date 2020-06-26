@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import { mdx } from '@mdx-js/react';
-import * as styles from './CodeBlock.module.scss';
+import styles from './CodeBlock.module.scss';
 
 const CodeBlock = ({ children, className, live, render }) => {
   const classes = classNames(styles.wrapper, className);

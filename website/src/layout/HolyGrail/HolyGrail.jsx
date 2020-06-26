@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Header, Body, Navigation, Content, Aside, Footer } from './components';
-import * as styles from './HolyGrail.module.scss';
+import styles from './HolyGrail.module.scss';
 
 const HolyGrail = ({ element, className, children, ...rest }) => {
   const Element = element;

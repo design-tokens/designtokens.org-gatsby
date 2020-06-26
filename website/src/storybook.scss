@@ -3,18 +3,17 @@
 }
 
 .sbdocs {
-
   &.sbdocs-wrapper,
   &.sbdocs-preview,
   [data-simplebar],
-  &.sbdocs-preview>div>div,
-  &.sbdocs-preview>div>div>button,
+  &.sbdocs-preview > div > div,
+  &.sbdocs-preview > div > div > button,
   table.docblock-propstable tbody td,
   .docblock-typeset {
     background: transparent;
   }
 
-  &.sbdocs-preview>div>div>button:focus {
+  &.sbdocs-preview > div > div > button:focus {
     background: $color-background-strong;
 
     @include dark-mode {
@@ -26,22 +25,22 @@
   .sbdocs-h2,
   .sbdocs-h3,
   [data-simplebar],
-  &.sbdocs-preview>div>div>button,
+  &.sbdocs-preview > div > div > button,
   table.docblock-propstable,
   table.docblock-propstable th,
-  table.docblock-propstable tbody td>div,
-  .docblock-colorpalette>div,
-  .docblock-colorpalette>div>div>div,
-  .docblock-typeset>div>div {
+  table.docblock-propstable tbody td > div,
+  .docblock-colorpalette > div,
+  .docblock-colorpalette > div > div > div,
+  .docblock-typeset > div > div {
     color: inherit;
   }
 
   &.sbdocs-preview,
-  &.sbdocs-preview>div>div {
+  &.sbdocs-preview > div > div {
     overflow: visible;
   }
 
-  .docblock-typeset>div>div:first-child {
+  .docblock-typeset > div > div:first-child {
     white-space: nowrap;
   }
 

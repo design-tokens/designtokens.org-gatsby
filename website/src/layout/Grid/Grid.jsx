@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Column } from './components';
-import * as styles from './Grid.module.scss';
+import styles from './Grid.module.scss';
 
 const Grid = ({
   element,

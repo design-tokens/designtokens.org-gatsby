@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import * as styles from './Container.module.scss';
+import styles from './Container.module.scss';
 
 const Container = ({ element, className, children, ...rest }) => {
   const Element = element;
