@@ -23,7 +23,7 @@
     margin: 0;
   }
 
-  @include breakpoint-large {
+  @include mq(large) {
     ul {
       justify-content: flex-end;
     }
@@ -51,7 +51,7 @@
   padding-top: $spacing-vertical-small;
   padding-bottom: $spacing-vertical-small;
 
-  @include breakpoint-medium {
+  @include mq(medium) {
     padding-top: $spacing-vertical-medium;
     padding-bottom: $spacing-vertical-medium;
   }

@@ -17,18 +17,12 @@ $spacing-horizontals: (
   large: $spacing-horizontal-large,
 );
 
-$breakpoint-small: $sizing-container-small;
-$breakpoint-medium: $sizing-container-medium;
-$breakpoint-large: $sizing-container-large;
-$breakpoint-x-large: $sizing-container-x-large;
-$breakpoint-xx-large: $sizing-container-xx-large;
-
-$breakpoints: (
-  small: $breakpoint-small,
-  medium: $breakpoint-medium,
-  large: $breakpoint-large,
-  x-large: $breakpoint-x-large,
-  xx-large: $breakpoint-xx-large,
+$mq-breakpoints: (
+  small: $sizing-container-small,
+  medium: $sizing-container-medium,
+  large: $sizing-container-large,
+  x-large: $sizing-container-x-large,
+  xx-large: $sizing-container-xx-large,
 );
 
 $unquote-font-family-body: unquote($font-family-body);
