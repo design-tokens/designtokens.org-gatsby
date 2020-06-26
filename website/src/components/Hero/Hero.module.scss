@@ -1,14 +1,14 @@
 .wrapper {
   position: relative;
   padding: $spacing-vertical-medium $spacing-horizontal-large;
-  background: rgba(black, .0625);
+  background: rgba(black, 0.0625);
   color: $color-foreground-strong;
   z-index: 1;
 
   * {
     margin: 0;
 
-    +* {
+    + * {
       margin-top: $spacing-vertical-small;
     }
   }
@@ -18,7 +18,7 @@
     color: $color-foreground-strong-inverse;
   }
 
-  @include breakpoint-medium {
+  @include mq(medium) {
     padding-top: $spacing-vertical-large;
     padding-bottom: $spacing-vertical-large;
   }
@@ -31,7 +31,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: .5;
+    opacity: 0.5;
     content: ' ';
     z-index: -1;
 

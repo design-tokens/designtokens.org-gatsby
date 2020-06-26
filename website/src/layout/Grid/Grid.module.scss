@@ -14,36 +14,30 @@
   flex: none;
 }
 
-.full>.column {
+.full > .column {
   flex: 0 0 100%;
 }
 
 @for $i from 2 through 4 {
-
-  .divide-by-#{$i}>.column {
+  .divide-by-#{$i} > .column {
     flex: 0 0 (100% / $i);
   }
 }
 
-@each $token,
-$value in $breakpoints {
-
-  @include breakpoint($value) {
-
-    .#{$token}Fit>.column {
+@each $token, $value in $mq-breakpoints {
+  @include mq($value) {
+    .#{$token}Fit > .column {
       flex: 1;
     }
   }
 }
 
-@each $spacing-name,
-$spacing-value in $spacing-horizontals {
-
+@each $spacing-name, $spacing-value in $spacing-horizontals {
   .#{$spacing-name} {
     margin-right: -$spacing-value / 2 !important;
     margin-left: -$spacing-value / 2 !important;
 
-    >.column {
+    > .column {
       padding-right: $spacing-value / 2 !important;
       padding-left: $spacing-value / 2 !important;
     }

@@ -14,15 +14,15 @@ h1,
   font-size: $font-size-x-large;
   line-height: 1;
 
-  @include breakpoint-large {
+  @include mq(large) {
     font-size: $font-size-xx-large;
   }
 
-  @include breakpoint-x-large {
+  @include mq(x-large) {
     font-size: $font-size-xxx-large;
   }
 
-  @include breakpoint-xx-large {
+  @include mq(xx-large) {
     font-size: $font-size-xxxx-large;
   }
 }
@@ -48,7 +48,7 @@ h4,
 h6,
 .h6 {
   text-transform: uppercase;
-  letter-spacing: .0625em;
+  letter-spacing: 0.0625em;
 }
 
 h1,

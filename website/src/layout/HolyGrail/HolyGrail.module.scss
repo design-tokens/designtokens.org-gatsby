@@ -16,7 +16,7 @@
 .body {
   flex: 1 0 auto;
 
-  @include breakpoint-medium {
+  @include mq(medium) {
     flex-direction: row;
 
     .content {
@@ -27,8 +27,7 @@
 
 .navigation,
 .aside {
-
-  @include breakpoint-medium {
+  @include mq(medium) {
     flex: 0 0 $sizing-container-xx-small;
   }
 }
