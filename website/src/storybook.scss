@@ -1,5 +1,10 @@
 #root {
   height: 100%;
+
+  @include dark-mode {
+    background: $color-background-inverse;
+    color: $color-foreground-inverse;
+  }
 }
 
 .sbdocs {

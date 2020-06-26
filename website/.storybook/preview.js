@@ -1,6 +1,7 @@
 import { addDecorator, addParameters } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
+import * as tokens from '@dtcg/design-tokens';
 
 import '../src/global.scss';
 import '../src/storybook.scss';
@@ -13,6 +14,24 @@ addParameters({
     container: DocsContainer,
     page: DocsPage,
   },
+  themes: [
+    {
+      name: 'Follow user preference',
+      class: '',
+      color: tokens.colorBackgroundWeak,
+      default: true,
+    },
+    {
+      name: 'Light mode',
+      class: 'light-mode',
+      color: tokens.colorBackgroundStrong,
+    },
+    {
+      name: 'Dark mode',
+      class: 'dark-mode',
+      color: tokens.colorBackgroundStrongInverse,
+    },
+  ],
   dependencies: {
     //display only dependencies/dependents that have a story in storybook
     //by default this is false
