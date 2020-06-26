@@ -1,13 +1,24 @@
 @mixin dark-mode {
-  @if $dark-mode==true {
-    :global(body:not(.light-mode)) & {
-      @media (prefers-color-scheme: dark) {
-        @content;
+  @if $dark-mode {
+    @media (prefers-color-scheme: dark) {
+      @if (#{&} == 'body') {
+        &:global(:not(.light-mode)) {
+          @content;
+        }
+      } @else {
+        :global(body:not(.light-mode)) & {
+          @content;
+        }
       }
     }
-
-    :global(body.dark-mode) & {
-      @content;
+    @if (#{&} == 'body') {
+      &:global(.dark-mode) {
+        @content;
+      }
+    } @else {
+      :global(.dark-mode) & {
+        @content;
+      }
     }
   }
 }
