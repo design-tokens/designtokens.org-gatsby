@@ -10,14 +10,14 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
 import PropTypes from 'prop-types';
 
-import { CodeBlock } from '../components/CodeBlock';
-import { Hero } from '../components/Hero';
-import { HorizontalList } from '../components/HorizontalList';
-import { LinkButton } from '../components/LinkButton';
+import { CodeBlock } from '../../components/CodeBlock';
+import { Hero } from '../../components/Hero';
+import { HorizontalList } from '../../components/HorizontalList';
+import { LinkButton } from '../../components/LinkButton';
 
-import { Container } from '../layout/Container';
-import { Grid } from '../layout/Grid';
-import { HolyGrail } from '../layout/HolyGrail';
+import { Container } from '../../layout/Container';
+import { Grid } from '../../layout/Grid';
+import { HolyGrail } from '../../layout/HolyGrail';
 
 import styles from './DefaultLayout.module.scss';
 
