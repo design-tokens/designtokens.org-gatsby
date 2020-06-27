@@ -19,6 +19,8 @@ import { Container } from '../layout/Container';
 import { Grid } from '../layout/Grid';
 import { HolyGrail } from '../layout/HolyGrail';
 
+import logo from '../images/logo.png';
+
 import styles from './DefaultLayout.module.scss';
 
 const components = {
@@ -49,7 +51,7 @@ const DefaultLayout = ({
         <Grid full largeFit spacing="medium">
           <Grid.Column role="banner" smallAutoSize>
             <LinkButton to="/">
-              <abbr title={data.site.siteMetadata.title}>DTCG</abbr>
+              <img src={logo} width={72} height={72} alt="DTCG Logo" />
             </LinkButton>
           </Grid.Column>
 
