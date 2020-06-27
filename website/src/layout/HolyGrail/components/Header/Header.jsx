@@ -22,7 +22,6 @@ Header.propTypes = {
 
 Header.defaultProps = {
   element: 'header',
-  className: '',
 };
 
 export { Header };

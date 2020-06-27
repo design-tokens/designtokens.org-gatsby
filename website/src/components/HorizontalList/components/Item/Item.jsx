@@ -21,7 +21,6 @@ Item.propTypes = {
 
 Item.defaultProps = {
   element: 'li',
-  className: '',
 };
 
 export { Item };

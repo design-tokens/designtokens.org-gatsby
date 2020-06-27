@@ -22,7 +22,6 @@ Aside.propTypes = {
 
 Aside.defaultProps = {
   element: 'aside',
-  className: '',
 };
 
 export { Aside };

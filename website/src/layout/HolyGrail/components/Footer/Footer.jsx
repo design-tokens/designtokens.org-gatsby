@@ -22,7 +22,6 @@ Footer.propTypes = {
 
 Footer.defaultProps = {
   element: 'footer',
-  className: '',
 };
 
 export { Footer };

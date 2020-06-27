@@ -43,6 +43,36 @@ export const divideBy4 = () => (
   </Grid>
 );
 
+export const itemsFlexStart = () => (
+  <Grid alignItems="flex-start">
+    <GridExample />
+  </Grid>
+);
+
+export const itemsFlexEnd = () => (
+  <Grid alignItems="flex-end">
+    <GridExample />
+  </Grid>
+);
+
+export const itemsCenter = () => (
+  <Grid alignItems="center">
+    <GridExample />
+  </Grid>
+);
+
+export const itemsBaseline = () => (
+  <Grid alignItems="baseline">
+    <GridExample />
+  </Grid>
+);
+
+export const itemsStretch = () => (
+  <Grid alignItems="stretch">
+    <GridExample stretch />
+  </Grid>
+);
+
 export const columnAutoSize = () => (
   <Grid>
     <GridExample autoSize />

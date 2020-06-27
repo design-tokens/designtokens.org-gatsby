@@ -13,6 +13,7 @@ const Grid = ({
   xLargeFit,
   xXLargeFit,
   divideBy,
+  alignItems,
   spacing,
   children,
   className,
@@ -28,6 +29,7 @@ const Grid = ({
     xLargeFit && styles.xLargeFit,
     xXLargeFit && styles.xxLargeFit,
     divideBy && styles[`divide-by-${divideBy}`],
+    alignItems && styles[`wrapper-${alignItems}`],
     spacing && styles[spacing],
     className,
   );
@@ -48,6 +50,13 @@ Grid.propTypes = {
   xLargeFit: PropTypes.bool,
   xXLargeFit: PropTypes.bool,
   divideBy: PropTypes.oneOf([2, 3, 4]),
+  alignItems: PropTypes.oneOf([
+    'flex-start',
+    'flex-end',
+    'center',
+    'baseline',
+    'stretch',
+  ]),
   spacing: PropTypes.oneOf(['base', 'small', 'medium', 'large']),
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
@@ -55,15 +64,6 @@ Grid.propTypes = {
 
 Grid.defaultProps = {
   element: 'div',
-  full: false,
-  smallFit: false,
-  mediumFit: false,
-  largeFit: false,
-  xLargeFit: false,
-  xXLargeFit: false,
-  divideBy: '',
-  spacing: '',
-  className: '',
 };
 
 Grid.Column = Column;

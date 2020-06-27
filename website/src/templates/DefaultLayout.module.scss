@@ -18,12 +18,14 @@
 
 .Header,
 .Footer {
+
   p,
   ul {
     margin: 0;
   }
 
   @include mq(large) {
+
     ul {
       justify-content: flex-end;
     }
@@ -33,6 +35,13 @@
     padding-top: $spacing-vertical-small;
     padding-bottom: $spacing-vertical-small;
   }
+}
+
+.Header,
+.Header p,
+.Footer p {
+  padding-top: $spacing-vertical-small;
+  padding-bottom: $spacing-vertical-small;
 }
 
 .Header {

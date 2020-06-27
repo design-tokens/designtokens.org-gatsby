@@ -26,7 +26,6 @@ Hero.propTypes = {
 };
 
 Hero.defaultProps = {
-  className: '',
   heading: '',
   description: '',
 };

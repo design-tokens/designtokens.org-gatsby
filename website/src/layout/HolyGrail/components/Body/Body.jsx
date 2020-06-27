@@ -22,7 +22,6 @@ Body.propTypes = {
 
 Body.defaultProps = {
   element: 'div',
-  className: '',
 };
 
 export { Body };

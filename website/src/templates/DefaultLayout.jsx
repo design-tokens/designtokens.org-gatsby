@@ -46,10 +46,11 @@ const DefaultLayout = ({
   return (
     <HolyGrail>
       <HolyGrail.Header className={styles.Header}>
-        <Grid full largeFit spacing="medium">
+        <Grid full largeFit alignItems="center" spacing="medium">
           <Grid.Column role="banner" smallAutoSize>
             <LinkButton to="/">
-              <abbr title={data.site.siteMetadata.title}>DTCG</abbr>
+              <img src="logo.png" width={72} height={72} alt="Logo mark" />
+              {data.site.siteMetadata.title}
             </LinkButton>
           </Grid.Column>
 

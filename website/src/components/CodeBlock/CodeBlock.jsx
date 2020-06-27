@@ -70,7 +70,6 @@ CodeBlock.propTypes = {
 };
 
 CodeBlock.defaultProps = {
-  className: '',
   live: false,
   render: false,
 };

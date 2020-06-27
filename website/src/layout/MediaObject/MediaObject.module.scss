@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+
+  @include flex-alignments(items);
+}
+
+.figure {
+  order: 1;
+  margin-right: $spacing-horizontal-medium;
+
+  .reverse & {
+    margin-right: 0;
+    margin-left: $spacing-horizontal-medium;
+  }
+}
+
+.body {
+  flex: 1;
+}
+
+@each $spacing-name,
+$spacing-value in $spacing-horizontals {
+
+  .#{$spacing-name} .figure {
+    margin-right: -$spacing-value;
+
+    .reverse & {
+      margin-right: 0;
+      margin-left: $spacing-value;
+    }
+  }
+}

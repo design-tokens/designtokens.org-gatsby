@@ -20,7 +20,6 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  className: '',
   type: 'submit',
 };
 

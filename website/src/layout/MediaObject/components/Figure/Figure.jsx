@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import styles from '../../HolyGrail.module.scss';
+import styles from '../../MediaObject.module.scss';
 
-const Content = ({ element, className, children, ...rest }) => {
+const Figure = ({ element, className, children, ...rest }) => {
   const Element = element;
-  const classes = classNames(styles.content, className);
+  const classes = classNames(styles.figure, className);
 
   return (
     <Element className={classes} {...rest}>
@@ -14,14 +14,14 @@ const Content = ({ element, className, children, ...rest }) => {
   );
 };
 
-Content.propTypes = {
+Figure.propTypes = {
   element: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
 
-Content.defaultProps = {
-  element: 'section',
+Figure.defaultProps = {
+  element: 'div',
 };
 
-export { Content };
+export { Figure };

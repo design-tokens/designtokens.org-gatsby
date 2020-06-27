@@ -33,8 +33,6 @@ AssistiveText.propTypes = {
 
 AssistiveText.defaultProps = {
   element: 'span',
-  className: '',
-  focusable: false,
 };
 
 export { AssistiveText };

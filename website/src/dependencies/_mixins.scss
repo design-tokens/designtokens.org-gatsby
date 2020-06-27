@@ -35,20 +35,10 @@
   }
 }
 
-@mixin clearfix {
-  &::before,
-  &::after {
-    display: table;
-    content: ' ';
-  }
-
-  &::after {
-    clear: both;
-  }
-}
-
 @mixin flex-alignments($context) {
+
   @each $flex-alignment in $flex-alignments {
+
     &-#{$flex-alignment} {
       align-#{$context}: $flex-alignment;
     }
@@ -56,8 +46,10 @@
 }
 
 @mixin spacing($child-selector: '>*', $use-breakpoint: '') {
-  @each $spacing-name, $spacing-value in $spacing-horizontals {
-    @if $use-breakpoint != '' {
+
+  @each $spacing-name,
+  $spacing-value in $spacing-horizontals {
+    @if $use-breakpoint !='' {
       @include mq($use-breakpoint) {
         .#{$spacing-name}\@#{$use-breakpoint} {
           margin-right: -$spacing-value / 2 !important;
@@ -69,7 +61,9 @@
           }
         }
       }
-    } @else {
+    }
+
+    @else {
       .#{$spacing-name} {
         margin-right: -$spacing-value / 2 !important;
         margin-left: -$spacing-value / 2 !important;
