@@ -23,6 +23,11 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+}
+
+body {
+  font-size: $font-size-medium;
+  text-rendering: optimizeLegibility;
   background: $color-background;
   color: $color-foreground;
 
@@ -30,12 +35,6 @@ html {
     background: $color-background-inverse;
     color: $color-foreground-inverse;
   }
-}
-
-body {
-  font-size: $font-size-medium;
-  text-rendering: optimizeLegibility;
-  background: transparent;
 }
 
 ::selection {

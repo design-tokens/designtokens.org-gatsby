@@ -11,6 +11,7 @@
     "@storybook/addon-a11y": "^5.3.19",
     "@storybook/addon-essentials": "^5.3.19",
     "@storybook/addon-storysource": "^5.3.19",
+    "@storybook/addon-viewport": "^5.3.19",
     "babel-plugin-react-docgen": "^4.1.0",
     "classnames": "^2.2.6",
     "gatsby": "^2.23.11",
@@ -37,7 +38,8 @@
     "react-live": "^2.2.2",
     "resolve-url-loader": "^3.1.1",
     "sass": "^1.26.9",
-    "sass-resources-loader": "^2.0.3"
+    "sass-resources-loader": "^2.0.3",
+    "storybook-addon-themes": "^5.4.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.1",
