@@ -32,7 +32,7 @@
 
 @mixin flex-alignments($context) {
   @each $flex-alignment in $flex-alignments {
-    &-#{$flex-alignment} {
+    &#{$flex-alignment} {
       align-#{$context}: $flex-alignment;
     }
   }

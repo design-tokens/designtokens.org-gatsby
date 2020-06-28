@@ -5,7 +5,7 @@ import DefaultLayout from '../templates/DefaultLayout';
 import { SEO } from '../components/SEO';
 
 const IndexPage = () => (
-  <DefaultLayout>
+  <DefaultLayout pageTitle="About DTCG">
     <SEO title="Home" />
 
     <Heading>Principles</Heading>
