@@ -43,31 +43,31 @@ export const divideBy4 = () => (
   </Grid>
 );
 
-export const itemsFlexStart = () => (
+export const alignItemsFlexStart = () => (
   <Grid alignItems="flex-start">
     <GridExample />
   </Grid>
 );
 
-export const itemsFlexEnd = () => (
+export const alignItemsFlexEnd = () => (
   <Grid alignItems="flex-end">
     <GridExample />
   </Grid>
 );
 
-export const itemsCenter = () => (
+export const alignItemsCenter = () => (
   <Grid alignItems="center">
     <GridExample />
   </Grid>
 );
 
-export const itemsBaseline = () => (
+export const alignItemsBaseline = () => (
   <Grid alignItems="baseline">
     <GridExample />
   </Grid>
 );
 
-export const itemsStretch = () => (
+export const alignItemsStretch = () => (
   <Grid alignItems="stretch">
     <GridExample stretch />
   </Grid>
@@ -79,8 +79,26 @@ export const columnAutoSize = () => (
   </Grid>
 );
 
-export const spacing = () => (
+export const spacingBase = () => (
+  <Grid spacing="base">
+    <GridExample />
+  </Grid>
+);
+
+export const spacingSmall = () => (
+  <Grid spacing="small">
+    <GridExample />
+  </Grid>
+);
+
+export const spacingMedium = () => (
   <Grid spacing="medium">
+    <GridExample />
+  </Grid>
+);
+
+export const spacingLarge = () => (
+  <Grid spacing="large">
     <GridExample />
   </Grid>
 );

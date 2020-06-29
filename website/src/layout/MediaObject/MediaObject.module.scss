@@ -6,10 +6,10 @@
 }
 
 .figure {
-  order: 1;
   margin-right: $spacing-horizontal-medium;
 
   .reverse & {
+    order: 1;
     margin-right: 0;
     margin-left: $spacing-horizontal-medium;
   }
@@ -19,13 +19,13 @@
   flex: 1;
 }
 
-@each $spacing-name,
-$spacing-value in $spacing-horizontals {
+@each $spacing-name, $spacing-value in $spacing-horizontals {
+  .#{$spacing-name} {
+    .figure {
+      margin-right: $spacing-value;
+    }
 
-  .#{$spacing-name} .figure {
-    margin-right: -$spacing-value;
-
-    .reverse & {
+    &.reverse .figure {
       margin-right: 0;
       margin-left: $spacing-value;
     }

@@ -19,7 +19,7 @@ const MediaObject = ({
     styles.wrapper,
     spacing && styles[spacing],
     reverse && styles.reverse,
-    alignItems && styles[`wrapper-${alignItems}`],
+    alignItems && styles[`wrapper${alignItems}`],
     className,
   );
 
@@ -32,7 +32,6 @@ const MediaObject = ({
 
 MediaObject.propTypes = {
   element: PropTypes.string,
-  spacing: PropTypes.oneOf(['base', 'small', 'medium', 'large']),
   reverse: PropTypes.bool,
   alignItems: PropTypes.oneOf([
     'flex-start',
@@ -41,6 +40,7 @@ MediaObject.propTypes = {
     'baseline',
     'stretch',
   ]),
+  spacing: PropTypes.oneOf(['base', 'small', 'medium', 'large']),
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
 };

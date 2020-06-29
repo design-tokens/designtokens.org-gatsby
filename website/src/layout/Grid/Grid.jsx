@@ -29,7 +29,7 @@ const Grid = ({
     xLargeFit && styles.xLargeFit,
     xXLargeFit && styles.xxLargeFit,
     divideBy && styles[`divide-by-${divideBy}`],
-    alignItems && styles[`wrapper-${alignItems}`],
+    alignItems && styles[`wrapper${alignItems}`],
     spacing && styles[spacing],
     className,
   );
