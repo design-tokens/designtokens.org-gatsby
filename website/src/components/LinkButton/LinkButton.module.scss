@@ -1,3 +1,5 @@
+@import 'dependencies';
+
 .wrapper {
   @include button;
 }
@@ -19,7 +21,7 @@ a.wrapper {
     background: rgba($color-background-strong, 0.5);
 
     @include dark-mode {
-      background: rgba($color-background-strong-inverse, .25);
+      background: rgba($color-background-strong-inverse, 0.25);
     }
   }
 

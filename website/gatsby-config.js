@@ -1,5 +1,3 @@
-/* eslint-disable global-require */
-
 module.exports = {
   siteMetadata: {
     title: 'Design Tokens W3C Community Group',
@@ -8,19 +6,6 @@ module.exports = {
     author: '@designtokens',
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-sass',
-      options: {
-        implementation: require('sass'),
-        useResolveUrlLoader: {
-          options: {
-            sourceMap: true,
-          },
-        },
-        postCssPlugins: require('./postcss.config').plugins,
-      },
-    },
-    `gatsby-sass-resources-loader`,
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',

@@ -4,4 +4,17 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
+const webpackStyleRules = require('./webpack-style-rules');
+
+exports.onCreateWebpackConfig = ({ actions, loaders }) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.scss$/,
+          use: [loaders.miniCssExtract(), ...webpackStyleRules],
+        },
+      ],
+    },
+  });
+};
