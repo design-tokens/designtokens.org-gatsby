@@ -1,6 +1,5 @@
 require('imports-loader');
 const path = require('path');
-const webpackStyleRules = require('../webpack-style-rules');
 
 module.exports = {
   presets: [
@@ -67,7 +66,35 @@ module.exports = {
         {
           loader: 'style-loader',
         },
-        ...webpackStyleRules,
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 1,
+            modules: {
+              // Same as https://github.com/gatsbyjs/gatsby/blob/94d1c4962a5620ff80f2eb68b4b072f8a3ffe898/packages/gatsby/src/utils/webpack-utils.ts#L208
+              localIdentName: '[name]--[local]--[hash:base64:5]',
+              context: path.resolve(__dirname, '../src'),
+            },
+            sourceMap: true,
+          },
+        },
+        {
+          loader: 'postcss-loader',
+          options: { sourceMap: true },
+        },
+        {
+          loader: 'resolve-url-loader',
+          options: { sourceMap: true },
+        },
+        {
+          loader: 'sass-loader',
+          options: {
+            sourceMap: true,
+            sassOptions: {
+              includePaths: [path.resolve(__dirname, '../src')],
+            },
+          },
+        },
       ],
       include: path.resolve(__dirname, '../src'),
     });

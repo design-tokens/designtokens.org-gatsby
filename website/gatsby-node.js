@@ -4,11 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const webpackStyleRules = require('./webpack-style-rules');
-
-exports.onCreateWebpackConfig = ({ actions, loaders, stage, getConfig }) => {
-  const isSSR = stage.includes(`html`);
-
+exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
+  // See https://spectrum.chat/gatsby-js/general/having-issue-related-to-chunk-commons-mini-css-extract-plugin~0ee9c456-a37e-472a-a1a0-cc36f8ae6033?m=MTU3MjYyNDQ5OTAyNQ==
   if (stage === 'build-javascript') {
     const config = getConfig();
     const miniCssExtractPlugin = config.plugins.find(
@@ -19,18 +16,4 @@ exports.onCreateWebpackConfig = ({ actions, loaders, stage, getConfig }) => {
     }
     actions.replaceWebpackConfig(config);
   }
-
-  actions.setWebpackConfig({
-    module: {
-      rules: [
-        {
-          test: /\.scss$/,
-          use: [
-            !isSSR && loaders.miniCssExtract({ hmr: false }),
-            ...webpackStyleRules,
-          ].filter(Boolean),
-        },
-      ],
-    },
-  });
 };

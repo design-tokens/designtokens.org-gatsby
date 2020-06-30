@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: 'Design Tokens W3C Community Group',
@@ -6,6 +8,17 @@ module.exports = {
     author: '@designtokens',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        sourceMap: true,
+        includePaths: [path.resolve(__dirname, './src')],
+        sassRuleTest: /\.nothing\.s(a|c)ss$/,
+        sassRuleModulesTest: /\.scss$/,
+        useResolveUrlLoader: true,
+        postCssPlugins: require('./postcss.config.js').plugins,
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
