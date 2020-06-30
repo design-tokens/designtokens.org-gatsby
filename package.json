@@ -7,6 +7,9 @@
   "author": "Design Token",
   "license": "SEE LICENSE.MD",
   "private": true,
+  "engines": {
+    "yarn": "1.18.0"
+  },
   "scripts": {
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint website/ --ext .js,.jsx,.ts,.tsx --format codeframe",
