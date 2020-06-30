@@ -1,14 +1,15 @@
 @import 'dependencies';
 
-#root {
-  height: 100%;
-
-  @include dark-mode {
-    background: $color-background-inverse;
-    color: $color-foreground-inverse;
-  }
-}
 :global {
+  #root {
+    height: 100%;
+
+    @include dark-mode {
+      background: $color-background-inverse;
+      color: $color-foreground-inverse;
+    }
+  }
+
   .sbdocs {
     &.sbdocs-wrapper,
     &.sbdocs-preview,
