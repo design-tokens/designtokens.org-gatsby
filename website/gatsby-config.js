@@ -2,7 +2,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'Design Tokens W3C Community Group',
+    title:
+      'Design Tokens <abbr title="World Wide Web Consortium">W3C</abbr> Community Group',
     description:
       'The DTCG’s goal is to provide standards upon which products and design tools can rely for sharing stylistic pieces of a design system at scale.',
     author: '@designtokens',

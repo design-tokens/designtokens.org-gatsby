@@ -58,7 +58,11 @@ const DefaultLayout = ({
                 </MediaObject.Figure>
 
                 <MediaObject.Body>
-                  {data.site.siteMetadata.title}
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: data.site.siteMetadata.title,
+                    }}
+                  />
                 </MediaObject.Body>
               </MediaObject>
             </LinkButton>
@@ -122,7 +126,12 @@ const DefaultLayout = ({
         <Grid full largeFit spacing="medium">
           <Grid.Column role="contentinfo">
             <p>
-              &copy; {new Date().getFullYear()} {data.site.siteMetadata.title}
+              &copy; {new Date().getFullYear()}{' '}
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: data.site.siteMetadata.title,
+                }}
+              />
             </p>
           </Grid.Column>
 
@@ -130,7 +139,7 @@ const DefaultLayout = ({
             <HorizontalList spacing="small">
               <HorizontalList.Item>
                 <LinkButton href="https://www.w3.org/community/design-tokens/">
-                  W3C Group
+                  <abbr title="World Wide Web Consortium">W3C</abbr> Group
                 </LinkButton>
               </HorizontalList.Item>
 
