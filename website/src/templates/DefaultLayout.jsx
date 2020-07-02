@@ -139,7 +139,9 @@ const DefaultLayout = ({
             <HorizontalList spacing="small">
               <HorizontalList.Item>
                 <LinkButton href="https://www.w3.org/community/design-tokens/">
-                  <abbr title="World Wide Web Consortium">W3C</abbr> Group
+                  <span>
+                    <abbr title="World Wide Web Consortium">W3C</abbr> Group
+                  </span>
                 </LinkButton>
               </HorizontalList.Item>
 
