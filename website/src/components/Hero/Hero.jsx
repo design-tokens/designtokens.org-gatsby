@@ -11,7 +11,11 @@ const Hero = ({ className, children, heading, description, ...rest }) => {
     <section className={classes} {...rest}>
       {heading !== '' ? <Heading level={1}>{heading}</Heading> : ''}
 
-      {description !== '' ? <Heading level={4}>{description}</Heading> : ''}
+      {description && (
+        <Heading level={4} element="h2">
+          {description}
+        </Heading>
+      )}
 
       {children}
     </section>

@@ -17,6 +17,13 @@
 }
 
 .Header,
+.Header p,
+.Footer p {
+  padding-top: $spacing-vertical-small;
+  padding-bottom: $spacing-vertical-small;
+}
+
+.Header,
 .Footer {
   p,
   ul {
@@ -27,11 +34,6 @@
     ul {
       justify-content: flex-end;
     }
-  }
-
-  p {
-    padding-top: $spacing-vertical-small;
-    padding-bottom: $spacing-vertical-small;
   }
 }
 
