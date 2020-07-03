@@ -2,21 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Figure, Body } from './components';
+
 import styles from './MediaObject.module.scss';
 
 const MediaObject = ({
   element,
-  alignItems,
-  spacing,
   children,
   className,
+  reverse,
+  alignItems,
+  spacing,
   ...rest
 }) => {
   const Element = element;
   const classes = classNames(
     styles.wrapper,
-    alignItems && styles[`wrapper${alignItems}`],
     spacing && styles[spacing],
+    reverse && styles.reverse,
+    alignItems && styles[`wrapper${alignItems}`],
     className,
   );
 
@@ -29,6 +32,7 @@ const MediaObject = ({
 
 MediaObject.propTypes = {
   element: PropTypes.string,
+  reverse: PropTypes.bool,
   alignItems: PropTypes.oneOf([
     'flex-start',
     'flex-end',
@@ -43,9 +47,10 @@ MediaObject.propTypes = {
 
 MediaObject.defaultProps = {
   element: 'div',
+  className: '',
+  reverse: false,
   alignItems: '',
   spacing: '',
-  className: '',
 };
 
 MediaObject.Figure = Figure;

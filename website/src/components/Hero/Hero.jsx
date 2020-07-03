@@ -30,9 +30,10 @@ Hero.propTypes = {
 };
 
 Hero.defaultProps = {
-  className: '',
   heading: '',
   description: '',
+  className: '',
+  children: '',
 };
 
 export { Hero };

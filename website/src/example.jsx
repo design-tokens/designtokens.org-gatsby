@@ -42,8 +42,8 @@ Example.propTypes = {
 Example.defaultProps = {
   element: 'span',
   className: '',
-  text: '',
   heading: '',
+  text: '',
   box: true,
   square: false,
   stretch: false,

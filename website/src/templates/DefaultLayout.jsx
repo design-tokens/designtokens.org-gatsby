@@ -54,11 +54,15 @@ const DefaultLayout = ({
             <LinkButton to="/">
               <MediaObject alignItems="center">
                 <MediaObject.Figure>
-                  <img src={logo} width={72} height={72} alt="DTCG Logo" />
+                  <img src={logo} width={48} height={48} alt="DTCG Logo" />
                 </MediaObject.Figure>
 
                 <MediaObject.Body>
-                  {data.site.siteMetadata.title}
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: data.site.siteMetadata.title,
+                    }}
+                  />
                 </MediaObject.Body>
               </MediaObject>
             </LinkButton>
@@ -122,7 +126,12 @@ const DefaultLayout = ({
         <Grid full largeFit spacing="medium">
           <Grid.Column role="contentinfo">
             <p>
-              &copy; {new Date().getFullYear()} {data.site.siteMetadata.title}
+              &copy; {new Date().getFullYear()}{' '}
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: data.site.siteMetadata.title,
+                }}
+              />
             </p>
           </Grid.Column>
 
@@ -130,7 +139,9 @@ const DefaultLayout = ({
             <HorizontalList spacing="small">
               <HorizontalList.Item>
                 <LinkButton href="https://www.w3.org/community/design-tokens/">
-                  W3C Group
+                  <span>
+                    <abbr title="World Wide Web Consortium">W3C</abbr> Group
+                  </span>
                 </LinkButton>
               </HorizontalList.Item>
 
@@ -156,7 +167,6 @@ const DefaultLayout = ({
 DefaultLayout.propTypes = {
   pageTitle: PropTypes.string,
   pageContext: PropTypes.node,
-  mdxTitle: PropTypes.string,
   children: PropTypes.node.isRequired,
   navigation: PropTypes.node,
   aside: PropTypes.node,
@@ -164,7 +174,6 @@ DefaultLayout.propTypes = {
 
 DefaultLayout.defaultProps = {
   pageTitle: '',
-  mdxTitle: '',
   navigation: '',
   aside: '',
   pageContext: '',

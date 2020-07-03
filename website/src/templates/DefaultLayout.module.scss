@@ -61,6 +61,12 @@
   }
 }
 
+.Content {
+  @include mq(large) {
+    padding-bottom: $spacing-vertical-large;
+  }
+}
+
 .Navigation a {
   display: block;
   margin-right: -$spacing-horizontal-medium;
@@ -76,6 +82,8 @@
 }
 
 .Footer {
+  padding-top: $spacing-vertical-large;
+  padding-bottom: $spacing-vertical-large;
   background: $color-background-weak;
   color: $color-foreground-weak;
 
