@@ -12,7 +12,7 @@ import styles from './CodeBlock.module.scss';
 
 const CodeBlock = ({ children, className, live, render }) => {
   const classes = classNames(styles.wrapper, className);
-  const language = className.replace(/language-/, '');
+  const language = className?.replace(/language-/, '') || '';
 
   if (live) {
     return (
@@ -70,7 +70,7 @@ CodeBlock.propTypes = {
 };
 
 CodeBlock.defaultProps = {
-  className: '',
+  className: null,
   live: false,
   render: false,
 };

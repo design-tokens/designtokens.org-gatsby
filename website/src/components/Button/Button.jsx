@@ -7,6 +7,8 @@ const Button = ({ className, children, type, ...rest }) => {
   const classes = classNames(styles.wrapper, className);
 
   return (
+    // TODO: re-enable when this issue is fixed https://github.com/yannickcr/eslint-plugin-react/issues/1846
+    // eslint-disable-next-line react/button-has-type
     <button type={type} className={classes} {...rest}>
       {children}
     </button>
@@ -20,7 +22,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  className: '',
+  className: null,
   type: 'submit',
 };
 

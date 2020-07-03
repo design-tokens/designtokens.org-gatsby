@@ -9,7 +9,7 @@ const Hero = ({ className, children, heading, description, ...rest }) => {
 
   return (
     <section className={classes} {...rest}>
-      {heading !== '' ? <Heading level={1}>{heading}</Heading> : ''}
+      {heading && <Heading level={1}>{heading}</Heading>}
 
       {description && (
         <Heading level={4} element="h2">
@@ -25,15 +25,15 @@ const Hero = ({ className, children, heading, description, ...rest }) => {
 Hero.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
-  heading: PropTypes.string,
+  heading: PropTypes.node,
   description: PropTypes.string,
 };
 
 Hero.defaultProps = {
-  heading: '',
-  description: '',
-  className: '',
-  children: '',
+  heading: null,
+  description: null,
+  className: null,
+  children: null,
 };
 
 export { Hero };

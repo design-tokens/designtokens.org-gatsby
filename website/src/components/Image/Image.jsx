@@ -45,7 +45,7 @@ Image.propTypes = {
 };
 
 Image.defaultProps = {
-  className: '',
+  className: null,
 };
 
 export { Image };
