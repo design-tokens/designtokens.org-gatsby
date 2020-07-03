@@ -17,6 +17,7 @@ module.exports = {
         sassRuleTest: /\.nothing\.s(a|c)ss$/,
         sassRuleModulesTest: /\.scss$/,
         useResolveUrlLoader: true,
+        // eslint-disable-next-line global-require
         postCssPlugins: require('./postcss.config.js').plugins,
       },
     },
