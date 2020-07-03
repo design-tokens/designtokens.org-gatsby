@@ -2,27 +2,21 @@
 
 .wrapper {
   position: relative;
-  padding: $spacing-vertical-medium $spacing-horizontal-large;
+  padding-right: $spacing-horizontal-large;
+  padding-left: $spacing-horizontal-large;
+  min-height: $spacing-vertical-large;
   background: rgba(black, 0.0625);
   color: $color-foreground-strong;
   z-index: 1;
+  overflow: hidden;
 
-  * {
-    margin: 0;
-
-    + * {
-      margin-top: $spacing-vertical-small;
-    }
+  h1 + h2 {
+    margin-top: -$spacing-vertical-medium;
   }
 
   @include dark-mode {
     background: rgba(white, 0.03125);
     color: $color-foreground-strong-inverse;
-  }
-
-  @include mq(medium) {
-    padding-top: $spacing-vertical-large;
-    padding-bottom: $spacing-vertical-large;
   }
 
   &::before {
