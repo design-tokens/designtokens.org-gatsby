@@ -1,4 +1,4 @@
-/* eslint-disable global-require */
+const path = require('path');
 
 module.exports = {
   siteMetadata: {
@@ -12,16 +12,14 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        implementation: require('sass'),
-        useResolveUrlLoader: {
-          options: {
-            sourceMap: true,
-          },
-        },
-        postCssPlugins: require('./postcss.config').plugins,
+        sourceMap: true,
+        includePaths: [path.resolve(__dirname, './src')],
+        sassRuleTest: /\.nothing\.s(a|c)ss$/,
+        sassRuleModulesTest: /\.scss$/,
+        useResolveUrlLoader: true,
+        postCssPlugins: require('./postcss.config.js').plugins,
       },
     },
-    `gatsby-sass-resources-loader`,
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',

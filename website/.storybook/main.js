@@ -1,7 +1,5 @@
 require('imports-loader');
 const path = require('path');
-const sassResourcesLoaderRule = require('../plugins/gatsby-sass-resources-loader/rule')
-  .rule;
 
 module.exports = {
   presets: [
@@ -28,9 +26,6 @@ module.exports = {
 
     // Since we're using Yarn Workspaces and nesting the packages, we need to include the parent package
     config.module.rules[0].include = require('path').resolve('../..');
-
-    // set the NODE_ENV to 'production' by default, to allow babel-plugin-remove-graphql-queries to remove static queries
-    process.env.NODE_ENV = 'production';
 
     // use installed babel-loader which is v8.0-beta (which is meant to work with @babel/core@7)
     config.module.rules[0].use[0].loader = require.resolve('babel-loader');
@@ -66,15 +61,19 @@ module.exports = {
 
     // Add specific loader rule for CSS (Sass) Modules
     config.module.rules.push({
-      test: /\.module\.scss$/,
+      test: /\.scss$/,
       use: [
-        { loader: 'style-loader', options: { sourceMap: true } },
+        {
+          loader: 'style-loader',
+        },
         {
           loader: 'css-loader',
           options: {
-            importLoaders: 2,
+            importLoaders: 1,
             modules: {
-              localIdentName: '[path]-[local]-[hash:base64:5]',
+              // Same as https://github.com/gatsbyjs/gatsby/blob/94d1c4962a5620ff80f2eb68b4b072f8a3ffe898/packages/gatsby/src/utils/webpack-utils.ts#L208
+              localIdentName: '[name]--[local]--[hash:base64:5]',
+              context: path.resolve(__dirname, '../src'),
             },
             sourceMap: true,
           },
@@ -84,32 +83,21 @@ module.exports = {
           options: { sourceMap: true },
         },
         {
+          loader: 'resolve-url-loader',
+          options: { sourceMap: true },
+        },
+        {
           loader: 'sass-loader',
           options: {
             sourceMap: true,
+            sassOptions: {
+              includePaths: [path.resolve(__dirname, '../src')],
+            },
           },
         },
-        sassResourcesLoaderRule,
       ],
       include: path.resolve(__dirname, '../src'),
     });
-
-    config.module.rules.push({
-      test: /\.scss$/,
-      loaders: [
-        { loader: 'style-loader', options: { sourceMap: true } },
-        { loader: 'css-loader', options: { sourceMap: true } },
-        {
-          loader: 'postcss-loader',
-          options: { sourceMap: true },
-        },
-        { loader: 'sass-loader', options: { sourceMap: true } },
-        sassResourcesLoaderRule,
-      ],
-      exclude: /\.module\.scss$/,
-      include: path.resolve(__dirname, '../src'),
-    });
-
     return config;
   },
 };
