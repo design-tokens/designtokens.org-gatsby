@@ -54,8 +54,10 @@ LinkButton.propTypes = {
 
 LinkButton.defaultProps = {
   element: 'span',
+  className: '',
   to: '',
   href: '',
+  primary: false,
 };
 
 export { LinkButton };

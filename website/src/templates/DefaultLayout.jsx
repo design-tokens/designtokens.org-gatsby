@@ -167,7 +167,6 @@ const DefaultLayout = ({
 DefaultLayout.propTypes = {
   pageTitle: PropTypes.string,
   pageContext: PropTypes.node,
-  mdxTitle: PropTypes.string,
   children: PropTypes.node.isRequired,
   navigation: PropTypes.node,
   aside: PropTypes.node,
@@ -175,7 +174,6 @@ DefaultLayout.propTypes = {
 
 DefaultLayout.defaultProps = {
   pageTitle: '',
-  mdxTitle: '',
   navigation: '',
   aside: '',
   pageContext: '',

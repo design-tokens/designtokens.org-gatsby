@@ -22,6 +22,7 @@ Content.propTypes = {
 
 Content.defaultProps = {
   element: 'section',
+  className: '',
 };
 
 export { Content };

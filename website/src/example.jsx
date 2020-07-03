@@ -41,8 +41,12 @@ Example.propTypes = {
 
 Example.defaultProps = {
   element: 'span',
+  className: '',
   heading: '',
+  text: '',
   box: true,
+  square: false,
+  stretch: false,
 };
 
 export { Example };

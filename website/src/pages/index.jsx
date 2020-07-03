@@ -6,14 +6,14 @@ import { SEO } from '../templates/SEO';
 
 const IndexPage = () => (
   <DefaultLayout
-    pageTitle={
+    pageTitle={(
       <span
         dangerouslySetInnerHTML={{
           __html:
             'About <abbr title="Design Tokens Community Group">DTCG</abbr>',
         }}
       />
-    }
+    )}
   >
     <SEO title="Home" />
 

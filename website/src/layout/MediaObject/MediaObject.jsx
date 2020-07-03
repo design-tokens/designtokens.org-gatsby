@@ -47,6 +47,10 @@ MediaObject.propTypes = {
 
 MediaObject.defaultProps = {
   element: 'div',
+  className: '',
+  reverse: false,
+  alignItems: '',
+  spacing: '',
 };
 
 MediaObject.Figure = Figure;

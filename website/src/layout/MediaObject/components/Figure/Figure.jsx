@@ -22,6 +22,7 @@ Figure.propTypes = {
 
 Figure.defaultProps = {
   element: 'div',
+  className: '',
 };
 
 export { Figure };

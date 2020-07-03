@@ -22,6 +22,7 @@ Container.propTypes = {
 
 Container.defaultProps = {
   element: 'div',
+  className: '',
 };
 
 export { Container };

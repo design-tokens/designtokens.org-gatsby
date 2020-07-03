@@ -22,6 +22,7 @@ Navigation.propTypes = {
 
 Navigation.defaultProps = {
   element: 'nav',
+  className: '',
 };
 
 export { Navigation };

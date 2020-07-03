@@ -27,6 +27,8 @@ Column.propTypes = {
 
 Column.defaultProps = {
   element: 'div',
+  className: '',
+  autoSize: false,
 };
 
 export { Column };

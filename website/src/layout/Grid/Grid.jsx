@@ -64,6 +64,16 @@ Grid.propTypes = {
 
 Grid.defaultProps = {
   element: 'div',
+  className: '',
+  full: false,
+  smallFit: false,
+  mediumFit: false,
+  largeFit: false,
+  xLargeFit: false,
+  xXLargeFit: false,
+  divideBy: '',
+  alignItems: '',
+  spacing: '',
 };
 
 Grid.Column = Column;

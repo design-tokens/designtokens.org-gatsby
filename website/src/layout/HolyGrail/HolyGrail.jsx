@@ -23,6 +23,7 @@ HolyGrail.propTypes = {
 
 HolyGrail.defaultProps = {
   element: 'div',
+  className: '',
 };
 
 HolyGrail.Header = Header;

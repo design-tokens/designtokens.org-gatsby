@@ -44,4 +44,8 @@ Image.propTypes = {
   alt: PropTypes.string.isRequired,
 };
 
+Image.defaultProps = {
+  className: '',
+};
+
 export { Image };
