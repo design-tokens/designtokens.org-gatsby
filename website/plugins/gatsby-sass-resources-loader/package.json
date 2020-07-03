@@ -1,8 +1,0 @@
-{
-  "name": "gatsby-sass-resources-loader",
-  "version": "1.0.0",
-  "description": "Automatically load Sass dependencies",
-  "main": "index.js",
-  "author": "Design Tokens W3C Community Group",
-  "license": "SEE LICENSE.MD"
-}
