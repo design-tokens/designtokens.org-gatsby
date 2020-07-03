@@ -9,6 +9,7 @@
   "files.exclude": {
     "**/.DS_Store": true,
     "**/.git": true,
+    "**/.yarn": true,
     "**/node_modules": true,
     "packages/*/build": true,
     "website/{.cache,public}": true
