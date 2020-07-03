@@ -28,8 +28,8 @@ HorizontalList.propTypes = {
 
 HorizontalList.defaultProps = {
   element: 'ul',
-  className: '',
-  spacing: '',
+  className: null,
+  spacing: null,
 };
 
 HorizontalList.Item = Item;

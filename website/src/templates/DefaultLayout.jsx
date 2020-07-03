@@ -10,6 +10,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
 import PropTypes from 'prop-types';
 
+import { SEO } from './SEO';
 import { CodeBlock } from '../components/CodeBlock';
 import { Hero } from '../components/Hero';
 import { HorizontalList } from '../components/HorizontalList';
@@ -40,14 +41,20 @@ const DefaultLayout = ({
     query SiteTitleQuery {
       site {
         siteMetadata {
-          title
+          htmlTitle
         }
       }
     }
   `);
 
+  const title = pageContext?.frontmatter?.title;
+  const description = pageContext?.frontmatter?.description;
+
+  const headingText = title || pageTitle || '';
+
   return (
     <HolyGrail>
+      <SEO title={title} description={description} />
       <HolyGrail.Header className={styles.Header}>
         <Grid full largeFit spacing="medium" alignItems="center">
           <Grid.Column role="banner" smallAutoSize>
@@ -59,8 +66,9 @@ const DefaultLayout = ({
 
                 <MediaObject.Body>
                   <span
+                    // eslint-disable-next-line react/no-danger
                     dangerouslySetInnerHTML={{
-                      __html: data.site.siteMetadata.title,
+                      __html: data.site.siteMetadata.htmlTitle,
                     }}
                   />
                 </MediaObject.Body>
@@ -77,29 +85,18 @@ const DefaultLayout = ({
           </Grid.Column>
         </Grid>
       </HolyGrail.Header>
-
       <HolyGrail.Body>
         <HolyGrail.Content>
           <HolyGrail>
             <HolyGrail.Header>
-              <Hero
-                heading={
-                  pageContext !== ''
-                    ? pageContext.frontmatter.title
-                    : pageTitle !== ''
-                    ? pageTitle
-                    : ''
-                }
-              />
+              <Hero heading={headingText} />
             </HolyGrail.Header>
 
             <HolyGrail.Body>
-              {navigation !== '' ? (
+              {navigation && (
                 <HolyGrail.Navigation className={styles.Navigation}>
                   {navigation}
                 </HolyGrail.Navigation>
-              ) : (
-                ''
               )}
 
               <HolyGrail.Content className={styles.Content}>
@@ -115,21 +112,19 @@ const DefaultLayout = ({
           </HolyGrail>
         </HolyGrail.Content>
 
-        {aside !== '' ? (
+        {aside && (
           <HolyGrail.Aside className={styles.Aside}>{aside}</HolyGrail.Aside>
-        ) : (
-          ''
         )}
       </HolyGrail.Body>
-
       <HolyGrail.Footer className={styles.Footer}>
         <Grid full largeFit spacing="medium">
           <Grid.Column role="contentinfo">
             <p>
               &copy; {new Date().getFullYear()}{' '}
               <span
+                // eslint-disable-next-line react/no-danger
                 dangerouslySetInnerHTML={{
-                  __html: data.site.siteMetadata.title,
+                  __html: data.site.siteMetadata.htmlTitle,
                 }}
               />
             </p>
@@ -165,7 +160,7 @@ const DefaultLayout = ({
 };
 
 DefaultLayout.propTypes = {
-  pageTitle: PropTypes.string,
+  pageTitle: PropTypes.node,
   pageContext: PropTypes.node,
   children: PropTypes.node.isRequired,
   navigation: PropTypes.node,
@@ -173,10 +168,10 @@ DefaultLayout.propTypes = {
 };
 
 DefaultLayout.defaultProps = {
-  pageTitle: '',
-  navigation: '',
-  aside: '',
-  pageContext: '',
+  pageTitle: null,
+  navigation: null,
+  aside: null,
+  pageContext: null,
 };
 
 export default DefaultLayout;

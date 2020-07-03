@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const Item = ({ element, className, children, ...rest }) => {
-  const Element = element !== '' ? element : 'li';
+  const Element = element;
   const classes = classNames(className);
 
   return (

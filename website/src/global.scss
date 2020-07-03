@@ -1,173 +1,177 @@
+// stylelint-disable no-duplicate-selectors
+
 @import 'dependencies';
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  border: 0;
-  padding: 0;
-  font: inherit;
-  vertical-align: inherit;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5;
-  font-family: $unquote-font-family-body;
-  vertical-align: baseline;
-  word-break: break-word;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-size: $font-size-medium;
-  text-rendering: optimizeLegibility;
-  background: $color-background;
-  color: $color-foreground;
-
-  @include dark-mode {
-    background: $color-background-inverse;
-    color: $color-foreground-inverse;
+:global {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    vertical-align: inherit;
   }
-}
 
-::selection {
-  background: rgba(
-    $color-background-strong-inverse,
-    0.99
-  ); // rgba hack avoids translucent selection bg
+  html,
+  body {
+    height: 100%;
+  }
 
-  color: $color-foreground-strong-inverse;
-  text-shadow: none;
+  html {
+    font-size: 100%;
+    line-height: 1.5;
+    font-family: $unquote-font-family-body;
+    vertical-align: baseline;
+    word-break: break-word;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
 
-  @include dark-mode {
+  body {
+    font-size: $font-size-medium;
+    text-rendering: optimizeLegibility;
+    background: $color-background;
+    color: $color-foreground;
+
+    @include dark-mode {
+      background: $color-background-inverse;
+      color: $color-foreground-inverse;
+    }
+  }
+
+  ::selection {
     background: rgba(
-      $color-background-strong,
+      $color-background-strong-inverse,
       0.99
     ); // rgba hack avoids translucent selection bg
 
-    color: $color-foreground;
-  }
-}
-
-:focus {
-  position: relative; // pop focused elements forward in z-index stacking
-  outline: $spacing-base solid $color-background-strong-inverse;
-  z-index: 9999;
-
-  @include dark-mode {
-    outline-color: $color-background-strong;
-  }
-}
-
-:active {
-  outline: 0 !important;
-}
-
-:focus:not(:focus-visible) {
-  outline: 0;
-}
-
-a,
-button {
-  transition: all 0.25s;
-}
-
-abbr {
-  border: 0;
-  text-decoration: none;
-}
-
-a {
-  box-decoration-break: clone;
-  text-decoration: none;
-  background: transparent;
-  cursor: pointer;
-  color: $color-foreground-primary-weak;
-
-  @include dark-mode {
-    color: $color-foreground-primary-weak-inverse;
-  }
-
-  &:hover,
-  &:focus {
-    color: $color-foreground-primary;
+    color: $color-foreground-strong-inverse;
+    text-shadow: none;
 
     @include dark-mode {
-      color: $color-foreground-primary-inverse;
+      background: rgba(
+        $color-background-strong,
+        0.99
+      ); // rgba hack avoids translucent selection bg
+
+      color: $color-foreground;
     }
   }
 
-  &:hover {
-    text-decoration: underline;
-    text-decoration-thickness: $border-width-hairline;
-    text-decoration-color: rgba($color-accent-primary, 0.5);
-    text-decoration-skip-ink: auto;
+  :focus {
+    position: relative; // pop focused elements forward in z-index stacking
+    outline: $spacing-base solid $color-background-strong-inverse;
+    z-index: 9999;
 
     @include dark-mode {
-      text-decoration-color: rgba($color-accent-primary-inverse, 0.5);
+      outline-color: $color-background-strong;
     }
   }
 
-  &:active {
-    text-decoration-color: rgba($color-accent-primary-strong, 0.5);
-    color: $color-foreground-primary-strong;
+  :active {
+    outline: 0 !important;
+  }
+
+  :focus:not(:focus-visible) {
+    outline: 0;
+  }
+
+  a,
+  button {
+    transition: all 0.25s;
+  }
+
+  abbr {
+    border: 0;
+    text-decoration: none;
+  }
+
+  a {
+    box-decoration-break: clone;
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+    color: $color-foreground-primary-weak;
 
     @include dark-mode {
-      text-decoration-color: rgba($color-accent-primary-strong-inverse, 0.5);
-      color: $color-foreground-primary-strong-inverse;
+      color: $color-foreground-primary-weak-inverse;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-foreground-primary;
+
+      @include dark-mode {
+        color: $color-foreground-primary-inverse;
+      }
+    }
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: $border-width-hairline;
+      text-decoration-color: rgba($color-accent-primary, 0.5);
+      text-decoration-skip-ink: auto;
+
+      @include dark-mode {
+        text-decoration-color: rgba($color-accent-primary-inverse, 0.5);
+      }
+    }
+
+    &:active {
+      text-decoration-color: rgba($color-accent-primary-strong, 0.5);
+      color: $color-foreground-primary-strong;
+
+      @include dark-mode {
+        text-decoration-color: rgba($color-accent-primary-strong-inverse, 0.5);
+        color: $color-foreground-primary-strong-inverse;
+      }
     }
   }
-}
 
-b,
-strong {
-  font-weight: bolder;
-}
+  b,
+  strong {
+    font-weight: bolder;
+  }
 
-p,
-ol,
-ul,
-dl,
-blockquote,
-figure,
-hr {
-  margin-top: $spacing-vertical-medium;
-  margin-bottom: $spacing-vertical-medium;
-}
+  p,
+  ol,
+  ul,
+  dl,
+  blockquote,
+  figure,
+  hr {
+    margin-top: $spacing-vertical-medium;
+    margin-bottom: $spacing-vertical-medium;
+  }
 
-p,
-li,
-dd {
-  max-width: 50em; // measure for readability
-}
+  p,
+  li,
+  dd {
+    max-width: 50em; // measure for readability
+  }
 
-ul,
-ol {
-  padding-left: $spacing-horizontal-large;
-}
+  ul,
+  ol {
+    padding-left: $spacing-horizontal-large;
+  }
 
-nav ul,
-form ol {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
-}
+  nav ul,
+  form ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+  }
 
-dd {
-  margin-left: $spacing-horizontal-large;
-}
+  dd {
+    margin-left: $spacing-horizontal-large;
+  }
 
-img {
-  display: block;
-  max-width: 100%;
+  img {
+    display: block;
+    max-width: 100%;
+  }
 }
