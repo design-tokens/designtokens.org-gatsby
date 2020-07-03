@@ -1,3 +1,5 @@
+@import '../../dependencies';
+
 :global(#___gatsby),
 :global(#gatsby-focus-wrapper) {
   height: 100%;
@@ -17,6 +19,13 @@
 }
 
 .Header,
+.Header p,
+.Footer p {
+  padding-top: $spacing-vertical-small;
+  padding-bottom: $spacing-vertical-small;
+}
+
+.Header,
 .Footer {
   p,
   ul {
@@ -27,11 +36,6 @@
     ul {
       justify-content: flex-end;
     }
-  }
-
-  p {
-    padding-top: $spacing-vertical-small;
-    padding-bottom: $spacing-vertical-small;
   }
 }
 
@@ -57,6 +61,12 @@
   }
 }
 
+.Content {
+  @include mq(large) {
+    padding-bottom: $spacing-vertical-large;
+  }
+}
+
 .Navigation a {
   display: block;
   margin-right: -$spacing-horizontal-medium;
@@ -72,6 +82,8 @@
 }
 
 .Footer {
+  padding-top: $spacing-vertical-large;
+  padding-bottom: $spacing-vertical-large;
   background: $color-background-weak;
   color: $color-foreground-weak;
 

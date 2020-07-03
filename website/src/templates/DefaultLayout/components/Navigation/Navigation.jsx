@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classNames from 'classnames';
-
 import styles from './Navigation.module.scss';
 
 const Navigation = () => {

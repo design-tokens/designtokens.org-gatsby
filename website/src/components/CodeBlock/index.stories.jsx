@@ -11,7 +11,7 @@ export const base = () => (
 );
 
 export const render = () => (
-  <CodeBlock render="true">
+  <CodeBlock render>
     {`
 <div
 style={{
@@ -27,6 +27,6 @@ Some code that is being rendered.
 );
 
 export const live = () => (
-  <CodeBlock live="true">{`<div style={{ backgroundColor: 'gold', padding: '1em' }} />
+  <CodeBlock live>{`<div style={{ backgroundColor: 'gold', padding: '1em' }} />
 `}</CodeBlock>
 );

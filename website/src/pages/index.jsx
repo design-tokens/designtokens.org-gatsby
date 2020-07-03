@@ -2,10 +2,19 @@ import React from 'react';
 import { Heading } from '../components/Heading';
 
 import DefaultLayout from '../templates/DefaultLayout';
-import { SEO } from '../components/SEO';
+import { SEO } from '../templates/SEO';
 
 const IndexPage = () => (
-  <DefaultLayout>
+  <DefaultLayout
+    pageTitle={(
+      <span
+        dangerouslySetInnerHTML={{
+          __html:
+            'About <abbr title="Design Tokens Community Group">DTCG</abbr>',
+        }}
+      />
+    )}
+  >
     <SEO title="Home" />
 
     <Heading>Principles</Heading>

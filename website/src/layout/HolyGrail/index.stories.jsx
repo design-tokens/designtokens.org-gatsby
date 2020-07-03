@@ -1,6 +1,6 @@
 import React from 'react';
 import { HolyGrail } from '.';
-import { Example } from '../../example';
+import { Example } from '../../design-system/examples/basic';
 
 export default {
   title: 'Layout/HolyGrail',

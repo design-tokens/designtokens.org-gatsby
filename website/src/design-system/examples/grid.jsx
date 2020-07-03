@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid } from '.';
-import { Example } from '../../example';
+import { Grid } from '../../layout/Grid';
+import { Example } from './basic';
 
 const GridExample = ({ autoSize, stretch }) => {
   return (

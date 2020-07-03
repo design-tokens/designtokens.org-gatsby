@@ -23,8 +23,8 @@ Heading.propTypes = {
 
 Heading.defaultProps = {
   element: '',
-  level: 2,
   className: '',
+  level: 2,
 };
 
 export { Heading };

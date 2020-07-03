@@ -18,6 +18,9 @@ import { LinkButton } from '../../components/LinkButton';
 import { Container } from '../../layout/Container';
 import { Grid } from '../../layout/Grid';
 import { HolyGrail } from '../../layout/HolyGrail';
+import { MediaObject } from '../../layout/MediaObject';
+
+import logo from '../../images/logo.png';
 
 import styles from './DefaultLayout.module.scss';
 
@@ -46,10 +49,22 @@ const DefaultLayout = ({
   return (
     <HolyGrail>
       <HolyGrail.Header className={styles.Header}>
-        <Grid full largeFit spacing="medium">
+        <Grid full largeFit spacing="medium" alignItems="center">
           <Grid.Column role="banner" smallAutoSize>
             <LinkButton to="/">
-              <abbr title={data.site.siteMetadata.title}>DTCG</abbr>
+              <MediaObject alignItems="center">
+                <MediaObject.Figure>
+                  <img src={logo} width={48} height={48} alt="DTCG Logo" />
+                </MediaObject.Figure>
+
+                <MediaObject.Body>
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: data.site.siteMetadata.title,
+                    }}
+                  />
+                </MediaObject.Body>
+              </MediaObject>
             </LinkButton>
           </Grid.Column>
 
@@ -73,7 +88,7 @@ const DefaultLayout = ({
                     ? pageContext.frontmatter.title
                     : pageTitle !== ''
                     ? pageTitle
-                    : data.site.siteMetadata.title
+                    : ''
                 }
               />
             </HolyGrail.Header>
@@ -111,7 +126,12 @@ const DefaultLayout = ({
         <Grid full largeFit spacing="medium">
           <Grid.Column role="contentinfo">
             <p>
-              &copy; {new Date().getFullYear()} {data.site.siteMetadata.title}
+              &copy; {new Date().getFullYear()}{' '}
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: data.site.siteMetadata.title,
+                }}
+              />
             </p>
           </Grid.Column>
 
@@ -119,7 +139,9 @@ const DefaultLayout = ({
             <HorizontalList spacing="small">
               <HorizontalList.Item>
                 <LinkButton href="https://www.w3.org/community/design-tokens/">
-                  W3C Group
+                  <span>
+                    <abbr title="World Wide Web Consortium">W3C</abbr> Group
+                  </span>
                 </LinkButton>
               </HorizontalList.Item>
 
@@ -145,7 +167,6 @@ const DefaultLayout = ({
 DefaultLayout.propTypes = {
   pageTitle: PropTypes.string,
   pageContext: PropTypes.node,
-  mdxTitle: PropTypes.string,
   children: PropTypes.node.isRequired,
   navigation: PropTypes.node,
   aside: PropTypes.node,
@@ -153,7 +174,6 @@ DefaultLayout.propTypes = {
 
 DefaultLayout.defaultProps = {
   pageTitle: '',
-  mdxTitle: '',
   navigation: '',
   aside: '',
   pageContext: '',

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Heading } from './components/Heading';
+import { Heading } from '../../components/Heading';
 
 const Example = ({
   element,
@@ -42,8 +42,8 @@ Example.propTypes = {
 Example.defaultProps = {
   element: 'span',
   className: '',
-  text: '',
   heading: '',
+  text: '',
   box: true,
   square: false,
   stretch: false,

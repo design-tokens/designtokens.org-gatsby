@@ -4,7 +4,7 @@ import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 import * as tokens from '@dtcg/design-tokens';
 
 import '../src/global.scss';
-import '../src/storybook.scss';
+import '../src/design-system/storybook.scss';
 
 addParameters({
   options: {

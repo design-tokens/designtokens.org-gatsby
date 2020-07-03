@@ -1,0 +1,102 @@
+@import '../dependencies';
+
+:global {
+  #root {
+    height: 100%;
+
+    @include dark-mode {
+      background: $color-background-inverse;
+      color: $color-foreground-inverse;
+    }
+  }
+
+  .sbdocs {
+    &.sbdocs-wrapper,
+    &.sbdocs-preview,
+    [data-simplebar],
+    &.sbdocs-preview > div > div,
+    &.sbdocs-preview > div > div > button,
+    table.docblock-propstable tbody td,
+    .docblock-typeset {
+      background: transparent;
+    }
+
+    &.sbdocs-preview > div > div > button:focus {
+      background: $color-background-strong;
+
+      @include dark-mode {
+        background: $color-background-strong-inverse;
+      }
+    }
+
+    .sbdocs-title,
+    .sbdocs-h2,
+    .sbdocs-h3,
+    [data-simplebar],
+    &.sbdocs-preview > div > div > button,
+    table.docblock-propstable,
+    table.docblock-propstable th,
+    table.docblock-propstable tbody td > div,
+    .docblock-colorpalette > div,
+    .docblock-colorpalette > div > div > div,
+    .docblock-typeset > div > div {
+      color: inherit;
+    }
+
+    &.sbdocs-preview,
+    &.sbdocs-preview > div > div {
+      overflow: visible;
+    }
+
+    .docblock-typeset > div > div:first-child {
+      white-space: nowrap;
+    }
+
+    .docblock-propstable-head th:first-child,
+    .docblock-propstable-body td:first-child {
+      white-space: nowrap;
+    }
+
+    .docblock-propstable .docblock-propstable-body tr:not(:first-child) {
+      border-top-color: $color-accent-weak;
+
+      @include dark-mode {
+        border-top-color: $color-accent-weak-inverse;
+      }
+    }
+  }
+
+  .example-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: $spacing-base $spacing-horizontal-small;
+    width: 100%;
+    min-height: $sizing-ui-icon;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: $font-size-medium;
+    text-align: center;
+    outline: 1px solid $color-background-strong;
+    background: $color-background-weak;
+
+    @include dark-mode {
+      outline-color: $color-background-strong-inverse;
+      background: $color-background-weak-inverse;
+    }
+
+    &--square {
+      min-width: $sizing-ui-icon;
+    }
+
+    &--stretch {
+      height: 100%;
+    }
+
+    h4 {
+      margin-top: $spacing-vertical-small;
+      margin-bottom: $spacing-vertical-small;
+    }
+  }
+}

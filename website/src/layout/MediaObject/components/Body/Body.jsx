@@ -1,15 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import styles from '../../Grid.module.scss';
+import styles from '../../MediaObject.module.scss';
 
-const Column = ({ element, className, children, autoSize, ...rest }) => {
+const Body = ({ element, className, children, ...rest }) => {
   const Element = element;
-  const classes = classNames(
-    styles.column,
-    autoSize && styles['auto-size'],
-    className,
-  );
+  const classes = classNames(styles.body, className);
 
   return (
     <Element className={classes} {...rest}>
@@ -18,17 +14,15 @@ const Column = ({ element, className, children, autoSize, ...rest }) => {
   );
 };
 
-Column.propTypes = {
+Body.propTypes = {
   element: PropTypes.string,
-  autoSize: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
 
-Column.defaultProps = {
+Body.defaultProps = {
   element: 'div',
   className: '',
-  autoSize: false,
 };
 
-export { Column };
+export { Body };
