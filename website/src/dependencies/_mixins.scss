@@ -1,7 +1,7 @@
 @mixin dark-mode {
   @if $dark-mode {
     @media (prefers-color-scheme: dark) {
-      @if (#{&} == 'body') {
+      @if (#{&} == ':global body') {
         &:global(:not(.light-mode)) {
           @content;
         }
@@ -11,7 +11,7 @@
         }
       }
     }
-    @if (#{&} == 'body') {
+    @if (#{&} == ':global body') {
       &:global(.dark-mode) {
         @content;
       }
