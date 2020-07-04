@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import styles from './Heading.module.scss';
 
 const Heading = ({ level, element, className, children, ...rest }) => {
-  const Element = element === '' ? `h${level}` : element;
+  const Element = element || `h${level}`;
   const classes = classNames(styles[`h${level}`], className);
 
   return (
@@ -22,8 +22,8 @@ Heading.propTypes = {
 };
 
 Heading.defaultProps = {
-  element: '',
-  className: '',
+  element: null,
+  className: null,
   level: 2,
 };
 

@@ -20,7 +20,7 @@ const LinkButton = ({
     className,
   );
 
-  if (to !== '') {
+  if (to) {
     return (
       <Link className={classes} to={to} {...rest}>
         {children}
@@ -28,7 +28,7 @@ const LinkButton = ({
     );
   }
 
-  if (href !== '') {
+  if (href) {
     return (
       <a className={classes} href={href} {...rest}>
         {children}
@@ -54,9 +54,9 @@ LinkButton.propTypes = {
 
 LinkButton.defaultProps = {
   element: 'span',
-  className: '',
-  to: '',
-  href: '',
+  className: null,
+  to: null,
+  href: null,
   primary: false,
 };
 

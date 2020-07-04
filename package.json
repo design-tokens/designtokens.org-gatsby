@@ -13,7 +13,7 @@
   "scripts": {
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint website/ --ext .js,.jsx,.ts,.tsx --format codeframe",
-    "lint:css": "stylelint **/*.s?css",
+    "lint:css": "stylelint **/*.scss",
     "develop": "yarn workspace website run develop",
     "storybook": "yarn workspace website storybook",
     "start": "yarn workspace website run start",
@@ -23,6 +23,7 @@
     "chromatic": "CHROMATIC_APP_CODE=966rycwf5zf chromatic"
   },
   "devDependencies": {
+    "core-js": "2",
     "eslint": "^7.3.1",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",

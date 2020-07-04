@@ -22,7 +22,7 @@ const Example = ({
 
   return (
     <Element className={classes}>
-      {heading !== '' ? <Heading level={4}>{heading}</Heading> : ''}
+      {heading && <Heading level={4}>{heading}</Heading>}
 
       {text}
     </Element>
@@ -32,8 +32,8 @@ const Example = ({
 Example.propTypes = {
   element: PropTypes.string,
   className: PropTypes.string,
-  text: PropTypes.string,
-  heading: PropTypes.string,
+  text: PropTypes.node,
+  heading: PropTypes.node,
   box: PropTypes.bool,
   square: PropTypes.bool,
   stretch: PropTypes.bool,
@@ -41,9 +41,9 @@ Example.propTypes = {
 
 Example.defaultProps = {
   element: 'span',
-  className: '',
-  heading: '',
-  text: '',
+  className: null,
+  heading: null,
+  text: null,
   box: true,
   square: false,
   stretch: false,

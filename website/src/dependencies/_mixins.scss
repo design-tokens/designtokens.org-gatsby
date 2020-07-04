@@ -1,24 +1,22 @@
 @mixin dark-mode {
-  @if $dark-mode {
-    @media (prefers-color-scheme: dark) {
-      @if (#{&} == 'body') {
-        &:global(:not(.light-mode)) {
-          @content;
-        }
-      } @else {
-        :global(body:not(.light-mode)) & {
-          @content;
-        }
-      }
-    }
+  @media (prefers-color-scheme: dark) {
     @if (#{&} == 'body') {
-      &:global(.dark-mode) {
+      &:global(:not(.light-mode)) {
         @content;
       }
     } @else {
-      :global(.dark-mode) & {
+      :global(body:not(.light-mode)) & {
         @content;
       }
+    }
+  }
+  @if (#{&} == 'body') {
+    &:global(.dark-mode) {
+      @content;
+    }
+  } @else {
+    :global(.dark-mode) & {
+      @content;
     }
   }
 }
