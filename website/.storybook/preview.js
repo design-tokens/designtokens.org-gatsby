@@ -1,5 +1,6 @@
 import { addDecorator, addParameters } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
+import { action } from '@storybook/addon-actions';
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 import * as tokens from '@dtcg/design-tokens';
 
