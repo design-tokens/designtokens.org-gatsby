@@ -1,4 +1,4 @@
-@import 'dependencies';
+@import '../assets/styles/dependencies';
 
 :global(#___gatsby),
 :global(#gatsby-focus-wrapper) {
@@ -91,4 +91,9 @@
     background: $color-background-weak-inverse;
     color: $color-foreground-weak-inverse;
   }
+}
+
+.logo {
+  width: $sizing-xxlarge;
+  height: $sizing-xxlarge;
 }

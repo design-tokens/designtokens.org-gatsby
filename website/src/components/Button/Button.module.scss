@@ -1,4 +1,4 @@
-@import 'dependencies';
+@import '../../assets/styles/dependencies';
 
 .wrapper {
   @include button;
@@ -14,7 +14,7 @@
 
   &:hover,
   &:focus {
-    background: $color-background-primary-default;
+    background: $color-background-primary;
 
     @include dark-mode {
       background: $color-background-primary-inverse;

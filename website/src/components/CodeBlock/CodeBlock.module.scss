@@ -1,4 +1,4 @@
-@import 'dependencies';
+@import '../../assets/styles/dependencies';
 
 .wrapper {
   background: $color-background-strong-inverse;
@@ -8,6 +8,7 @@
   pre,
   textarea {
     font-family: $unquote-font-family-code !important;
+    letter-spacing: $letter-spacing-normal;
   }
 
   pre,

@@ -61,7 +61,13 @@ const DefaultLayout = ({
             <LinkButton to="/">
               <MediaObject alignItems="center">
                 <MediaObject.Figure>
-                  <img src={logo} width={48} height={48} alt="DTCG Logo" />
+                  <img
+                    className={styles.logo}
+                    src={logo}
+                    width={48}
+                    height={48}
+                    alt="DTCG Logo"
+                  />
                 </MediaObject.Figure>
 
                 <MediaObject.Body>

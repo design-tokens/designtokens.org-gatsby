@@ -8,14 +8,14 @@ global:
 props:
   color_accent_weak:
     value: '{!gray_000}'
-  color_accent_default:
+  color_accent:
     value: '{!gray_100}'
   color_accent_strong:
     value: '{!gray_200}'
 
   color_accent_primary_weak:
     value: '{!yellow_100}'
-  color_accent_primary_default:
+  color_accent_primary:
     value: '{!yellow_200}'
   color_accent_primary_strong:
     value: '{!yellow_300}'

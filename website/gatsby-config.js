@@ -7,7 +7,11 @@ module.exports = {
       'Design Tokens <abbr title="World Wide Web Consortium">W3C</abbr> Community Group',
     description:
       'The DTCG’s goal is to provide standards upon which products and design tools can rely for sharing stylistic pieces of a design system at scale.',
-    author: '@designtokens',
+    author: 'DTCG',
+    siteUrl: `https://www.designtokens.org/`,
+    social: {
+      twitter: 'designtokens',
+    },
   },
   plugins: [
     {
