@@ -1,0 +1,45 @@
+imports:
+  - ./aliases/metrics.yml
+
+global:
+  category: spacing
+  type: size
+
+props:
+  spacing_base:
+    value: '{!base}'
+
+  spacing_xsmall:
+    value: '{!xsmall}'
+  spacing_small:
+    value: '{!small}'
+  spacing_medium:
+    value: '{!medium}'
+  spacing_large:
+    value: '{!large}'
+  spacing_xlarge:
+    value: '{!xlarge}'
+  spacing_xxlarge:
+    value: '{!xxlarge}'
+  spacing_xxxlarge:
+    value: '{!xxxlarge}'
+  spacing_xxxxlarge:
+    value: '{!xxxxlarge}'
+
+  spacing_horizontal_small:
+    value: '{!xsmall}'
+  spacing_horizontal_medium:
+    value: '{!medium}'
+  spacing_horizontal_large:
+    value: '{!xlarge}'
+  spacing_horizontal_xlarge:
+    value: '{!xxxlarge}'
+
+  spacing_vertical_small:
+    value: '{!small}'
+  spacing_vertical_medium:
+    value: '{!large}'
+  spacing_vertical_large:
+    value: '{!xxlarge}'
+  spacing_vertical_xlarge:
+    value: '{!xxxxlarge}'

@@ -1,7 +1,16 @@
 imports:
-  - './global-only.yml'
-  - './components-only.yml'
+  - ./breakpoints.yml
+  - ./color-accent.yml
+  - ./color-background.yml
+  - ./color-foreground.yml
+  - ./font-family.yml
+  - ./font-size.yml
+  - ./letter-spacing.yml
+  - ./sizing.yml
+  - ./spacing.yml
+  - ./strokes.yml
+  - ./z-index.yml
 
 global:
+  category: global
   type: all
-  category: all

@@ -75,7 +75,7 @@
     flex-direction: column;
     padding: $spacing-base $spacing-horizontal-small;
     width: 100%;
-    min-height: $sizing-ui-icon;
+    min-height: $sizing-medium;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: $font-size-medium;
@@ -89,7 +89,7 @@
     }
 
     &--square {
-      min-width: $sizing-ui-icon;
+      min-width: $sizing-medium;
     }
 
     &--stretch {

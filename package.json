@@ -23,7 +23,7 @@
     "chromatic": "CHROMATIC_APP_CODE=966rycwf5zf chromatic"
   },
   "devDependencies": {
-    "core-js": "2",
+    "core-js": "3",
     "eslint": "^7.3.1",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",

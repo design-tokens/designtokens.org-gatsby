@@ -33,8 +33,8 @@
   body {
     font-size: $font-size-medium;
     text-rendering: optimizeLegibility;
-    background: $color-background;
-    color: $color-foreground;
+    background: $color-background-default;
+    color: $color-foreground-default;
 
     @include dark-mode {
       background: $color-background-inverse;
@@ -57,7 +57,7 @@
         0.99
       ); // rgba hack avoids translucent selection bg
 
-      color: $color-foreground;
+      color: $color-foreground-default;
     }
   }
 
@@ -102,7 +102,7 @@
 
     &:hover,
     &:focus {
-      color: $color-foreground-primary;
+      color: $color-foreground-primary-default;
 
       @include dark-mode {
         color: $color-foreground-primary-inverse;
@@ -111,8 +111,8 @@
 
     &:hover {
       text-decoration: underline;
-      text-decoration-thickness: $border-width-hairline;
-      text-decoration-color: rgba($color-accent-primary, 0.5);
+      text-decoration-thickness: $stroke-hairline;
+      text-decoration-color: rgba($color-accent-primary-default, 0.5);
       text-decoration-skip-ink: auto;
 
       @include dark-mode {

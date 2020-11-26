@@ -1,0 +1,10 @@
+global:
+  category: z-index
+  type: number
+
+props:
+  z_index_root:
+    value: 0
+
+  z_index_max:
+    value: 9999

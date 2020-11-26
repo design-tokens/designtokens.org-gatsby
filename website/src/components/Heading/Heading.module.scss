@@ -13,19 +13,19 @@ h1,
 .h1 {
   margin-bottom: $spacing-vertical-large;
   font-weight: normal;
-  font-size: $font-size-x-large;
+  font-size: $font-size-xlarge;
   line-height: 1;
 
   @include mq(large) {
-    font-size: $font-size-xx-large;
+    font-size: $font-size-xxlarge;
   }
 
   @include mq(x-large) {
-    font-size: $font-size-xxx-large;
+    font-size: $font-size-xxxlarge;
   }
 
   @include mq(xx-large) {
-    font-size: $font-size-xxxx-large;
+    font-size: $font-size-xxxxlarge;
   }
 }
 

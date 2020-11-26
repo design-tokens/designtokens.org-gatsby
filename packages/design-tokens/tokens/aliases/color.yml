@@ -1,0 +1,273 @@
+aliases:
+  gray_000:
+    value: '#f8f9fa'
+  gray_100:
+    value: '#f1f3f5'
+  gray_200:
+    value: '#e9ecef'
+  gray_300:
+    value: '#dee2e6'
+  gray_400:
+    value: '#ced4da'
+  gray_500:
+    value: '#adb5bd'
+  gray_600:
+    value: '#868e96'
+  gray_700:
+    value: '#495057'
+  gray_800:
+    value: '#343a40'
+  gray_900:
+    value: '#212529'
+
+  red_000:
+    value: '#fff5f5'
+  red_100:
+    value: '#ffe3e3'
+  red_200:
+    value: '#ffc9c9'
+  red_300:
+    value: '#ffa8a8'
+  red_400:
+    value: '#ff8787'
+  red_500:
+    value: '#ff6b6b'
+  red_600:
+    value: '#fa5252'
+  red_700:
+    value: '#f03e3e'
+  red_800:
+    value: '#e03131'
+  red_900:
+    value: '#c92a2a'
+
+  pink_000:
+    value: '#fff5f5'
+  pink_100:
+    value: '#ffe3e3'
+  pink_200:
+    value: '#ffc9c9'
+  pink_300:
+    value: '#ffa8a8'
+  pink_400:
+    value: '#ff8787'
+  pink_500:
+    value: '#ff6b6b'
+  pink_600:
+    value: '#fa5252'
+  pink_700:
+    value: '#f03e3e'
+  pink_800:
+    value: '#e03131'
+  pink_900:
+    value: '#c92a2a'
+
+  grape_000:
+    value: '#f8f0fc'
+  grape_100:
+    value: '#f3d9fa'
+  grape_200:
+    value: '#eebefa'
+  grape_300:
+    value: '#e599f7'
+  grape_400:
+    value: '#da77f2'
+  grape_500:
+    value: '#cc5de8'
+  grape_600:
+    value: '#be4bdb'
+  grape_700:
+    value: '#ae3ec9'
+  grape_800:
+    value: '#9c36b5'
+  grape_900:
+    value: '#862e9c'
+
+  violet_000:
+    value: '#f3f0ff'
+  violet_100:
+    value: '#e5dbff'
+  violet_200:
+    value: '#d0bfff'
+  violet_300:
+    value: '#b197fc'
+  violet_400:
+    value: '#9775fa'
+  violet_500:
+    value: '#845ef7'
+  violet_600:
+    value: '#7950f2'
+  violet_700:
+    value: '#7048e8'
+  violet_800:
+    value: '#6741d9'
+  violet_900:
+    value: '#5f3dc4'
+
+  indigo_000:
+    value: '#edf2ff'
+  indigo_100:
+    value: '#dbe4ff'
+  indigo_200:
+    value: '#bac8ff'
+  indigo_300:
+    value: '#91a7ff'
+  indigo_400:
+    value: '#748ffc'
+  indigo_500:
+    value: '#5c7cfa'
+  indigo_600:
+    value: '#4c6ef5'
+  indigo_700:
+    value: '#4263eb'
+  indigo_800:
+    value: '#3b5bdb'
+  indigo_900:
+    value: '#364fc7'
+
+  blue_000:
+    value: '#e7f5ff'
+  blue_100:
+    value: '#d0ebff'
+  blue_200:
+    value: '#a5d8ff'
+  blue_300:
+    value: '#74c0fc'
+  blue_400:
+    value: '#4dabf7'
+  blue_500:
+    value: '#339af0'
+  blue_600:
+    value: '#228be6'
+  blue_700:
+    value: '#1c7ed6'
+  blue_800:
+    value: '#1971c2'
+  blue_900:
+    value: '#1864ab'
+
+  cyan_000:
+    value: '#e3fafc'
+  cyan_100:
+    value: '#c5f6fa'
+  cyan_200:
+    value: '#99e9f2'
+  cyan_300:
+    value: '#66d9e8'
+  cyan_400:
+    value: '#3bc9db'
+  cyan_500:
+    value: '#22b8cf'
+  cyan_600:
+    value: '#15aabf'
+  cyan_700:
+    value: '#1098ad'
+  cyan_800:
+    value: '#0c8599'
+  cyan_900:
+    value: '#0b7285'
+
+  teal_000:
+    value: '#e6fcf5'
+  teal_100:
+    value: '#c3fae8'
+  teal_200:
+    value: '#96f2d7'
+  teal_300:
+    value: '#63e6be'
+  teal_400:
+    value: '#38d9a9'
+  teal_500:
+    value: '#20c997'
+  teal_600:
+    value: '#12b886'
+  teal_700:
+    value: '#0ca678'
+  teal_800:
+    value: '#099268'
+  teal_900:
+    value: '#087f5b'
+
+  green_000:
+    value: '#ebfbee'
+  green_100:
+    value: '#d3f9d8'
+  green_200:
+    value: '#b2f2bb'
+  green_300:
+    value: '#8ce99a'
+  green_400:
+    value: '#69db7c'
+  green_500:
+    value: '#51cf66'
+  green_600:
+    value: '#40c057'
+  green_700:
+    value: '#37b24d'
+  green_800:
+    value: '#2f9e44'
+  green_900:
+    value: '#2b8a3e'
+
+  lime_000:
+    value: '#f4fce3'
+  lime_100:
+    value: '#e9fac8'
+  lime_200:
+    value: '#d8f5a2'
+  lime_300:
+    value: '#c0eb75'
+  lime_400:
+    value: '#a9e34b'
+  lime_500:
+    value: '#94d82d'
+  lime_600:
+    value: '#82c91e'
+  lime_700:
+    value: '#74b816'
+  lime_800:
+    value: '#66a80f'
+  lime_900:
+    value: '#5c940d'
+
+  yellow_000:
+    value: '#fff9db'
+  yellow_100:
+    value: '#fff3bf'
+  yellow_200:
+    value: '#ffec99'
+  yellow_300:
+    value: '#ffe066'
+  yellow_400:
+    value: '#ffd43b'
+  yellow_500:
+    value: '#fcc419'
+  yellow_600:
+    value: '#fab005'
+  yellow_700:
+    value: '#f59f00'
+  yellow_800:
+    value: '#f08c00'
+  yellow_900:
+    value: '#e67700'
+
+  orange_000:
+    value: '#fff4e6'
+  orange_100:
+    value: '#ffe8cc'
+  orange_200:
+    value: '#ffd8a8'
+  orange_300:
+    value: '#ffc078'
+  orange_400:
+    value: '#ffa94d'
+  orange_500:
+    value: '#ff922b'
+  orange_600:
+    value: '#fd7e14'
+  orange_700:
+    value: '#f76707'
+  orange_800:
+    value: '#e8590c'
+  orange_900:
+    value: '#d9480f'

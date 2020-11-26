@@ -18,6 +18,6 @@
 
   textarea:focus {
     outline-color: $color-accent-primary-strong-inverse;
-    outline-offset: -$border-width-thickline;
+    outline-offset: -$stroke-thickline;
   }
 }

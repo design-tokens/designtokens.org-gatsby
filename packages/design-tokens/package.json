@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "theo": "theo ./tokens/index.yml --format json,scss,common.js --dest ./dist",
+    "theo": "theo ./tokens/index.yml --format common.js,json,scss,map.scss --dest ./dist && theo ./tokens/breakpoints.yml --format json,map.scss --dest ./dist && theo ./tokens/color-accent.yml --format json,map.scss --dest ./dist && theo ./tokens/color-background.yml --format json,map.scss --dest ./dist && theo ./tokens/color-foreground.yml --format json,map.scss --dest ./dist && theo ./tokens/font-family.yml --format json,map.scss --dest ./dist && theo ./tokens/font-size.yml --format json,map.scss --dest ./dist && theo ./tokens/letter-spacing.yml --format json,map.scss --dest ./dist && theo ./tokens/sizing.yml --format json,map.scss --dest ./dist && theo ./tokens/spacing.yml --format json,map.scss --dest ./dist && theo ./tokens/strokes.yml --format json,map.scss --dest ./dist && theo ./tokens/z-index.yml --format json,map.scss --dest ./dist",
     "lint:prettier": "prettier --config ../../.prettierrc --write ./dist/*.{json,scss}",
     "lint:stylelint": "stylelint dist/*.scss --fix",
     "build": "npm-run-all theo lint:*"

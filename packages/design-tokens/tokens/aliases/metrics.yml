@@ -1,0 +1,33 @@
+aliases:
+  base:
+    value: 4px
+
+  xsmall:
+    value: 8px
+  small:
+    value: 12px
+  medium:
+    value: 16px
+  large:
+    value: 24px
+  xlarge:
+    value: 32px
+  xxlarge:
+    value: 48px
+  xxxlarge:
+    value: 64px
+  xxxxlarge:
+    value: 96px
+
+  container_xsmall:
+    value: 320px
+  container_small:
+    value: 480px
+  container_medium:
+    value: 640px
+  container_large:
+    value: 960px
+  container_xlarge:
+    value: 1280px
+  container_xxlarge:
+    value: 1920px

@@ -1,0 +1,12 @@
+imports:
+  - ./aliases/metrics.yml
+
+global:
+  category: border-width
+  type: size
+
+props:
+  stroke_thickline:
+    value: 2px
+  stroke_hairline:
+    value: 1px

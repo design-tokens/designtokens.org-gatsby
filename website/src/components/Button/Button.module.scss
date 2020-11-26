@@ -14,7 +14,7 @@
 
   &:hover,
   &:focus {
-    background: $color-background-primary;
+    background: $color-background-primary-default;
 
     @include dark-mode {
       background: $color-background-primary-inverse;

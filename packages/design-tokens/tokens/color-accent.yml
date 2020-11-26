@@ -1,0 +1,35 @@
+imports:
+  - ./aliases/color.yml
+
+global:
+  category: accent-color
+  type: color
+
+props:
+  color_accent_weak:
+    value: '{!gray_000}'
+  color_accent_default:
+    value: '{!gray_100}'
+  color_accent_strong:
+    value: '{!gray_200}'
+
+  color_accent_primary_weak:
+    value: '{!yellow_100}'
+  color_accent_primary_default:
+    value: '{!yellow_200}'
+  color_accent_primary_strong:
+    value: '{!yellow_300}'
+
+  color_accent_weak_inverse:
+    value: '{!gray_900}'
+  color_accent_inverse:
+    value: '{!gray_800}'
+  color_accent_strong_inverse:
+    value: '{!gray_700}'
+
+  color_accent_primary_weak_inverse:
+    value: '{!yellow_800}'
+  color_accent_primary_inverse:
+    value: '{!yellow_700}'
+  color_accent_primary_strong_inverse:
+    value: '{!yellow_600}'

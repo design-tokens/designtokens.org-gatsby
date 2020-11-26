@@ -30,7 +30,7 @@
 .navigation,
 .aside {
   @include mq(medium) {
-    flex: 0 0 $sizing-container-xx-small;
+    flex: 0 0 $sizing-container-xsmall;
   }
 }
 

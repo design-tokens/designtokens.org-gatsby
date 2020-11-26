@@ -21,8 +21,8 @@ $mq-breakpoints: (
   small: $sizing-container-small,
   medium: $sizing-container-medium,
   large: $sizing-container-large,
-  x-large: $sizing-container-x-large,
-  xx-large: $sizing-container-xx-large,
+  x-large: $sizing-container-xlarge,
+  xx-large: $sizing-container-xxlarge,
 );
 
 $unquote-font-family-body: unquote($font-family-body);

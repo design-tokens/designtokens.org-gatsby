@@ -1,0 +1,35 @@
+imports:
+  - ./aliases/color.yml
+
+global:
+  category: background-color
+  type: color
+
+props:
+  color_background_weak:
+    value: '#fff'
+  color_background_default:
+    value: '{!gray_000}'
+  color_background_strong:
+    value: '{!gray_100}'
+
+  color_background_primary_weak:
+    value: '{!yellow_000}'
+  color_background_primary_default:
+    value: '{!yellow_100}'
+  color_background_primary_strong:
+    value: '{!yellow_200}'
+
+  color_background_weak_inverse:
+    value: '#000'
+  color_background_inverse:
+    value: '{!gray_900}'
+  color_background_strong_inverse:
+    value: '{!gray_800}'
+
+  color_background_primary_weak_inverse:
+    value: '{!yellow_900}'
+  color_background_primary_inverse:
+    value: '{!yellow_800}'
+  color_background_primary_strong_inverse:
+    value: '{!yellow_700}'

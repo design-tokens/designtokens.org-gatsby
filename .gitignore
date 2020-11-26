@@ -10,5 +10,22 @@ node_modules
 .DS_Store
 
 # Build caches
-website/.cache
-website/public
+.cache
+dist
+public
+
+# Yarn
+yarn-error.log
+.pnp/
+.pnp.js
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# secrets
+.env*
+!.env.example
+
+# we use only yarn
+package-lock.json

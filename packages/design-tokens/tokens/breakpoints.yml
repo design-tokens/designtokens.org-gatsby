@@ -1,0 +1,20 @@
+imports:
+  - ./aliases/metrics.yml
+
+global:
+  category: breakpoints
+  type: size
+
+props:
+  breakpoint_xsmall:
+    value: '{!container_xsmall}'
+  breakpoint_small:
+    value: '{!container_small}'
+  breakpoint_medium:
+    value: '{!container_medium}'
+  breakpoint_large:
+    value: '{!container_large}'
+  breakpoint_xlarge:
+    value: '{!container_xlarge}'
+  breakpoint_xxlarge:
+    value: '{!container_xxlarge}'

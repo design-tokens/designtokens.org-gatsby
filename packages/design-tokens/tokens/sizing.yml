@@ -1,0 +1,58 @@
+imports:
+  - ./aliases/metrics.yml
+
+global:
+  category: sizing
+  type: size
+
+props:
+  sizing_base:
+    value: '{!base}'
+
+  sizing_xsmall:
+    value: '{!xsmall}'
+  sizing_small:
+    value: '{!small}'
+  sizing_medium:
+    value: '{!medium}'
+  sizing_large:
+    value: '{!large}'
+  sizing_xlarge:
+    value: '{!xlarge}'
+  sizing_xxlarge:
+    value: '{!xxlarge}'
+  sizing_xxxlarge:
+    value: '{!xxxlarge}'
+  sizing_xxxxlarge:
+    value: '{!xxxxlarge}'
+
+  sizing_horizontal_small:
+    value: '{!xsmall}'
+  sizing_horizontal_medium:
+    value: '{!medium}'
+  sizing_horizontal_large:
+    value: '{!xlarge}'
+  sizing_horizontal_xlarge:
+    value: '{!xxxlarge}'
+
+  sizing_vertical_small:
+    value: '{!small}'
+  sizing_vertical_medium:
+    value: '{!large}'
+  sizing_vertical_large:
+    value: '{!xxlarge}'
+  sizing_vertical_xlarge:
+    value: '{!xxxxlarge}'
+
+  sizing_container_xsmall:
+    value: '{!container_xsmall}'
+  sizing_container_small:
+    value: '{!container_small}'
+  sizing_container_medium:
+    value: '{!container_medium}'
+  sizing_container_large:
+    value: '{!container_large}'
+  sizing_container_xlarge:
+    value: '{!container_xlarge}'
+  sizing_container_xxlarge:
+    value: '{!container_xxlarge}'
