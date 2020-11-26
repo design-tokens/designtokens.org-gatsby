@@ -8,14 +8,14 @@ global:
 props:
   color_foreground_weak:
     value: '{!gray_800}'
-  color_foreground_default:
+  color_foreground:
     value: '{!gray_900}'
   color_foreground_strong:
     value: '#000'
 
   color_foreground_primary_weak:
     value: '{!yellow_700}'
-  color_foreground_primary_default:
+  color_foreground_primary:
     value: '{!yellow_800}'
   color_foreground_primary_strong:
     value: '{!yellow_900}'
