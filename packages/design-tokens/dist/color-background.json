@@ -1,0 +1,14 @@
+{
+  "color_background_primary_strong": "#ffec99",
+  "color_background_primary_weak": "#fff9db",
+  "color_background_strong": "#f1f3f5",
+  "color_background_default": "#f8f9fa",
+  "color_background_weak": "#fff",
+  "color_background_primary_default": "#fff3bf",
+  "color_background_primary_strong_inverse": "#f59f00",
+  "color_background_primary_weak_inverse": "#e67700",
+  "color_background_inverse": "#212529",
+  "color_background_strong_inverse": "#343a40",
+  "color_background_primary_inverse": "#f08c00",
+  "color_background_weak_inverse": "#000"
+}

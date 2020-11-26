@@ -1,0 +1,8 @@
+{
+  "breakpoint_xsmall": "320px",
+  "breakpoint_small": "480px",
+  "breakpoint_medium": "640px",
+  "breakpoint_large": "960px",
+  "breakpoint_xlarge": "1280px",
+  "breakpoint_xxlarge": "1920px"
+}

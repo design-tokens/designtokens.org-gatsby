@@ -1,0 +1,19 @@
+{
+  "spacing_vertical_medium": "24px",
+  "spacing_horizontal_xlarge": "64px",
+  "spacing_horizontal_small": "8px",
+  "spacing_small": "12px",
+  "spacing_xsmall": "8px",
+  "spacing_base": "4px",
+  "spacing_vertical_large": "48px",
+  "spacing_vertical_xlarge": "96px",
+  "spacing_medium": "16px",
+  "spacing_horizontal_medium": "16px",
+  "spacing_vertical_small": "12px",
+  "spacing_horizontal_large": "32px",
+  "spacing_large": "24px",
+  "spacing_xxlarge": "48px",
+  "spacing_xxxxlarge": "96px",
+  "spacing_xlarge": "32px",
+  "spacing_xxxlarge": "64px"
+}

@@ -1,0 +1,14 @@
+{
+  "color_accent_strong_inverse": "#495057",
+  "color_accent_weak_inverse": "#212529",
+  "color_accent_default": "#f1f3f5",
+  "color_accent_primary_default": "#ffec99",
+  "color_accent_primary_strong": "#ffe066",
+  "color_accent_primary_weak": "#fff3bf",
+  "color_accent_strong": "#e9ecef",
+  "color_accent_weak": "#f8f9fa",
+  "color_accent_inverse": "#343a40",
+  "color_accent_primary_inverse": "#f59f00",
+  "color_accent_primary_strong_inverse": "#fab005",
+  "color_accent_primary_weak_inverse": "#f08c00"
+}
