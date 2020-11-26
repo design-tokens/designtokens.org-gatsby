@@ -4,8 +4,8 @@ import { action } from '@storybook/addon-actions';
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 import * as tokens from '@dtcg/design-tokens';
 
-import '../src/global.scss';
-import '../src/storybook.scss';
+import '../src/assets/styles/global.scss';
+import '../src/storybook/storybook.scss';
 
 addParameters({
   options: {
@@ -25,12 +25,12 @@ addParameters({
     {
       name: 'Light mode',
       class: 'light-mode',
-      color: tokens.colorBackgroundStrong,
+      color: tokens.colorBackgroundDefault,
     },
     {
       name: 'Dark mode',
       class: 'dark-mode',
-      color: tokens.colorBackgroundStrongInverse,
+      color: tokens.colorBackgroundInverse,
     },
   ],
   dependencies: {

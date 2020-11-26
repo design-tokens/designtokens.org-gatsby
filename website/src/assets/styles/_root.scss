@@ -1,0 +1,117 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  vertical-align: inherit;
+}
+
+html,
+body,
+body > div:not([class]),
+body > div:not([class]) > div:not([class]) {
+  // workaround because gatsby inserts 2 divs
+  height: 100%;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: $font-size-medium;
+  line-height: 1.5;
+  font-family: $unquote-font-family-body;
+  letter-spacing: $letter-spacing-wide;
+  vertical-align: baseline;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  word-break: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $color-background-strong;
+  color: $color-foreground-strong;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: $color-background-strong-inverse;
+  color: $color-foreground-strong-inverse;
+  text-shadow: none;
+}
+
+:focus {
+  outline: $spacing-base solid $color-accent-strong;
+}
+
+abbr[title] {
+  border: 0;
+  text-decoration: none;
+}
+
+a {
+  box-decoration-break: clone;
+  text-decoration: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.25s;
+
+  &:hover,
+  &:focus {
+    background: $color-background-default;
+  }
+
+  &:active {
+    background: $color-background-weak;
+    color: $color-foreground-weak;
+  }
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+small {
+  font-size: 80%;
+}
+
+sup {
+  position: relative;
+  top: -0.5em;
+  font-size: 75%;
+  line-height: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+main,
+iframe,
+img,
+svg {
+  display: block;
+}
+
+iframe,
+img,
+svg {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+hr {
+  display: none;
+}

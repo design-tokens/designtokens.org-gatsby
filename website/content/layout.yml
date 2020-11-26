@@ -1,0 +1,7 @@
+header:
+  - title: Home
+    url: /
+
+footer:
+  - title: GitHub
+    url: https://github.com/design-tokens
