@@ -81,14 +81,6 @@ const DefaultLayout = ({
               </MediaObject>
             </LinkButton>
           </Grid.Column>
-
-          <Grid.Column element="nav" role="navigation">
-            <HorizontalList spacing="small">
-              <HorizontalList.Item>
-                <LinkButton to="/test/">Test Page</LinkButton>
-              </HorizontalList.Item>
-            </HorizontalList>
-          </Grid.Column>
         </Grid>
       </HolyGrail.Header>
       <HolyGrail.Body>
