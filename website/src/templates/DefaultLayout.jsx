@@ -6,9 +6,9 @@
  */
 
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
-import PropTypes from 'prop-types';
+import { PropTypes } from 'prop-types';
 
 import { SEO } from './SEO';
 import { CodeBlock } from '../components/CodeBlock';
@@ -115,16 +115,20 @@ const DefaultLayout = ({
         )}
       </HolyGrail.Body>
       <HolyGrail.Footer className={styles.Footer}>
-        <Grid full largeFit spacing="medium">
+        <Grid full largeFit spacing="medium" alignItems="center">
           <Grid.Column role="contentinfo">
             <p>
-              &copy; {new Date().getFullYear()}{' '}
-              <span
-                // eslint-disable-next-line react/no-danger
-                dangerouslySetInnerHTML={{
-                  __html: data.site.siteMetadata.htmlTitle,
-                }}
-              />
+              <Link
+                href="https://www.netlify.com/"
+                className={styles.NetlifyLogoLink}
+              >
+                <img
+                  src="https://www.netlify.com/img/global/badges/netlify-dark.svg"
+                  alt="Deploys by Netlify xxx"
+                  width="114"
+                  height="51"
+                />
+              </Link>
             </p>
           </Grid.Column>
 
